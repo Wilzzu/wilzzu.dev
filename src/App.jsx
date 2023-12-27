@@ -2,10 +2,8 @@ import Logo from "./components/start/Logo";
 
 function App() {
 	return (
-		<main className="h-dvh">
-			<div className="w-full h-full flex items-center justify-center">
-				<Logo />
-			</div>
+		<main className="h-dvh w-full flex items-center justify-center overflow-hidden">
+			<Logo />
 		</main>
 	);
 }
