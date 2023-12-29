@@ -8,7 +8,7 @@ const Projects = () => {
 			animate={{ y: 0, opacity: 1 }}
 			transition={{
 				// TODO: Make a better animation
-				y: { type: "spring", stiffness: 18, damping: 7, delay: 1.2 },
+				y: { type: "spring", stiffness: 12, damping: 8, delay: 1.2 },
 				opacity: { duration: 1.4, type: "tween", ease: [0.61, 0, 0.59, 0.93], delay: 1.2 },
 			}}
 			className="p-4 bg-primary w-[50%] rounded-2xl drop-shadow-2xl z-0 overflow-hidden">
