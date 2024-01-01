@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiGithub, FiTwitter, FiYoutube } from "react-icons/fi";
-import { FaDiscord } from "react-icons/fa";
+import { TbBrandSteam } from "react-icons/tb";
 
 const socials = [
 	{
@@ -9,7 +9,7 @@ const socials = [
 		image: (
 			<FiGithub
 				size={48}
-				strokeWidth={1.4}
+				strokeWidth={1.2}
 				className="opacity-40 group-hover:opacity-80 duration-500"
 			/>
 		),
@@ -20,7 +20,7 @@ const socials = [
 		image: (
 			<FiTwitter
 				size={48}
-				strokeWidth={1.4}
+				strokeWidth={1.2}
 				className="opacity-40 group-hover:opacity-80 duration-500"
 			/>
 		),
@@ -30,21 +30,20 @@ const socials = [
 		link: "https://www.youtube.com/@thewilzzu",
 		image: (
 			<FiYoutube
-				size={48}
-				strokeWidth={1.4}
+				size={52}
+				strokeWidth={1.2}
 				className="opacity-40 group-hover:opacity-80 duration-500"
 			/>
 		),
 	},
 	{
-		name: "Discord",
-		link: "",
+		name: "Steam",
+		link: "https://steamcommunity.com/id/wilzzu/",
 		image: (
-			<FaDiscord
-				size={48}
-				fill="transparent"
-				strokeWidth={36}
-				className="opacity-40 group-hover:opacity-80 duration-500"
+			<TbBrandSteam
+				size={52}
+				strokeWidth={1.2}
+				className="opacity-40 group-hover:opacity-80 duration-500 social-stroke"
 			/>
 		),
 	},

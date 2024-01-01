@@ -16,3 +16,13 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+/* @keyframes changeBGColor {
+	0% {
+		background-color: #141316;
+	}
+}
+
+body {
+	animation: changeBGColor 3s ease-in-out;
+} */
