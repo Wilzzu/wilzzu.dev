@@ -1,39 +1,32 @@
 import Tilt from "react-parallax-tilt";
-import { motion, useAnimationControls } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import Socials from "../Socials";
 
+// Animation variants
 const variants = {
 	hidden: { y: 300, opacity: 0 },
 	start: {
 		y: 0,
 		opacity: 1,
 		transition: {
-			y: { duration: 4.5, type: "tween", ease: [0.45, 0.45, 0.15, 1] },
-			opacity: { duration: 3.5, type: "tween", ease: [0.61, 0, 0.59, 0.93], delay: 0.2 },
+			y: { duration: 3.5, type: "tween", ease: [0.45, 0.45, 0.15, 1] },
+			opacity: { duration: 2.5, type: "tween", ease: [0.61, 0, 0.59, 0.93], delay: 0.2 },
 		},
-	},
-	end: {
-		y: -20,
-		transition: { duration: 4.5, type: "tween", ease: [0.45, 0.45, 0.15, 1] },
 	},
 };
 
 const Logo = (props) => {
 	// Control animation state
-	const controls = useAnimationControls();
 	const [firstLayoutAnimationComplete, setFirstLayoutAnimationComplete] = useState(false);
 
 	// Move the logo upwards after the first layout animation has finished
+	// BUG: This doesn't trigger, if user is changing the window size
+	// TODO: Create a failsafe using the projects container:
+	// - When the projects container is visible, trigger this if it hasn't been triggered yet
 	const handleLayoutAnimationComplete = () => {
 		if (!firstLayoutAnimationComplete) setFirstLayoutAnimationComplete(true);
-		controls.start("end"); //TODO: This moves the whole container right now, it should only move the logo
 	};
-
-	// Start animation on mount
-	useEffect(() => {
-		controls.start("start");
-	}, [controls]);
 
 	return (
 		// Full height container that moves to the left after logo reveal
@@ -42,9 +35,9 @@ const Logo = (props) => {
 			id="logoContainer"
 			transition={{ layout: { duration: 2, type: "tween", ease: [0.61, 0, 0.59, 0.93] } }} //TODO: Make a better animation
 			onLayoutAnimationComplete={handleLayoutAnimationComplete}
-			className="relative w-[40%] h-full flex flex-col items-center justify-center drop-shadow-2xl select-none z-10">
+			className="relative w-[40%] h-full flex flex-col items-center justify-center drop-shadow-2xl select-none overflow-hidden z-10">
 			{/* Container for logo and socials */}
-			<motion.div layout className="w-full h-full flex flex-col items-center justify-center gap-8">
+			<motion.div className="w-full h-full flex flex-col items-center justify-center gap-8">
 				{/* Container for logo, to move it upwards at start */}
 				<motion.div
 					layout

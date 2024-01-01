@@ -7,7 +7,7 @@ function App() {
 	const [initialLogoAnimationComplete, setInitialLogoAnimationComplete] = useState(false);
 
 	return (
-		<main className="h-dvh w-full flex justify-center overflow-hidden">
+		<main className="h-dvh w-full flex justify-center">
 			{/* Main container */}
 			<div
 				className={cn(

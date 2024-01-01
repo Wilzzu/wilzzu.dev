@@ -49,7 +49,7 @@ const socials = [
 	},
 ];
 
-// Animations
+// Animation variants
 const container = {
 	start: {
 		transition: {
@@ -85,12 +85,14 @@ const Socials = () => {
 			variants={container}
 			className="h-14 w-full flex justify-between">
 			{/* Icons */}
+			{/* TODO: Add a card, which has the name of the social media platform, below the icon on hover */}
 			{socials.map((social) => (
-				<motion.li
-					key={social.name}
-					className="group w-14 h-14 flex items-center justify-center"
-					variants={item}>
-					<a target="_blank" rel="noopener noreferrer" href={social.link}>
+				<motion.li key={social.name} className="group w-14 h-14" variants={item}>
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						href={social.link}
+						className="h-full w-full flex items-center justify-center">
 						{social.image}
 					</a>
 				</motion.li>
