@@ -2,11 +2,12 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Socials from "../Socials";
+import AnimatedText from "../AnimatedText";
 
 // Animation variants
 const variants = {
 	hidden: { y: 300, opacity: 0 },
-	start: {
+	visible: {
 		y: 0,
 		opacity: 1,
 		transition: {
@@ -35,7 +36,7 @@ const Logo = (props) => {
 			id="logoContainer"
 			transition={{ layout: { duration: 2, type: "tween", ease: [0.61, 0, 0.59, 0.93] } }} //TODO: Make a better animation
 			onLayoutAnimationComplete={handleLayoutAnimationComplete}
-			className="relative w-[40%] h-full flex flex-col items-center justify-center drop-shadow-2xl select-none overflow-hidden z-10">
+			className="relative w-[40%] h-full flex flex-col items-center justify-center drop-shadow-2xl overflow-hidden z-10">
 			{/* Container for logo and socials */}
 			<motion.div className="w-full h-full flex flex-col items-center justify-center gap-8">
 				{/* Container for logo, to move it upwards at start */}
@@ -43,10 +44,27 @@ const Logo = (props) => {
 					layout
 					variants={variants}
 					initial="hidden"
-					animate="start"
+					animate="visible"
 					onAnimationComplete={() => props.setInitialLogoAnimationComplete(true)}
 					transition={{ layout: { duration: 1, type: "tween", ease: [0.61, 0, 0.59, 0.93] } }}
-					className="group px-10 w-full">
+					className="relative group px-10 w-full">
+					{/* Name and title */}
+					{firstLayoutAnimationComplete && (
+						<div className="absolute -top-24 w-full mx-auto left-0 right-0 flex flex-col items-center justify-center">
+							<AnimatedText
+								text="Wilzzu"
+								style="text-5xl leading-none opacity-90"
+								delay={0.9}
+								duration={3}
+							/>
+							<AnimatedText
+								text="/ Web Developer"
+								style="text-xl leading-none opacity-50"
+								delay={3}
+								duration={0.2}
+							/>
+						</div>
+					)}
 					{/* Hoverable logo */}
 					{/* TODO: Add automatic hovering effect and tilting */}
 					<Tilt
@@ -61,13 +79,14 @@ const Logo = (props) => {
 						gyroscope={true}>
 						{/* Inner logo letter */}
 						<img
-							className="inner-element w-1/4 transform-style-3d translate-z-4 drop-shadow-2xl group-hover:scale-125 duration-500 ease-out"
+							className="inner-element w-1/4 transform-style-3d translate-z-4 drop-shadow-2xl group-hover:scale-125 duration-500 ease-out select-none"
 							src="./src/assets/LogoLetter.png"
 							alt="W letter logo"
 							draggable="false"
 						/>
 					</Tilt>
 				</motion.div>
+				{/* Socials */}
 				{firstLayoutAnimationComplete && <Socials />}
 			</motion.div>
 		</motion.div>

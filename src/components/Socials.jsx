@@ -51,7 +51,7 @@ const socials = [
 
 // Animation variants
 const container = {
-	start: {
+	visible: {
 		transition: {
 			staggerChildren: 0.12,
 		},
@@ -60,7 +60,7 @@ const container = {
 };
 
 const item = {
-	start: {
+	visible: {
 		y: 0,
 		opacity: 1,
 		transition: {
@@ -81,7 +81,7 @@ const Socials = () => {
 	return (
 		<motion.ul
 			initial="hidden"
-			animate="start"
+			animate="visible"
 			variants={container}
 			className="h-14 w-full flex justify-between">
 			{/* Icons */}
