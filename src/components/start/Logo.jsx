@@ -36,7 +36,7 @@ const Logo = (props) => {
 			id="logoContainer"
 			transition={{ layout: { duration: 2, type: "tween", ease: [0.61, 0, 0.59, 0.93] } }} //TODO: Make a better animation
 			onLayoutAnimationComplete={handleLayoutAnimationComplete}
-			className="relative w-[40%] h-full flex flex-col items-center justify-center drop-shadow-2xl overflow-hidden z-10">
+			className="relative w-[40%] h-full flex flex-col items-center justify-center drop-shadow-2xl z-10">
 			{/* Container for logo and socials */}
 			<motion.div className="w-full h-full flex flex-col items-center justify-center gap-8">
 				{/* Container for logo, to move it upwards at start */}
@@ -47,24 +47,7 @@ const Logo = (props) => {
 					animate="visible"
 					onAnimationComplete={() => props.setInitialLogoAnimationComplete(true)}
 					transition={{ layout: { duration: 1, type: "tween", ease: [0.61, 0, 0.59, 0.93] } }}
-					className="relative group px-10 w-full">
-					{/* Name and title */}
-					{firstLayoutAnimationComplete && (
-						<div className="absolute -top-24 w-full mx-auto left-0 right-0 flex flex-col items-center justify-center">
-							<AnimatedText
-								text="Wilzzu"
-								style="text-5xl leading-none opacity-90"
-								delay={0.9}
-								duration={3}
-							/>
-							<AnimatedText
-								text="/ Web Developer"
-								style="text-xl leading-none opacity-50"
-								delay={3}
-								duration={0.2}
-							/>
-						</div>
-					)}
+					className="relative group px-10 w-full z-20">
 					{/* Hoverable logo */}
 					{/* TODO: Add automatic hovering effect and tilting */}
 					<Tilt
@@ -86,8 +69,27 @@ const Logo = (props) => {
 						/>
 					</Tilt>
 				</motion.div>
-				{/* Socials */}
-				{firstLayoutAnimationComplete && <Socials />}
+				{/* Show socials, name and title below logo */}
+				{firstLayoutAnimationComplete && (
+					<>
+						<Socials />
+						{/* Name and title */}
+						<div className="w-full flex flex-col items-center justify-center">
+							<AnimatedText
+								text="Wilzzu"
+								style="text-5xl leading-none opacity-90"
+								delay={0.9}
+								duration={3}
+							/>
+							<AnimatedText
+								text="/ Web Developer"
+								style="text-xl leading-none opacity-50"
+								delay={3}
+								duration={0.2}
+							/>
+						</div>
+					</>
+				)}
 			</motion.div>
 		</motion.div>
 	);

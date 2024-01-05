@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const container = {
 	visible: (delay) => ({
 		transition: {
-			delayChildren: delay,
+			delayChildren: 0.4 + delay,
 			staggerChildren: 0.1,
 		},
 	}),
