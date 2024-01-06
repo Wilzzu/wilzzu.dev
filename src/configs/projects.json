@@ -1,0 +1,26 @@
+{
+	"project1": {
+		"title": "Project 1",
+		"image": "",
+		"links": {
+			"code": "github.com/wilzzu",
+			"live": "google.com"
+		}
+	},
+	"project2": {
+		"title": "Project 2",
+		"image": "",
+		"links": {
+			"code": "github.com/wilzzu",
+			"live": "google.com"
+		}
+	},
+	"project3": {
+		"title": "Project 3",
+		"image": "",
+		"links": {
+			"code": "github.com/wilzzu",
+			"live": "google.com"
+		}
+	}
+}

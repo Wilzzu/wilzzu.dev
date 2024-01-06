@@ -21,6 +21,8 @@ const Logo = (props) => {
 	// Control animation state
 	const [firstLayoutAnimationComplete, setFirstLayoutAnimationComplete] = useState(false);
 
+	// TODO: Add loading state, so that the animation doesn't start before the logo is loaded
+
 	// Move the logo upwards after the first layout animation has finished
 	// BUG: This doesn't trigger, if user is changing the window size
 	// TODO: Create a failsafe using the projects container:

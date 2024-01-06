@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
 	return (
@@ -16,11 +17,14 @@ const Projects = () => {
 				}}
 				className="p-4 bg-primary w-full rounded-2xl drop-shadow-2xl z-0 overflow-hidden">
 				{/* List of projects */}
+				{/* Render these using the projects.json */}
 				<ul className="flex flex-col gap-2 overflow-y-auto h-[40rem] scrollbar-thin scrollbar-thumb-accent scrollbar-thumb-rounded-full pr-4">
 					<li className="text-[rgb(75,75,75)] text-2xl border-b-[1px] border-[rgb(75,75,75)]">
 						2024
 					</li>
-					<li className="bg-secondary p-6 rounded-xl">Project 1</li>
+					<li className="bg-secondary p-6 rounded-xl">
+						<Link to="/project/project1">Project 1</Link>{" "}
+					</li>
 					<li className="bg-secondary p-6 rounded-xl">Project 2</li>
 					<li className="bg-secondary p-6 rounded-xl">Project 3</li>
 					<li className="text-[rgb(75,75,75)] text-2xl border-b-[1px] border-[rgb(75,75,75)] mt-2">
