@@ -1,13 +1,12 @@
-import { useParams } from "react-router-dom";
 import projects from "../../configs/projects.json";
 
-const ProjectDetails = () => {
-	const { projectName } = useParams();
+const ProjectDetails = (props) => {
+	// TODO: Get the project details from the projects.json with the project name
 
 	return (
-		<div className="w-[480px] h-full flex flex-col items-center justify-center">
-			<div className="bg-secondary h-[42rem] w-full p-4 flex flex-col items-center justify-center">
-				<p>{projects[projectName].title} details</p>
+		<div className="w-full h-full">
+			<div className="bg-secondary h-full w-full p-4 flex flex-col items-center justify-center backdrop-blur-lg bg-opacity-90">
+				<p>{projects[props.projectName].title} details</p>
 			</div>
 		</div>
 	);

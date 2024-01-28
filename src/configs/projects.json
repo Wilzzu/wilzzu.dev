@@ -1,26 +1,31 @@
 {
 	"project1": {
 		"title": "Project 1",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
+		"year": "2024",
 		"links": {
 			"code": "github.com/wilzzu",
 			"live": "google.com"
-		}
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" }
+		]
 	},
 	"project2": {
 		"title": "Project 2",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
+		"year": "2023",
 		"links": {
 			"code": "github.com/wilzzu",
-			"live": "google.com"
-		}
-	},
-	"project3": {
-		"title": "Project 3",
-		"image": "",
-		"links": {
-			"code": "github.com/wilzzu",
-			"live": "google.com"
-		}
+			"live": "google.com",
+			"demo": "demo.google.com"
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" }
+		]
 	}
 }

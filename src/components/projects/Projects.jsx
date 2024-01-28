@@ -1,11 +1,24 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
+import ProjectDetails from "../project-details/ProjectDetails";
+import { cn } from "../../../lib/utils";
+import { useEffect, useState } from "react";
 
-const Projects = () => {
+const Projects = (props) => {
+	const [animationComplete, setAnimationComplete] = useState(false);
+
+	useEffect(() => {
+		if (props.projectName && !animationComplete) setAnimationComplete(true);
+	}, [props.projectName, animationComplete]);
+
 	return (
-		// TODO: Fix overflow when window is resized
-		<div className="h-full w-[50%] flex items-center justify-center overflow-hidden">
-			{/* Container card */}
+		<div
+			className={cn(
+				"h-full w-[480px] flex items-center justify-center",
+				props.projectName && "w-full",
+				!animationComplete && "overflow-hidden"
+			)}>
+			{/* Projects container */}
 			<motion.div
 				layout
 				initial={{ y: 550, opacity: 0 }}
@@ -15,15 +28,22 @@ const Projects = () => {
 					y: { type: "spring", stiffness: 12, damping: 8, delay: 1.2 },
 					opacity: { duration: 1.4, type: "tween", ease: [0.61, 0, 0.59, 0.93], delay: 1.2 },
 				}}
-				className="p-4 bg-primary w-full rounded-2xl drop-shadow-2xl z-0 overflow-hidden">
+				onAnimationComplete={() => setAnimationComplete(true)}
+				className={cn(
+					"h-[40rem] p-4 w-[480px] z-0 overflow-hidden backdrop-blur-lg",
+					props.projectName && "h-full bg-primary bg-opacity-90"
+				)}>
 				{/* List of projects */}
-				{/* Render these using the projects.json */}
-				<ul className="flex flex-col gap-2 overflow-y-auto h-[40rem] scrollbar-thin scrollbar-thumb-accent scrollbar-thumb-rounded-full pr-4">
+				{/* 
+				TODO: 	Add shadow to top and bottom 
+				TODO:	Render these using the projects.json 
+				*/}
+				<ul className="h-full flex flex-col gap-2 overflow-y-auto scrollbar-thin scrollbar-thumb-secondary scrollbar-thumb-rounded-full drop-shadow-md pr-4">
 					<li className="text-[rgb(75,75,75)] text-2xl border-b-[1px] border-[rgb(75,75,75)]">
 						2024
 					</li>
 					<li className="bg-secondary p-6 rounded-xl">
-						<Link to="/project/project1">Project 1</Link>{" "}
+						<Link to={!props.projectName && "/project/project1"}>Project 1</Link>{" "}
 					</li>
 					<li className="bg-secondary p-6 rounded-xl">Project 2</li>
 					<li className="bg-secondary p-6 rounded-xl">Project 3</li>
@@ -40,8 +60,18 @@ const Projects = () => {
 					<li className="bg-secondary p-6 rounded-xl">Project 8</li>
 					<li className="bg-secondary p-6 rounded-xl">Project 9</li>
 					<li className="bg-secondary p-6 rounded-xl">Project 10</li>
+					<li className="bg-secondary p-6 rounded-xl">Project 11</li>
+					<li className="bg-secondary p-6 rounded-xl">Project 12</li>
 				</ul>
 			</motion.div>
+
+			{/* Project details */}
+			<Routes>
+				<Route
+					path="project/:projectName"
+					element={<ProjectDetails projectName={props.projectName} />}
+				/>
+			</Routes>
 		</div>
 	);
 };
