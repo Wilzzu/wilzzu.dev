@@ -22,14 +22,14 @@ const parseUrl = (title) => {
 	return title.replace(/\s+/g, "-").toLowerCase();
 };
 
-const ProjectItem = ({ item, current, index }) => {
+const ProjectItem = ({ item, current, index, lastItem }) => {
 	const selected = current === parseUrl(item.title);
 
 	return (
 		<motion.li
 			layout
 			variants={itemVariant}
-			style={selected && { gridRowStart: index / 2 }} // Make right side items span above
+			style={!lastItem && selected && { gridRowStart: index / 2 }} // Make right side items span above
 			className={cn(selected && "col-span-2")} // Selected items span both columns
 		>
 			<Link to={!selected && `/project/${parseUrl(item.title)}`}>

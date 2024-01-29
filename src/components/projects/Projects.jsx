@@ -28,7 +28,7 @@ const scrollShadow = (element, botShadow, topShadow) => {
 
 // Scroll to the selected project
 const scrollToProject = (listRef, projectName) => {
-	if (listRef.current && projectName) {
+	if (projectName && listRef?.current) {
 		const selectedProject = listRef.current.querySelector(`[href="/project/${projectName}"]`);
 
 		if (selectedProject) {
@@ -42,10 +42,13 @@ const scrollToProject = (listRef, projectName) => {
 
 const Projects = () => {
 	const { projectName } = useParams();
+
+	// Refs
 	const listRef = useRef(null);
 	const botShadow = useRef(null);
 	const topShadow = useRef(null);
 
+	// Scroll to a project when the url changes
 	useEffect(() => {
 		scrollToProject(listRef, projectName);
 	}, [projectName]);
@@ -59,7 +62,7 @@ const Projects = () => {
 				<div
 					ref={topShadow}
 					style={{ opacity: 0 }}
-					className="absolute top-4 bg-gradient-to-b from-background to-transparent h-4 w-full z-10 duration-500"
+					className="absolute top-4 bg-gradient-to-b from-background to-transparent right-8 h-4 w-full z-10 duration-500"
 				/>
 				{/* List of projects */}
 				<motion.ul
@@ -72,14 +75,20 @@ const Projects = () => {
 					onScroll={(e) => scrollShadow(e.target, botShadow, topShadow)}
 					className="h-full grid grid-cols-2 grid-flow-dense gap-6 overflow-y-auto scrollbar-thin scrollbar-thumb-secondary scrollbar-thumb-rounded-full drop-shadow-md pr-4">
 					{projectsDb.map((project, i) => (
-						<ProjectItem key={project.title} item={project} current={projectName} index={i + 1} />
+						<ProjectItem
+							key={project.title}
+							item={project}
+							current={projectName}
+							index={i + 1}
+							lastItem={projectsDb.length === i + 1}
+						/>
 					))}
 				</motion.ul>
 				{/* Bottom Shadow */}
 				<div
 					ref={botShadow}
 					style={{ opacity: 0.2 }}
-					className="relative bottom-4 bg-gradient-to-t from-background to-transparent h-4 w-full z-10 duration-500"
+					className="relative bottom-4 bg-gradient-to-t from-background to-transparent right-4 h-4 w-full z-10 duration-500"
 				/>
 			</div>
 		</div>
