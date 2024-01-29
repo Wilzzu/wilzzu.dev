@@ -22,11 +22,17 @@ const Projects = () => {
 
 	useEffect(() => {
 		// Scroll to the selected project
-		if (listRef.current) {
-			console.log(listRef.current);
-			// selectedProject.scrollIntoView({ behavior: "smooth", block: "center" });
+		if (listRef.current && projectName) {
+			const selectedProject = listRef.current.querySelector(`[href="/project/${projectName}"]`);
+
+			if (selectedProject) {
+				listRef.current.scrollTo({
+					top: selectedProject.offsetTop - 50,
+					behavior: "smooth",
+				});
+			}
 		}
-	}, [projectName]);
+	}, [listRef, projectName]);
 
 	return (
 		<div className="h-full w-[800px] flex flex-col items-center justify-center gap-4">
