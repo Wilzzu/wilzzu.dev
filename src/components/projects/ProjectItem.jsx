@@ -28,11 +28,10 @@ const ProjectItem = ({ item, current, index }) => {
 	return (
 		<motion.li
 			layout
-			key={item.title}
 			variants={itemVariant}
-			style={selected && { gridRowStart: index / 2 }}
-			className={cn(selected && "col-span-2")}>
-			{/* row-start-1 */}
+			style={selected && { gridRowStart: index / 2 }} // Make right side items span above
+			className={cn(selected && "col-span-2")} // Selected items span both columns
+		>
 			<Link to={!selected && `/project/${parseUrl(item.title)}`}>
 				<div className={cn("bg-secondary h-32 p-6 rounded-xl", selected && "h-72")}>
 					{item.title}
