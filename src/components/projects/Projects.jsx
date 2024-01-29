@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Navigation from "./Navigation";
 import projectsDb from "../../configs/projects.json";
 import ProjectItem from "./ProjectItem";
+import { useEffect, useRef } from "react";
 
 // Animation variants
 const list = {
@@ -17,6 +18,15 @@ const list = {
 
 const Projects = () => {
 	const { projectName } = useParams();
+	const listRef = useRef(null);
+
+	useEffect(() => {
+		// Scroll to the selected project
+		if (listRef.current) {
+			console.log(listRef.current);
+			// selectedProject.scrollIntoView({ behavior: "smooth", block: "center" });
+		}
+	}, [projectName]);
 
 	return (
 		<div className="h-full w-[800px] flex flex-col items-center justify-center gap-4">
@@ -26,12 +36,14 @@ const Projects = () => {
 				{/* List of projects */}
 				{/* TODO: Add shadow to top and bottom */}
 				<motion.ul
+					layout
 					initial="hidden"
 					animate="visible"
 					variants={list}
-					className="h-full grid grid-cols-2 gap-6 overflow-y-auto scrollbar-thin scrollbar-thumb-secondary scrollbar-thumb-rounded-full drop-shadow-md pr-4">
-					{projectsDb.map((project) => (
-						<ProjectItem key={project.title} item={project} current={projectName} />
+					ref={listRef}
+					className="h-full grid grid-cols-2 grid-flow-dense gap-6 overflow-y-auto scrollbar-thin scrollbar-thumb-secondary scrollbar-thumb-rounded-full drop-shadow-md pr-4">
+					{projectsDb.map((project, i) => (
+						<ProjectItem key={project.title} item={project} current={projectName} index={i + 1} />
 					))}
 				</motion.ul>
 			</div>

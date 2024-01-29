@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { cn } from "../../../lib/utils";
 
 // Animation variants
 const itemVariant = {
@@ -21,13 +22,21 @@ const parseUrl = (title) => {
 	return title.replace(/\s+/g, "-").toLowerCase();
 };
 
-const ProjectItem = ({ item, current }) => {
+const ProjectItem = ({ item, current, index }) => {
 	const selected = current === parseUrl(item.title);
 
 	return (
-		<motion.li key={item.title} variants={itemVariant}>
+		<motion.li
+			layout
+			key={item.title}
+			variants={itemVariant}
+			style={selected && { gridRowStart: index / 2 }}
+			className={cn(selected && "col-span-2")}>
+			{/* row-start-1 */}
 			<Link to={!selected && `/project/${parseUrl(item.title)}`}>
-				<div className="bg-secondary h-32 p-6 rounded-xl">{item.title}</div>
+				<div className={cn("bg-secondary h-32 p-6 rounded-xl", selected && "h-72")}>
+					{item.title}
+				</div>
 			</Link>
 		</motion.li>
 	);
