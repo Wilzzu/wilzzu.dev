@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 // Animation variants
 const text = {
+	// TODO: Faster visible text animation
 	visible: {
 		y: 0,
 		opacity: 1,
@@ -17,7 +18,6 @@ const text = {
 	exit: { opacity: 0, transition: { duration: 0 } },
 };
 
-// TODO: Faster visible text animation
 const ItemThumbnail = ({ item }) => {
 	return (
 		<>

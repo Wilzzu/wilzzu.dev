@@ -8,8 +8,12 @@ const imageVariant = {
 		opacity: 1,
 		borderRadius: "8%",
 		transition: {
-			y: { duration: 0.8, type: "tween", ease: "easeOut", delay: 0.2 },
-			opacity: { duration: 0.8, delay: 0.2 },
+			y: { type: "spring", stiffness: 44, damping: 14 },
+			// duration: 0.8, type: "tween", ease: "easeOut", delay: 0.2
+			// type: "spring", stiffness: 32, damping: 14
+			opacity: { duration: 1, delay: 0.14 },
+			// duration: 0.8, delay: 0.2
+			// duration: 1, delay: 0.14
 		},
 	},
 	hidden: {
@@ -68,21 +72,25 @@ const SelectedItem = ({ item }) => {
 				variants={containerVariant}
 				className="w-full h-full flex flex-col items-center justify-between p-2 py-4 z-10 drop-shadow-md gap-2">
 				{/* Title */}
-				<motion.h1 layout="position" variants={itemVariant} className="font-semibold text-2xl">
-					{item.title}
-				</motion.h1>
+				<div className="w-full flex justify-center items-center gap-2">
+					<motion.h1 variants={itemVariant} className="font-semibold text-2xl">
+						{item.title}
+					</motion.h1>
+					<motion.p variants={itemVariant} className="font-light text-sm mt-[0.16rem]">
+						({item.year})
+					</motion.p>
+				</div>
 				{/* Description */}
 				<div className="flex flex-col gap-1 text-center px-4">
 					{/* Add line breaks */}
 					{item.description.split("<br />").map((line, i) => (
-						<motion.p layout="position" variants={itemVariant} key={i}>
+						<motion.p variants={itemVariant} key={i}>
 							{line}
 						</motion.p>
 					))}
 				</div>
 				{/* Links */}
 				<motion.div
-					layout="position"
 					variants={itemVariant}
 					className="w-full flex justify-center items-center gap-5">
 					{item?.links.map((link) => (

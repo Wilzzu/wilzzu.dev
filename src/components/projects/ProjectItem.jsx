@@ -56,7 +56,7 @@ const ProjectItem = ({ item, current, index, lastItem }) => {
 								<ItemThumbnail key={item.title + "-thumbnail"} item={item} />
 							)}
 						</AnimatePresence>
-						{/* Thumbnail */}
+						{/* Background image */}
 						<img
 							src={item.thumbnail}
 							alt={`${item.title} image`}

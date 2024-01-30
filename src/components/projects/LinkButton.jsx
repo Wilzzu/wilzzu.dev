@@ -2,7 +2,7 @@ import { FaCode } from "react-icons/fa6";
 import { PiTestTubeDuotone } from "react-icons/pi";
 import { FiExternalLink } from "react-icons/fi";
 
-// Remap the icon names to actual icons
+// Remap icon names to actual icons
 const icon = {
 	code: <FaCode />,
 	live: <FiExternalLink />,
