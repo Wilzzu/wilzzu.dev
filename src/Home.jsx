@@ -1,4 +1,4 @@
-import Logo from "./components/start/Logo";
+import Logo from "./components/Logo";
 import Projects from "./components/projects/Projects";
 import { useState } from "react";
 

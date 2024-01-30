@@ -1,8 +1,8 @@
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Socials from "../Socials";
-import AnimatedText from "../AnimatedText";
+import Socials from "./Socials";
+import AnimatedText from "./AnimatedText";
 
 // Animation variants
 const variants = {
