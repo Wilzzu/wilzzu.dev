@@ -5,10 +5,7 @@
 		"image": "./src/assets/projects/botBob.png",
 		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2024",
-		"links": [
-			{ "type": "code", "url": "https://github.com/Wilzzu/botBob" },
-			{ "type": "live", "url": "https://google.com" }
-		],
+		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/botBob" }],
 		"tech": [
 			{ "name": "React", "icon": "" },
 			{ "name": "Tailwind CSS", "icon": "" }

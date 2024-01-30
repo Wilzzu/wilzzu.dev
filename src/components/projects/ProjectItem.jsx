@@ -4,6 +4,7 @@ import { cn } from "../../../lib/utils";
 import Tilt from "react-parallax-tilt";
 import SelectedItem from "./SelectedItem";
 import ItemThumbnail from "./ItemThumbnail";
+import { forwardRef } from "react";
 
 // Animation variants
 const itemVariant = {
@@ -21,15 +22,15 @@ const itemVariant = {
 	},
 };
 
-const parseUrl = (title) => {
-	return title.replace(/\s+/g, "-").toLowerCase();
-};
-
-const ProjectItem = ({ item, current, index, lastItem }) => {
-	const selected = current === parseUrl(item.title);
+const ProjectItem = forwardRef(function ProjectItem(
+	{ item, current, parsedUrl, index, lastItem },
+	ref
+) {
+	const selected = current === parsedUrl;
 
 	return (
 		<motion.li
+			ref={ref}
 			layout
 			variants={itemVariant}
 			transition={{ layout: { duration: 0.3, type: "tween", ease: "easeInOut" } }}
@@ -41,7 +42,7 @@ const ProjectItem = ({ item, current, index, lastItem }) => {
 				transitionSpeed={2400}
 				tiltMaxAngleX={selected ? 4 : 8}
 				tiltMaxAngleY={selected ? 2 : 6}>
-				<Link to={!selected && `/project/${parseUrl(item.title)}`}>
+				<Link to={!selected && `/project/${parsedUrl}`}>
 					{/* Card container */}
 					<div
 						className={cn(
@@ -72,6 +73,6 @@ const ProjectItem = ({ item, current, index, lastItem }) => {
 			</Tilt>
 		</motion.li>
 	);
-};
+});
 
 export default ProjectItem;

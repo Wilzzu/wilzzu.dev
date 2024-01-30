@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 // Animation variants
 const text = {
-	// TODO: Faster visible text animation
+	// TODO: Faster visible text animation and stagger title and year
 	visible: {
 		y: 0,
 		opacity: 1,
@@ -22,6 +22,7 @@ const ItemThumbnail = ({ item }) => {
 	return (
 		<>
 			<div className="absolute w-full flex flex-col justify-center p-4 z-10">
+				{/* Title */}
 				<motion.h1
 					initial="hidden"
 					animate="visible"
@@ -31,6 +32,7 @@ const ItemThumbnail = ({ item }) => {
 					className="font-semibold text-lg">
 					{item.title}
 				</motion.h1>
+				{/* Year */}
 				<motion.h2
 					initial="hidden"
 					animate="visible"

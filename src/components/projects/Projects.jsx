@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Navigation from "./Navigation";
 import projectsDb from "../../configs/projects.json";
 import ProjectItem from "./ProjectItem";
-import { useEffect, useRef } from "react";
+import { createRef, useEffect, useRef } from "react";
 
 // Animation variants
 const list = {
@@ -18,6 +18,10 @@ const list = {
 	hidden: {
 		opacity: 0,
 	},
+};
+
+const parseUrl = (title) => {
+	return title.replace(/\s+/g, "-").toLowerCase();
 };
 
 // Check if scroll shadows should be shown
@@ -41,19 +45,16 @@ const scrollShadow = (element, botShadow, topShadow) => {
 };
 
 // Scroll to the selected project
-const scrollToProject = (listRef, projectName) => {
-	if (projectName && listRef?.current) {
-		// TODO: Fix this
-		const selectedProject = listRef.current.children[0].querySelector(
-			`[href="/project/${projectName}"]`
-		);
+const scrollToProject = (listRef, projectRefs, projectName) => {
+	const projectIndex = projectsDb.findIndex((project) => parseUrl(project.title) === projectName);
 
-		if (selectedProject) {
-			listRef.current.scrollTo({
-				top: selectedProject.offsetTop - 50,
-				behavior: "smooth",
-			});
-		}
+	if (projectIndex !== -1) {
+		const selectedProject = projectRefs.current[projectIndex];
+
+		listRef.current.scrollTo({
+			top: selectedProject.current.offsetTop - 50,
+			behavior: "smooth",
+		});
 	}
 };
 
@@ -61,13 +62,14 @@ const Projects = () => {
 	const { projectName } = useParams();
 
 	// Refs
+	const projectRefs = useRef(projectsDb.map(() => createRef()));
 	const listRef = useRef(null);
 	const botShadow = useRef(null);
 	const topShadow = useRef(null);
 
 	// Scroll to a project when the url changes
 	useEffect(() => {
-		scrollToProject(listRef, projectName);
+		if (projectName && listRef?.current) scrollToProject(listRef, projectRefs, projectName);
 	}, [projectName]);
 
 	return (
@@ -94,8 +96,10 @@ const Projects = () => {
 					{projectsDb.map((project, i) => (
 						<ProjectItem
 							key={project.title}
+							ref={projectRefs.current[i]}
 							item={project}
 							current={projectName}
+							parsedUrl={parseUrl(project.title)}
 							index={i + 1}
 							lastItem={projectsDb.length === i + 1}
 						/>

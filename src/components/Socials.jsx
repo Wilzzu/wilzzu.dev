@@ -75,7 +75,7 @@ const Socials = () => {
 					key={social.name}
 					className="group relative w-14 h-14 flex flex-col items-center"
 					variants={item}>
-					{/* Social logo */}
+					{/* Social icon */}
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
