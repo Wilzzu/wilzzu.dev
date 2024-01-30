@@ -1,14 +1,14 @@
 [
 	{
 		"title": "botBob",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"description": "An advanced Discord bot with fully customizable features, AI integration, and multilingual support.<br />I started this project in 2019, and have been updating it ever since!",
 		"image": "./src/assets/projects/botBob.png",
 		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2024",
-		"links": {
-			"code": "github.com/wilzzu",
-			"live": "google.com"
-		},
+		"links": [
+			{ "type": "code", "url": "https://github.com/Wilzzu/botBob" },
+			{ "type": "live", "url": "https://google.com" }
+		],
 		"tech": [
 			{ "name": "React", "icon": "" },
 			{ "name": "Tailwind CSS", "icon": "" }
@@ -19,11 +19,11 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2023",
-		"links": {
-			"code": "github.com/wilzzu",
-			"live": "google.com",
-			"demo": "demo.google.com"
-		},
+		"links": [
+			{ "type": "code", "url": "github.com/wilzzu" },
+			{ "type": "live", "url": "google.com" },
+			{ "type": "demo", "url": "demo.google.com" }
+		],
 		"tech": [
 			{ "name": "React", "icon": "" },
 			{ "name": "Tailwind CSS", "icon": "" }
@@ -34,10 +34,11 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2022",
-		"links": {
-			"code": "github.com/wilzzu",
-			"live": "google.com"
-		},
+		"links": [
+			{ "type": "code", "url": "github.com/wilzzu" },
+			{ "type": "live", "url": "google.com" },
+			{ "type": "demo", "url": "demo.google.com" }
+		],
 		"tech": [
 			{ "name": "React", "icon": "" },
 			{ "name": "Tailwind CSS", "icon": "" }
@@ -48,10 +49,10 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2021",
-		"links": {
-			"code": "github.com/wilzzu",
-			"live": "google.com"
-		},
+		"links": [
+			{ "type": "code", "url": "github.com/wilzzu" },
+			{ "type": "live", "url": "google.com" }
+		],
 		"tech": [
 			{ "name": "React", "icon": "" },
 			{ "name": "Tailwind CSS", "icon": "" }
@@ -62,10 +63,10 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2020",
-		"links": {
-			"code": "github.com/wilzzu",
-			"live": "google.com"
-		},
+		"links": [
+			{ "type": "code", "url": "github.com/wilzzu" },
+			{ "type": "live", "url": "google.com" }
+		],
 		"tech": [
 			{ "name": "React", "icon": "" },
 			{ "name": "Tailwind CSS", "icon": "" }
@@ -76,10 +77,10 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2019",
-		"links": {
-			"code": "github.com/wilzzu",
-			"live": "google.com"
-		},
+		"links": [
+			{ "type": "code", "url": "github.com/wilzzu" },
+			{ "type": "live", "url": "google.com" }
+		],
 		"tech": [
 			{ "name": "React", "icon": "" },
 			{ "name": "Tailwind CSS", "icon": "" }
@@ -90,10 +91,10 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2018",
-		"links": {
-			"code": "github.com/wilzzu",
-			"live": "google.com"
-		},
+		"links": [
+			{ "type": "code", "url": "github.com/wilzzu" },
+			{ "type": "live", "url": "google.com" }
+		],
 		"tech": [
 			{ "name": "React", "icon": "" },
 			{ "name": "Tailwind CSS", "icon": "" }
@@ -104,10 +105,10 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2017",
-		"links": {
-			"code": "github.com/wilzzu",
-			"live": "google.com"
-		},
+		"links": [
+			{ "type": "code", "url": "github.com/wilzzu" },
+			{ "type": "live", "url": "google.com" }
+		],
 		"tech": [
 			{ "name": "React", "icon": "" },
 			{ "name": "Tailwind CSS", "icon": "" }
@@ -118,10 +119,10 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2016",
-		"links": {
-			"code": "github.com/wilzzu",
-			"live": "google.com"
-		},
+		"links": [
+			{ "type": "code", "url": "github.com/wilzzu" },
+			{ "type": "live", "url": "google.com" }
+		],
 		"tech": [
 			{ "name": "React", "icon": "" },
 			{ "name": "Tailwind CSS", "icon": "" }
@@ -132,11 +133,10 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2015",
-		"links": {
-			"code": "github.com/wilzzu",
-			"live": "google.com",
-			"demo": "demo.google.com"
-		},
+		"links": [
+			{ "type": "code", "url": "github.com/wilzzu" },
+			{ "type": "live", "url": "google.com" }
+		],
 		"tech": [
 			{ "name": "React", "icon": "" },
 			{ "name": "Tailwind CSS", "icon": "" },

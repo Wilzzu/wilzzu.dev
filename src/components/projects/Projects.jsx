@@ -90,7 +90,7 @@ const Projects = () => {
 					ref={listRef}
 					onAnimationComplete={() => scrollToProject(listRef, projectName)}
 					onScroll={(e) => scrollShadow(e.target, botShadow, topShadow)}
-					className="h-full px-4 grid grid-cols-2 grid-flow-dense gap-6 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-[#D2A754] scrollbar-thumb-rounded-full drop-shadow-md pr-4">
+					className="h-full px-4 grid grid-cols-2 grid-flow-dense gap-6 overflow-y-auto overflow-x-hidden scrollbar scrollbar-w-2 scrollbar-thumb-accent scrollbar-thumb-rounded-full  drop-shadow-md pr-4">
 					{projectsDb.map((project, i) => (
 						<ProjectItem
 							key={project.title}
@@ -104,7 +104,7 @@ const Projects = () => {
 				{/* Bottom Shadow */}
 				<div
 					ref={botShadow}
-					style={{ opacity: 0.2 }}
+					style={{ opacity: 0.6 }}
 					className="relative bottom-4 bg-gradient-to-t from-background to-transparent right-4 h-4 w-full z-10 duration-500"
 				/>
 			</div>

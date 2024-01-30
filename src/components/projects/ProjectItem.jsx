@@ -42,11 +42,13 @@ const ProjectItem = ({ item, current, index, lastItem }) => {
 				tiltMaxAngleX={selected ? 4 : 8}
 				tiltMaxAngleY={selected ? 2 : 6}>
 				<Link to={!selected && `/project/${parseUrl(item.title)}`}>
+					{/* Card container */}
 					<div
 						className={cn(
 							"relative group flex items-center justify-center bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden gap-3",
 							selected && "h-72 p-4"
 						)}>
+						{/* Content */}
 						<AnimatePresence>
 							{selected ? (
 								<SelectedItem key={item.title + "-selected"} item={item} />
@@ -54,6 +56,7 @@ const ProjectItem = ({ item, current, index, lastItem }) => {
 								<ItemThumbnail key={item.title + "-thumbnail"} item={item} />
 							)}
 						</AnimatePresence>
+						{/* Thumbnail */}
 						<img
 							src={item.thumbnail}
 							alt={`${item.title} image`}

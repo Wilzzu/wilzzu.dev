@@ -14,7 +14,7 @@ export default {
 				primary: "#191919",
 				secondary: "#2A2A2A",
 				tertiary: "#8B8B8B",
-				accent: "#F1BF61",
+				accent: "#D2A754",
 			},
 		},
 	},

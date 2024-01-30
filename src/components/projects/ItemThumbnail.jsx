@@ -5,10 +5,6 @@ const text = {
 	visible: {
 		y: 0,
 		opacity: 1,
-		// transition: {
-		// 	y: { type: "tween", duration: 0.5, ease: "easeOut" },
-		// 	opacity: { duration: 1, ease: "easeInOut" },
-		// },
 	},
 	hidden: {
 		y: 3,
@@ -30,7 +26,7 @@ const ItemThumbnail = ({ item }) => {
 					initial="hidden"
 					animate="visible"
 					exit="exit"
-					transition={{ duration: 0.8, type: "tween", ease: "easeInOut", delay: 0.5 }}
+					transition={{ duration: 0.8, type: "tween", ease: "easeInOut", delay: 0.2 }}
 					variants={text}
 					className="font-semibold text-lg">
 					{item.title}
@@ -39,7 +35,7 @@ const ItemThumbnail = ({ item }) => {
 					initial="hidden"
 					animate="visible"
 					exit="exit"
-					transition={{ duration: 0.8, type: "tween", ease: "easeInOut", delay: 0.5 }}
+					transition={{ duration: 0.8, type: "tween", ease: "easeInOut", delay: 0.2 }}
 					variants={text}
 					className="text-sm text-neutral-400">
 					{item.year}

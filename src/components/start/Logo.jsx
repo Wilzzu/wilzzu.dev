@@ -28,6 +28,7 @@ const Logo = (props) => {
 	// TODO: Create a failsafe using the projects container:
 	// - When the projects container is visible, trigger this if it hasn't been triggered yet
 	const handleLayoutAnimationComplete = () => {
+		// TODO: Add loading bar here while waiting for all the images to load
 		if (!firstLayoutAnimationComplete) setFirstLayoutAnimationComplete(true);
 	};
 
@@ -64,7 +65,7 @@ const Logo = (props) => {
 						gyroscope={true}>
 						{/* Inner logo letter */}
 						<img
-							className="inner-element w-1/4 transform-style-3d translate-z-4 drop-shadow-2xl group-hover:scale-125 duration-500 ease-out select-none"
+							className="w-1/4 transform-style-3d translate-z-4 drop-shadow-2xl group-hover:scale-125 duration-500 ease-out select-none"
 							src="./src/assets/LogoLetter.png"
 							alt="W letter logo"
 							draggable="false"
