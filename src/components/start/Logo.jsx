@@ -60,7 +60,7 @@ const Logo = (props) => {
 						glareColor="#ffffff"
 						glarePosition="bottom"
 						glareBorderRadius="2rem"
-						transitionSpeed={2000}
+						transitionSpeed={2200}
 						gyroscope={true}>
 						{/* Inner logo letter */}
 						<img

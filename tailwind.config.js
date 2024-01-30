@@ -13,6 +13,15 @@ export default {
 				tertiary: "#8B8B8B",
 				accent: "#F1BF61",
 			},
+			keyframes: {
+				moveImage: {
+					"0%, 100%": { objectPosition: "0% 50%" },
+					"50%": { objectPosition: "100% 50%" },
+				},
+			},
+			animation: {
+				"move-image": "moveImage 30s ease-in-out infinite",
+			},
 		},
 	},
 	plugins: [tailwindcss3d, tailwindScrollbar({ nocompatible: true })],

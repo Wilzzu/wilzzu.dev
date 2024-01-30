@@ -2,7 +2,7 @@
 	{
 		"title": "Project 1",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"image": "",
+		"image": "./src/assets/projects/botBob.png",
 		"year": "2024",
 		"links": {
 			"code": "github.com/wilzzu",
