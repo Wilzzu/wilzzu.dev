@@ -57,6 +57,7 @@ const Projects = () => {
 		<div className="h-full w-[800px] flex flex-col items-center justify-center gap-4">
 			<Navigation />
 			{/* Projects container */}
+			{/* TODO: Transfer the padding from this to the ul */}
 			<div className="relative h-[40rem] p-4 w-full z-0 overflow-hidden backdrop-blur-lg">
 				{/* Top shadow */}
 				<div

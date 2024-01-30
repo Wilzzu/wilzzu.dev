@@ -35,7 +35,7 @@ const ProjectItem = ({ item, current, index, lastItem }) => {
 		>
 			<Link to={!selected && `/project/${parseUrl(item.title)}`}>
 				<div className={cn("bg-secondary h-32 p-6 rounded-xl", selected && "h-72")}>
-					{item.title}
+					<motion.p layout="position">{item.title}</motion.p>
 				</div>
 			</Link>
 		</motion.li>
