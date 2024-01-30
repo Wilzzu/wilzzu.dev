@@ -36,9 +36,9 @@ const Logo = (props) => {
 		<motion.div
 			layout
 			id="logoContainer"
-			transition={{ layout: { duration: 2, type: "tween", ease: [0.61, 0, 0.59, 0.93] } }} //TODO: Make a better animation
+			transition={{ layout: { duration: 1.8, type: "tween", ease: [0.62, 0, 0.25, 1] } }} //TODO: Make a better animation
 			onLayoutAnimationComplete={handleLayoutAnimationComplete}
-			className="relative w-[40%] h-full flex flex-col items-center justify-center drop-shadow-2xl z-10">
+			className="relative w-[380px] h-full flex flex-col items-center justify-center drop-shadow-2xl z-10">
 			{/* Container for logo and socials */}
 			<motion.div className="w-full h-full flex flex-col items-center justify-center gap-8">
 				{/* Container for logo, to move it upwards at start */}

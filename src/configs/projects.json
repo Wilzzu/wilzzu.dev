@@ -1,26 +1,145 @@
-{
-	"project1": {
+[
+	{
 		"title": "Project 1",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
+		"year": "2024",
 		"links": {
 			"code": "github.com/wilzzu",
 			"live": "google.com"
-		}
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" }
+		]
 	},
-	"project2": {
+	{
 		"title": "Project 2",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
+		"year": "2023",
 		"links": {
 			"code": "github.com/wilzzu",
-			"live": "google.com"
-		}
+			"live": "google.com",
+			"demo": "demo.google.com"
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" }
+		]
 	},
-	"project3": {
+	{
 		"title": "Project 3",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
+		"year": "2022",
 		"links": {
 			"code": "github.com/wilzzu",
 			"live": "google.com"
-		}
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" }
+		]
+	},
+	{
+		"title": "Project 4",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"image": "",
+		"year": "2021",
+		"links": {
+			"code": "github.com/wilzzu",
+			"live": "google.com"
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" }
+		]
+	},
+	{
+		"title": "Project 5",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"image": "",
+		"year": "2020",
+		"links": {
+			"code": "github.com/wilzzu",
+			"live": "google.com"
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" }
+		]
+	},
+	{
+		"title": "Project 6",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"image": "",
+		"year": "2019",
+		"links": {
+			"code": "github.com/wilzzu",
+			"live": "google.com"
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" }
+		]
+	},
+	{
+		"title": "Project 7",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"image": "",
+		"year": "2018",
+		"links": {
+			"code": "github.com/wilzzu",
+			"live": "google.com"
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" }
+		]
+	},
+	{
+		"title": "Project 8",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"image": "",
+		"year": "2017",
+		"links": {
+			"code": "github.com/wilzzu",
+			"live": "google.com"
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" }
+		]
+	},
+	{
+		"title": "Project 9",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"image": "",
+		"year": "2016",
+		"links": {
+			"code": "github.com/wilzzu",
+			"live": "google.com"
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" }
+		]
+	},
+	{
+		"title": "Project 10",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"image": "",
+		"year": "2015",
+		"links": {
+			"code": "github.com/wilzzu",
+			"live": "google.com",
+			"demo": "demo.google.com"
+		},
+		"tech": [
+			{ "name": "React", "icon": "" },
+			{ "name": "Tailwind CSS", "icon": "" },
+			{ "name": "Next.js", "icon": "" }
+		]
 	}
-}
+]
