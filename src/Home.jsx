@@ -7,7 +7,7 @@ function Home() {
 	// TODO: If user has already selected a project, don't show initial animations
 
 	return (
-		<main className="h-dvh w-full flex justify-center gap-24">
+		<main className="h-dvh w-full flex justify-center gap-24 font-poppins">
 			{/* Main container */}
 			<div className="h-full flex justify-center">
 				<Logo setInitialLogoAnimationComplete={setInitialLogoAnimationComplete} />

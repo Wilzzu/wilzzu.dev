@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../../../lib/utils";
 import Tilt from "react-parallax-tilt";
+import SelectedItem from "./SelectedItem";
+import ItemThumbnail from "./ItemThumbnail";
 
 // Animation variants
 const itemVariant = {
@@ -25,7 +27,6 @@ const parseUrl = (title) => {
 
 const ProjectItem = ({ item, current, index, lastItem }) => {
 	const selected = current === parseUrl(item.title);
-	console.log(item);
 
 	return (
 		<motion.li
@@ -35,23 +36,34 @@ const ProjectItem = ({ item, current, index, lastItem }) => {
 			style={!lastItem && selected && { gridRowStart: index / 2 }} // Make right side items span above
 			className={cn(selected && "col-span-2")} // Selected items span both columns
 		>
-			<Tilt perspective={800} transitionSpeed={2200} tiltMaxAngleX={4} tiltMaxAngleY={10}>
+			<Tilt
+				perspective={800}
+				transitionSpeed={2400}
+				tiltMaxAngleX={selected ? 4 : 8}
+				tiltMaxAngleY={selected ? 2 : 6}>
 				<Link to={!selected && `/project/${parseUrl(item.title)}`}>
 					<div
 						className={cn(
-							"relative group bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden",
-							selected && "h-72"
+							"relative group flex items-center justify-center bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden gap-3",
+							selected && "h-72 p-4"
 						)}>
+						<AnimatePresence>
+							{selected ? (
+								<SelectedItem key={item.title + "-selected"} item={item} />
+							) : (
+								<ItemThumbnail key={item.title + "-thumbnail"} item={item} />
+							)}
+						</AnimatePresence>
 						<img
-							src={item.image}
+							src={item.thumbnail}
 							alt={`${item.title} image`}
 							className={cn(
-								"absolute w-full h-full object-cover blur-sm opacity-50 duration-300",
-								selected && "opacity-100 blur-none w-[30%] animate-move-image",
-								!selected && "group-hover:opacity-70 group-hover:blur-none"
+								"absolute w-full h-full object-cover blur-sm duration-300 z-0",
+								selected
+									? "opacity-10 blur-md"
+									: "opacity-20 group-hover:opacity-30 group-hover:blur-[2px]"
 							)}
 						/>
-						<motion.p layout="position">{item.title}</motion.p>
 					</div>
 				</Link>
 			</Tilt>

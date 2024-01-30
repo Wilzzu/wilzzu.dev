@@ -1,8 +1,9 @@
 [
 	{
-		"title": "Project 1",
+		"title": "botBob",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "./src/assets/projects/botBob.png",
+		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2024",
 		"links": {
 			"code": "github.com/wilzzu",
@@ -14,7 +15,7 @@
 		]
 	},
 	{
-		"title": "Project 2",
+		"title": "CS2Rankings",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2023",
@@ -29,7 +30,7 @@
 		]
 	},
 	{
-		"title": "Project 3",
+		"title": "wilzzu.dev",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2022",
@@ -43,7 +44,7 @@
 		]
 	},
 	{
-		"title": "Project 4",
+		"title": "Thunderblaze",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"image": "",
 		"year": "2021",
