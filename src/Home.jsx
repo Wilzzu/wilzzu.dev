@@ -1,19 +1,23 @@
+import { useParams } from "react-router-dom";
 import Logo from "./components/Logo";
 import Projects from "./components/projects/Projects";
 import { useState } from "react";
 
 function Home() {
+	const { projectName } = useParams();
 	const [initialLogoAnimationComplete, setInitialLogoAnimationComplete] = useState(false);
-	// TODO: If user has already selected a project, don't show initial animations
 
 	return (
 		<main className="h-dvh w-full flex justify-center gap-24 font-poppins">
 			{/* Main container */}
 			<div className="h-full flex justify-center">
-				<Logo setInitialLogoAnimationComplete={setInitialLogoAnimationComplete} />
+				<Logo
+					setInitialLogoAnimationComplete={setInitialLogoAnimationComplete}
+					projectName={projectName}
+				/>
 			</div>
 			{/* Projects container */}
-			{initialLogoAnimationComplete && <Projects />}
+			{initialLogoAnimationComplete && <Projects projectName={projectName} />}
 		</main>
 	);
 }

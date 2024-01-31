@@ -11,7 +11,6 @@ const container = {
 	hidden: {},
 };
 
-// TODO: Make a better animation
 const character = {
 	visible: (dur) => ({
 		opacity: 1,

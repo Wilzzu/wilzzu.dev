@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useParams } from "react-router-dom";
 import Navigation from "./Navigation";
 import projectsDb from "../../configs/projects.json";
 import ProjectItem from "./ProjectItem";
@@ -58,9 +57,7 @@ const scrollToProject = (listRef, projectRefs, projectName) => {
 	}
 };
 
-const Projects = () => {
-	const { projectName } = useParams();
-
+const Projects = ({ projectName }) => {
 	// Refs
 	const projectRefs = useRef(projectsDb.map(() => createRef()));
 	const listRef = useRef(null);

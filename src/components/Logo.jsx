@@ -1,35 +1,42 @@
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Socials from "./Socials";
 import AnimatedText from "./AnimatedText";
 
 // Animation variants
 const variants = {
-	hidden: { y: 300, opacity: 0 },
-	visible: {
+	visible: ([yDur, opacityDur]) => ({
 		y: 0,
 		opacity: 1,
 		transition: {
-			y: { duration: 3.5, type: "tween", ease: [0.45, 0.45, 0.15, 1] },
-			opacity: { duration: 2.5, type: "tween", ease: [0.61, 0, 0.59, 0.93], delay: 0.2 },
+			y: { duration: yDur, type: "tween", ease: [0.45, 0.45, 0.15, 1] },
+			opacity: { duration: opacityDur, type: "tween", ease: [0.61, 0, 0.59, 0.93], delay: 0.2 },
 		},
-	},
+	}),
+	hidden: { y: 300, opacity: 0 },
 };
 
-const Logo = (props) => {
-	// Control animation state
+const Logo = ({ setInitialLogoAnimationComplete, projectName }) => {
 	const [firstLayoutAnimationComplete, setFirstLayoutAnimationComplete] = useState(false);
+	const animationState = useRef(firstLayoutAnimationComplete);
 
-	// TODO: Add loading state, so that the animation doesn't start before the logo is loaded
+	// Update the ref so setTimeout can access the latest state
+	useEffect(() => {
+		animationState.current = firstLayoutAnimationComplete;
+	}, [firstLayoutAnimationComplete]);
 
-	// Move the logo upwards after the first layout animation has finished
-	// BUG: This doesn't trigger, if user is changing the window size
-	// TODO: Create a failsafe using the projects container:
-	// - When the projects container is visible, trigger this if it hasn't been triggered yet
+	const handleInitialAnimationComplete = () => {
+		setInitialLogoAnimationComplete(true);
+
+		// Fail-safe if layoutAnimationComplete doesn't fire
+		setTimeout(() => {
+			handleLayoutAnimationComplete();
+		}, 3000);
+	};
+
 	const handleLayoutAnimationComplete = () => {
-		// TODO: Add loading bar here while waiting for all the images to load
-		if (!firstLayoutAnimationComplete) setFirstLayoutAnimationComplete(true);
+		if (!animationState.current) setFirstLayoutAnimationComplete(true);
 	};
 
 	return (
@@ -37,22 +44,34 @@ const Logo = (props) => {
 		<motion.div
 			layout
 			id="logoContainer"
-			transition={{ layout: { duration: 1.8, type: "tween", ease: [0.62, 0, 0.25, 1] } }} //TODO: Make a better animation
+			transition={{
+				layout: {
+					duration: projectName ? 1.2 : 1.8,
+					type: "tween",
+					ease: [0.62, 0, 0.25, 1],
+				},
+			}}
 			onLayoutAnimationComplete={handleLayoutAnimationComplete}
 			className="relative w-[380px] h-full flex flex-col items-center justify-center drop-shadow-2xl z-10">
 			{/* Container for logo and socials */}
 			<motion.div className="w-full h-full flex flex-col items-center justify-center gap-8">
-				{/* Container for logo, to move it upwards at start */}
+				{/* Container for logo, to move it upwards at start and after first layout animation */}
 				<motion.div
 					layout
-					variants={variants}
 					initial="hidden"
 					animate="visible"
-					onAnimationComplete={() => props.setInitialLogoAnimationComplete(true)}
-					transition={{ layout: { duration: 1, type: "tween", ease: [0.61, 0, 0.59, 0.93] } }}
+					variants={variants}
+					custom={projectName ? [0, 1] : [3.4, 2.5]}
+					onAnimationComplete={handleInitialAnimationComplete}
+					transition={{
+						layout: {
+							type: "tween",
+							duration: projectName ? 1.5 : 1.9,
+							ease: [0.48, 0.13, 0.15, 1],
+						},
+					}} //1.4 | 0.45, 0.16, 0.28, 1 /  2.1 | 0.38, 0.2, 0.06, 1 / 1.9 | 0.48, 0.13, 0.15, 1
 					className="relative group px-10 w-full z-20">
 					{/* Hoverable logo */}
-					{/* TODO: Add automatic hovering effect and tilting */}
 					<Tilt
 						className="bg-[url('./src/assets/LogoBG.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center aspect-square rounded-[2rem] transform-style-3d"
 						perspective={800}
@@ -82,12 +101,12 @@ const Logo = (props) => {
 								text="Wilzzu"
 								style="text-5xl leading-none opacity-90"
 								delay={0.9}
-								duration={3}
+								duration={projectName ? 1 : 3}
 							/>
 							<AnimatedText
 								text="/ Web Developer"
 								style="text-xl leading-none opacity-50"
-								delay={3}
+								delay={projectName ? 2.1 : 3}
 								duration={0.2}
 							/>
 						</div>
