@@ -32,7 +32,7 @@ const ItemThumbnail = ({ item }) => {
 			animate="visible"
 			exit="exit"
 			variants={container}
-			className="absolute w-full flex flex-col justify-center p-4 z-10">
+			className="absolute w-full flex flex-col justify-center p-5 z-10">
 			{/* Title */}
 			<motion.h1 variants={text} className="font-semibold text-lg">
 				{item.title}

@@ -6,7 +6,7 @@ const imageVariant = {
 	visible: {
 		y: 0,
 		opacity: 1,
-		borderRadius: "8%",
+		borderRadius: "7%",
 		transition: {
 			y: { type: "spring", stiffness: 44, damping: 14 },
 			// duration: 0.8, type: "tween", ease: "easeOut", delay: 0.2
@@ -21,8 +21,8 @@ const imageVariant = {
 		opacity: 0,
 	},
 	exit: {
-		x: -200,
-		scale: 0.64,
+		x: -220,
+		scale: 0.55,
 		opacity: 0,
 		transition: {
 			x: { type: "tween", duration: 0.6, ease: "easeOut" },
@@ -61,7 +61,7 @@ const SelectedItem = ({ item }) => {
 				variants={imageVariant}
 				src={item.image}
 				alt={`${item.title} image`}
-				className="w-1/2 h-full z-10"
+				className="w-auto h-[14.5rem] aspect-square z-10"
 			/>
 			{/* Content container */}
 			<motion.div

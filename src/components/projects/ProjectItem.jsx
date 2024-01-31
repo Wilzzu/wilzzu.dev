@@ -47,7 +47,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 					<div
 						className={cn(
 							"relative group flex items-center justify-center bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden gap-3",
-							selected && "h-72 p-4"
+							selected && "h-72 px-6 py-4"
 						)}>
 						{/* Content */}
 						<AnimatePresence>
