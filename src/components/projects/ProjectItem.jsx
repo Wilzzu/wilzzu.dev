@@ -38,13 +38,15 @@ const ProjectItem = forwardRef(function ProjectItem(
 				perspective={800}
 				transitionSpeed={2400}
 				tiltMaxAngleX={selected ? 4 : 8}
-				tiltMaxAngleY={selected ? 2 : 6}>
+				tiltMaxAngleY={selected ? 2 : 6}
+				tiltReverse={selected}>
 				<Link to={!selected && `/project/${parsedUrl}`} draggable={false}>
 					{/* Card container */}
 					<div
 						className={cn(
 							"relative group flex items-center justify-center bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden gap-3",
 							selected && "h-72 px-6 py-4"
+							// TODO: Maybe change to py-3 if being too cramped
 						)}>
 						{/* Content */}
 						<AnimatePresence>

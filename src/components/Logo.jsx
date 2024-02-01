@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Socials from "./Socials";
 import AnimatedText from "./AnimatedText";
+import { useLocation } from "react-router-dom";
 
 // Animation variants
 const variants = {
@@ -17,8 +18,9 @@ const variants = {
 	hidden: { y: 300, opacity: 0 },
 };
 
-const Logo = ({ setInitialLogoAnimationComplete, projectName }) => {
+const Logo = ({ setIntroAnimationOver }) => {
 	const [firstLayoutAnimationComplete, setFirstLayoutAnimationComplete] = useState(false);
+	const location = useLocation();
 	const animationState = useRef(firstLayoutAnimationComplete);
 
 	// Update the ref so setTimeout can access the latest state
@@ -27,7 +29,7 @@ const Logo = ({ setInitialLogoAnimationComplete, projectName }) => {
 	}, [firstLayoutAnimationComplete]);
 
 	const handleInitialAnimationComplete = () => {
-		setInitialLogoAnimationComplete(true);
+		setIntroAnimationOver(true);
 
 		// Fail-safe if layoutAnimationComplete doesn't fire
 		setTimeout(() => {
@@ -46,7 +48,7 @@ const Logo = ({ setInitialLogoAnimationComplete, projectName }) => {
 			id="logoContainer"
 			transition={{
 				layout: {
-					duration: projectName ? 1.2 : 1.8,
+					duration: location.pathname === "/" ? 1.8 : 1.2,
 					type: "tween",
 					ease: [0.62, 0, 0.25, 1],
 				},
@@ -61,12 +63,12 @@ const Logo = ({ setInitialLogoAnimationComplete, projectName }) => {
 					initial="hidden"
 					animate="visible"
 					variants={variants}
-					custom={projectName ? [0, 1] : [3.4, 2.5]}
+					custom={location.pathname === "/" ? [3.4, 2.5] : [0, 1]}
 					onAnimationComplete={handleInitialAnimationComplete}
 					transition={{
 						layout: {
 							type: "tween",
-							duration: projectName ? 1.5 : 1.9,
+							duration: location.pathname === "/" ? 1.9 : 1.5,
 							ease: [0.48, 0.13, 0.15, 1],
 						},
 					}} //1.4 | 0.45, 0.16, 0.28, 1 /  2.1 | 0.38, 0.2, 0.06, 1 / 1.9 | 0.48, 0.13, 0.15, 1
@@ -101,12 +103,12 @@ const Logo = ({ setInitialLogoAnimationComplete, projectName }) => {
 								text="Wilzzu"
 								style="text-5xl leading-none opacity-90"
 								delay={0.9}
-								duration={projectName ? 1 : 3}
+								duration={location.pathname === "/" ? 3 : 1}
 							/>
 							<AnimatedText
 								text="/ Web Developer"
 								style="text-xl leading-none opacity-50"
-								delay={projectName ? 2.1 : 3}
+								delay={location.pathname === "/" ? 3 : 2.1}
 								duration={0.2}
 							/>
 						</div>

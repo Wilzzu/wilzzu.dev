@@ -1,23 +1,18 @@
-import { useParams } from "react-router-dom";
 import Logo from "./components/Logo";
-import Projects from "./components/projects/Projects";
 import { useState } from "react";
+import ContainerRight from "./components/ContainerRight";
 
 function Home() {
-	const { projectName } = useParams();
-	const [initialLogoAnimationComplete, setInitialLogoAnimationComplete] = useState(false);
+	const [introAnimationOver, setIntroAnimationOver] = useState(false);
 
 	return (
 		<main className="h-dvh w-full flex justify-center gap-24 font-poppins">
 			{/* Main container */}
 			<section className="h-full flex justify-center">
-				<Logo
-					setInitialLogoAnimationComplete={setInitialLogoAnimationComplete}
-					projectName={projectName}
-				/>
+				<Logo setIntroAnimationOver={setIntroAnimationOver} />
 			</section>
-			{/* Projects container */}
-			{initialLogoAnimationComplete && <Projects projectName={projectName} />}
+			{/* Show projects and about container */}
+			{introAnimationOver && <ContainerRight />}
 		</main>
 	);
 }
