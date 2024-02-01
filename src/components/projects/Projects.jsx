@@ -14,9 +14,7 @@ const list = {
 			opacity: { delay: 0.7, duration: 0.4, ease: "easeInOut" },
 		},
 	},
-	hidden: {
-		opacity: 0,
-	},
+	hidden: { opacity: 0 },
 };
 
 const parseUrl = (title) => {
@@ -73,7 +71,7 @@ const Projects = ({ projectName }) => {
 		<div className="h-full w-[800px] flex flex-col items-center justify-center gap-4">
 			<Navigation />
 			{/* Projects container */}
-			<div className="relative h-[40rem] w-full z-0 overflow-hidden backdrop-blur-lg">
+			<section className="relative h-[40rem] w-full z-0 overflow-hidden backdrop-blur-lg">
 				{/* Top shadow */}
 				<div
 					ref={topShadow}
@@ -108,7 +106,7 @@ const Projects = ({ projectName }) => {
 					style={{ opacity: 0.6 }}
 					className="relative bottom-4 bg-gradient-to-t from-background to-transparent right-4 h-4 w-full z-10 duration-500"
 				/>
-			</div>
+			</section>
 		</div>
 	);
 };

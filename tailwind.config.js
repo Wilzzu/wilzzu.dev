@@ -16,6 +16,9 @@ export default {
 				tertiary: "#8B8B8B",
 				accent: "#D2A754",
 			},
+			dropShadow: {
+				icon: "0 1px 1px rgba(0, 0, 0, 1)",
+			},
 		},
 	},
 	plugins: [tailwindcss3d, tailwindScrollbar({ nocompatible: true })],

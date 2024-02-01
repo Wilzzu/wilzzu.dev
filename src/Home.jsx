@@ -10,12 +10,12 @@ function Home() {
 	return (
 		<main className="h-dvh w-full flex justify-center gap-24 font-poppins">
 			{/* Main container */}
-			<div className="h-full flex justify-center">
+			<section className="h-full flex justify-center">
 				<Logo
 					setInitialLogoAnimationComplete={setInitialLogoAnimationComplete}
 					projectName={projectName}
 				/>
-			</div>
+			</section>
 			{/* Projects container */}
 			{initialLogoAnimationComplete && <Projects projectName={projectName} />}
 		</main>

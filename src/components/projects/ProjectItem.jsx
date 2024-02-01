@@ -16,10 +16,7 @@ const itemVariant = {
 			opacity: { duration: 1, ease: "easeInOut" },
 		},
 	},
-	hidden: {
-		y: 50,
-		opacity: 0,
-	},
+	hidden: { y: 50, opacity: 0 },
 };
 
 const ProjectItem = forwardRef(function ProjectItem(
@@ -42,7 +39,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 				transitionSpeed={2400}
 				tiltMaxAngleX={selected ? 4 : 8}
 				tiltMaxAngleY={selected ? 2 : 6}>
-				<Link to={!selected && `/project/${parsedUrl}`}>
+				<Link to={!selected && `/project/${parsedUrl}`} draggable={false}>
 					{/* Card container */}
 					<div
 						className={cn(

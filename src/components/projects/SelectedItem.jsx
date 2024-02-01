@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import LinkButton from "./LinkButton";
+import TechIcons from "./TechIcons";
 
 // Animation variants
 const imageVariant = {
@@ -9,17 +10,10 @@ const imageVariant = {
 		borderRadius: "7%",
 		transition: {
 			y: { type: "spring", stiffness: 44, damping: 14 },
-			// duration: 0.8, type: "tween", ease: "easeOut", delay: 0.2
-			// type: "spring", stiffness: 32, damping: 14
 			opacity: { duration: 1, delay: 0.14 },
-			// duration: 0.8, delay: 0.2
-			// duration: 1, delay: 0.14
 		},
 	},
-	hidden: {
-		y: 100,
-		opacity: 0,
-	},
+	hidden: { y: 100, opacity: 0 },
 	exit: {
 		x: -220,
 		scale: 0.55,
@@ -32,14 +26,8 @@ const imageVariant = {
 };
 
 const containerVariant = {
-	visible: {
-		opacity: 1,
-		transition: {
-			when: "beforeChildren",
-			staggerChildren: 0.12,
-		},
-	},
-	hidden: { opacity: 0 },
+	visible: { transition: { delayChildren: 0.2, staggerChildren: 0.12 } },
+	hidden: {},
 	exit: {},
 };
 
@@ -61,6 +49,7 @@ const SelectedItem = ({ item }) => {
 				variants={imageVariant}
 				src={item.image}
 				alt={`${item.title} image`}
+				draggable={false}
 				className="w-auto h-[14.5rem] aspect-square z-10"
 			/>
 			{/* Content container */}
@@ -70,15 +59,24 @@ const SelectedItem = ({ item }) => {
 				animate="visible"
 				exit="exit"
 				variants={containerVariant}
-				className="w-full h-full flex flex-col items-center justify-between p-2 py-4 z-10 drop-shadow-md gap-2">
-				{/* Title */}
-				<div className="w-full flex justify-center items-center gap-2">
-					<motion.h1 variants={itemVariant} className="font-semibold text-2xl">
-						{item.title}
-					</motion.h1>
-					<motion.p variants={itemVariant} className="font-light text-sm mt-[0.16rem]">
-						({item.year})
-					</motion.p>
+				className="w-full h-full flex flex-col items-center justify-between gap-2 p-2 py-4 z-10 drop-shadow">
+				{/* Title and Badges */}
+				<div className="w-full flex flex-col items-center gap-2">
+					{/* Title */}
+					<div className="flex items-center gap-2">
+						<motion.h1 variants={itemVariant} className="font-semibold text-2xl">
+							{item.title}
+						</motion.h1>
+						<motion.p variants={itemVariant} className="font-light text-sm mt-[0.16rem]">
+							({item.year})
+						</motion.p>
+					</div>
+					{/* Badges */}
+					<motion.div
+						variants={containerVariant}
+						className="flex w-full items-center justify-center gap-2 scale-90">
+						<TechIcons items={item.tech} variant={itemVariant} badge={true} />
+					</motion.div>
 				</div>
 				{/* Description */}
 				<div className="flex flex-col gap-1 text-center px-4">

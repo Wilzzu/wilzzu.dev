@@ -5,11 +5,7 @@ import socials from "../configs/socials.json";
 
 // Animation variants
 const container = {
-	visible: {
-		transition: {
-			staggerChildren: 0.12,
-		},
-	},
+	visible: { transition: { staggerChildren: 0.12 } },
 	hidden: {},
 };
 
@@ -19,16 +15,10 @@ const item = {
 		opacity: 1,
 		transition: {
 			y: { type: "tween", duration: 1, ease: "easeOut" },
-			opacity: {
-				duration: 2,
-				ease: "easeInOut",
-			},
+			opacity: { duration: 2, ease: "easeInOut" },
 		},
 	},
-	hidden: {
-		y: -20,
-		opacity: 0,
-	},
+	hidden: { y: -20, opacity: 0 },
 };
 
 // Remap icon names to actual icons

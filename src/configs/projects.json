@@ -1,15 +1,13 @@
 [
 	{
 		"title": "botBob",
-		"description": "An advanced Discord bot with fully customizable features, AI integration, and multilingual support.<br />I started this project in 2019, and have been updating it ever since!",
+		"description": "An advanced Discord bot with fully customizable features, AI integration, and multilingual support.",
+		"temp": "<br />I started this project in 2019, and have been updating it ever since!",
 		"image": "./src/assets/projects/botBob.png",
 		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2024",
 		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/botBob" }],
-		"tech": [
-			{ "name": "React", "icon": "" },
-			{ "name": "Tailwind CSS", "icon": "" }
-		]
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "CS2Rankings",
@@ -21,10 +19,7 @@
 			{ "type": "live", "url": "google.com" },
 			{ "type": "demo", "url": "demo.google.com" }
 		],
-		"tech": [
-			{ "name": "React", "icon": "" },
-			{ "name": "Tailwind CSS", "icon": "" }
-		]
+		"tech": ["React", "Tailwind CSS", "MongoDB", "Express", "Redux", "Node.js"]
 	},
 	{
 		"title": "wilzzu.dev",
@@ -36,10 +31,7 @@
 			{ "type": "live", "url": "google.com" },
 			{ "type": "demo", "url": "demo.google.com" }
 		],
-		"tech": [
-			{ "name": "React", "icon": "" },
-			{ "name": "Tailwind CSS", "icon": "" }
-		]
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Thunderblaze",
@@ -50,10 +42,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": [
-			{ "name": "React", "icon": "" },
-			{ "name": "Tailwind CSS", "icon": "" }
-		]
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Project 5",
@@ -64,10 +53,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": [
-			{ "name": "React", "icon": "" },
-			{ "name": "Tailwind CSS", "icon": "" }
-		]
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Project 6",
@@ -78,10 +64,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": [
-			{ "name": "React", "icon": "" },
-			{ "name": "Tailwind CSS", "icon": "" }
-		]
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Project 7",
@@ -92,10 +75,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": [
-			{ "name": "React", "icon": "" },
-			{ "name": "Tailwind CSS", "icon": "" }
-		]
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Project 8",
@@ -106,10 +86,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": [
-			{ "name": "React", "icon": "" },
-			{ "name": "Tailwind CSS", "icon": "" }
-		]
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Project 9",
@@ -120,10 +97,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": [
-			{ "name": "React", "icon": "" },
-			{ "name": "Tailwind CSS", "icon": "" }
-		]
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Project 10",
@@ -134,10 +108,6 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": [
-			{ "name": "React", "icon": "" },
-			{ "name": "Tailwind CSS", "icon": "" },
-			{ "name": "Next.js", "icon": "" }
-		]
+		"tech": ["React", "Tailwind CSS"]
 	}
 ]
