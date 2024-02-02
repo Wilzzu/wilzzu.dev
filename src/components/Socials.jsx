@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { FiGithub, FiTwitter, FiYoutube } from "react-icons/fi";
+import { FiGithub, FiTwitter, FiYoutube, FiMail } from "react-icons/fi";
 import { TbBrandSteam } from "react-icons/tb";
-import socials from "../configs/socials.json";
+import { cn } from "../../lib/utils";
 
 // Animation variants
 const container = {
-	visible: { transition: { staggerChildren: 0.12 } },
+	visible: { transition: { staggerChildren: 0.16 } },
 	hidden: {},
 };
 
@@ -18,7 +18,7 @@ const item = {
 			opacity: { duration: 2, ease: "easeInOut" },
 		},
 	},
-	hidden: { y: -20, opacity: 0 },
+	hidden: (y) => ({ y: y, opacity: 0 }),
 };
 
 // Remap icon names to actual icons
@@ -51,20 +51,28 @@ const icons = {
 			className="opacity-40 group-hover:opacity-80 duration-500 social-stroke"
 		/>
 	),
+	email: (
+		<FiMail
+			size={52}
+			strokeWidth={1.2}
+			className="opacity-40 group-hover:opacity-80 duration-500"
+		/>
+	),
 };
 
-const Socials = () => {
+const Socials = ({ socials, style = null, direction }) => {
 	return (
 		<motion.ul
 			initial="hidden"
 			animate="visible"
 			variants={container}
-			className="h-14 w-full flex justify-between">
+			className={cn("h-14 w-full flex justify-between", style)}>
 			{socials.map((social) => (
 				<motion.li
 					key={social.name}
 					className="group relative w-14 h-14 flex flex-col items-center"
-					variants={item}>
+					variants={item}
+					custom={direction}>
 					{/* Social icon */}
 					<a
 						target="_blank"

@@ -1,22 +1,36 @@
-[
-	{
-		"name": "GitHub",
-		"link": "https://github.com/Wilzzu",
-		"icon": "github"
-	},
-	{
-		"name": "Twitter",
-		"link": "https://twitter.com/Wilzzu",
-		"icon": "twitter"
-	},
-	{
-		"name": "YouTube",
-		"link": "https://www.youtube.com/@thewilzzu",
-		"icon": "youtube"
-	},
-	{
-		"name": "Steam",
-		"link": "https://steamcommunity.com/id/wilzzu/",
-		"icon": "steam"
-	}
-]
+{
+	"socials": [
+		{
+			"name": "GitHub",
+			"link": "https://github.com/Wilzzu",
+			"icon": "github"
+		},
+		{
+			"name": "Twitter",
+			"link": "https://twitter.com/Wilzzu",
+			"icon": "twitter"
+		},
+		{
+			"name": "YouTube",
+			"link": "https://www.youtube.com/@thewilzzu",
+			"icon": "youtube"
+		},
+		{
+			"name": "Steam",
+			"link": "https://steamcommunity.com/id/wilzzu/",
+			"icon": "steam"
+		}
+	],
+	"contact": [
+		{
+			"name": "Twitter",
+			"link": "https://twitter.com/Wilzzu",
+			"icon": "twitter"
+		},
+		{
+			"name": "Email",
+			"link": "mailto:wilzzudev@gmail.com",
+			"icon": "email"
+		}
+	]
+}

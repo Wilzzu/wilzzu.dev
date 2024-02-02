@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Socials from "./Socials";
 import AnimatedText from "./AnimatedText";
 import { useLocation } from "react-router-dom";
+import socials from "../configs/socials.json";
 
 // Animation variants
 const variants = {
@@ -96,7 +97,7 @@ const Logo = ({ setIntroAnimationOver }) => {
 				{/* Show socials, name and title below logo */}
 				{firstLayoutAnimationComplete && (
 					<>
-						<Socials />
+						<Socials socials={socials.socials} direction={-20} />
 						{/* Name and title */}
 						<div className="w-full flex flex-col items-center justify-center">
 							<AnimatedText
