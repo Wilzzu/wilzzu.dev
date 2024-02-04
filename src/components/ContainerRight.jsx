@@ -20,9 +20,9 @@ const ContainerRight = () => {
 			<section className="relative h-[40rem] w-full z-0 overflow-hidden backdrop-blur-lg">
 				<AnimatePresence>
 					{location.pathname === "/about/" ? (
-						<About />
+						<About key="About" />
 					) : (
-						<Projects projectName={projectName} firstTime={firstTime} />
+						<Projects key="Projects" projectName={projectName} firstTime={firstTime} />
 					)}
 				</AnimatePresence>
 			</section>

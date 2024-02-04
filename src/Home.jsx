@@ -4,7 +4,7 @@ import ContainerRight from "./components/ContainerRight";
 
 function Home() {
 	const [introAnimationOver, setIntroAnimationOver] = useState(false);
-
+	// TODO: Add padding
 	return (
 		<main className="h-dvh w-full flex justify-center gap-24 font-poppins">
 			{/* Main container */}
