@@ -19,7 +19,7 @@ const itemVariant = {
 		},
 	},
 	hidden: { y: 50, scale: 0.8, opacity: 0 },
-	exit: { y: 20, scale: 0.8, opacity: 0, transition: { duration: 0.4, ease: "easeInOut" } },
+	exit: { scale: 0.8, opacity: 0, transition: { duration: 0.4, ease: "easeInOut" } },
 };
 
 const ProjectItem = forwardRef(function ProjectItem(

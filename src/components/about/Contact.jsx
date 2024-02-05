@@ -3,14 +3,24 @@ import socials from "../../configs/socials.json";
 import { motion } from "framer-motion";
 
 const container = {
-	visible: { transition: { delayChildren: 0.15 } },
+	visible: { transition: { delayChildren: 0.2 } },
 	hidden: {},
+	exit: {},
 };
 
 const item = {
-	visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 44, damping: 18 } },
-	hidden: { y: 14, opacity: 0 },
-	exit: { y: 0, opacity: 0, transition: { duration: 0 } },
+	visible: {
+		y: 0,
+		rotate: 0.01, // To make the animation render smoother
+		opacity: 1,
+		transition: {
+			duration: 1.8,
+			ease: "easeOut",
+			opacity: { duration: 1.4, ease: "easeInOut" },
+		},
+	},
+	hidden: { y: 20, opacity: 0 },
+	exit: { opacity: 0, transition: { duration: 0.5, ease: "easeIn" } },
 };
 
 const Contact = () => {

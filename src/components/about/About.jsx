@@ -1,17 +1,21 @@
 import Contact from "./Contact";
-import { motion } from "framer-motion";
+import { cubicBezier, motion } from "framer-motion";
 
 // Animation variants
 const container = {
 	visible: {
 		opacity: 1,
 		transition: {
-			staggerChildren: 0.12,
-			opacity: { duration: 1, ease: "easeInOut" },
+			staggerChildren: 0.14,
+			opacity: { duration: 0.9, ease: "easeInOut" },
 		},
 	},
 	hidden: { opacity: 0 },
-	exit: { opacity: 0, transition: { staggerChildren: 0.12, duration: 0.6, ease: "easeInOut" } },
+	exit: {
+		opacity: 0,
+		scale: 0.9,
+		transition: { staggerChildren: 0.08, duration: 0.8, ease: "easeInOut" },
+	},
 };
 
 const item = {
@@ -19,10 +23,16 @@ const item = {
 		y: 0,
 		rotate: 0.01, // To make the animation render smoother
 		opacity: 1,
-		transition: { type: "spring", stiffness: 40, damping: 18 },
+		transition: { duration: 2.4, ease: cubicBezier(0.09, 0.64, 0.26, 1) },
 	},
-	hidden: { y: 42, opacity: 0 },
-	exit: { y: 50, opacity: 0, transition: { type: "spring", stiffness: 40, damping: 18 } },
+	hidden: { y: 60, opacity: 0 },
+	exit: {
+		opacity: 0,
+		transition: {
+			duration: 0.5,
+			ease: "easeIn",
+		},
+	},
 };
 
 const About = () => {
