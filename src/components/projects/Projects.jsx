@@ -14,7 +14,7 @@ const list = {
 		}, //0.8 0.7
 	}),
 	hidden: { opacity: 0 },
-	exit: { opacity: 0, transition: { staggerChildren: 0.09, duration: 0.8, ease: "easeInOut" } },
+	exit: { opacity: 0, transition: { staggerChildren: 0.1, duration: 0.9, ease: "easeInOut" } },
 };
 
 const parseUrl = (title) => {

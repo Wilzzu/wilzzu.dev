@@ -20,7 +20,7 @@ const item = {
 		},
 	},
 	hidden: { y: 20, opacity: 0 },
-	exit: { opacity: 0, transition: { duration: 0.5, ease: "easeIn" } },
+	exit: { opacity: 0, transition: { duration: 0.3, ease: "easeIn" } },
 };
 
 const Contact = () => {
