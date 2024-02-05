@@ -19,7 +19,7 @@ const ContainerRight = () => {
 		<div className="h-full w-[800px] flex flex-col items-center justify-center gap-4">
 			<Navigation location={location} projectName={projectName} />
 			<section className="relative h-[40rem] w-full z-0 overflow-hidden backdrop-blur-lg">
-				<AnimatePresence mode="wait" onExitComplete={() => console.log("exited")}>
+				<AnimatePresence mode="wait">
 					{location.pathname === "/about/" ? (
 						<About key="About" />
 					) : (
