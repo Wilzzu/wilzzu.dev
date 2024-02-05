@@ -14,6 +14,7 @@ const list = {
 		}, //0.8 0.7
 	}),
 	hidden: { opacity: 0 },
+	exit: { opacity: 0, transition: { staggerChildren: 0.14, duration: 1, ease: "easeInOut" } },
 };
 
 const parseUrl = (title) => {
@@ -54,7 +55,7 @@ const scrollToProject = (listRef, projectRefs, projectName) => {
 	}
 };
 
-const Projects = ({ projectName, firstTime }) => {
+const Projects = ({ projectName, delayItems }) => {
 	// Refs
 	const projectRefs = useRef(projectsDb.map(() => createRef()));
 	const listRef = useRef(null);
@@ -81,8 +82,9 @@ const Projects = ({ projectName, firstTime }) => {
 				layout
 				initial="hidden"
 				animate="visible"
+				exit="exit"
 				variants={list}
-				custom={firstTime ? [0.8, 0.7] : [0, 0]}
+				custom={delayItems ? [0.8, 0.7] : [0, 0]}
 				ref={listRef}
 				onAnimationComplete={() => scrollToProject(listRef, projectName)}
 				onScroll={(e) => scrollShadow(e.target, botShadow, topShadow)}

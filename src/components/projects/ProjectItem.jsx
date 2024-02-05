@@ -10,13 +10,16 @@ import { forwardRef } from "react";
 const itemVariant = {
 	visible: {
 		y: 0,
+		scale: 1,
 		opacity: 1,
 		transition: {
 			y: { type: "tween", duration: 0.5, ease: "easeOut" },
 			opacity: { duration: 1, ease: "easeInOut" },
+			scale: { duration: 0.5, ease: "easeOut" },
 		},
 	},
-	hidden: { y: 50, opacity: 0 },
+	hidden: { y: 50, scale: 0.8, opacity: 0 },
+	exit: { y: 20, scale: 0.8, opacity: 0, transition: { duration: 0.4, ease: "easeInOut" } },
 };
 
 const ProjectItem = forwardRef(function ProjectItem(

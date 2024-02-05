@@ -11,7 +11,7 @@ const container = {
 		},
 	},
 	hidden: { opacity: 0 },
-	exit: { opacity: 0, transition: { duration: 2, ease: "easeInOut" } },
+	exit: { opacity: 0, transition: { staggerChildren: 0.12, duration: 0.6, ease: "easeInOut" } },
 };
 
 const item = {
@@ -22,7 +22,7 @@ const item = {
 		transition: { type: "spring", stiffness: 40, damping: 18 },
 	},
 	hidden: { y: 42, opacity: 0 },
-	exit: { y: 0, opacity: 0, transition: { duration: 0 } },
+	exit: { y: 50, opacity: 0, transition: { type: "spring", stiffness: 40, damping: 18 } },
 };
 
 const About = () => {
@@ -43,7 +43,7 @@ const About = () => {
 				{/* Content */}
 				<motion.p variants={item}>
 					{
-						"I'm a 24 year old student from Finland, who creates fun projects around my passions. With a background in graphic design, I focus on the design and try to make everything look as good as possible."
+						"I'm a 24 year old student from Finland, who enjoys creating fun projects around my passions. With a background in graphic design, I focus on the design and try to make everything look as good as possible."
 					}
 				</motion.p>
 				<motion.p variants={item}>
