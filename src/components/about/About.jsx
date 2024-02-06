@@ -6,10 +6,7 @@ import { cubicBezier, motion } from "framer-motion";
 const container = {
 	visible: {
 		opacity: 1,
-		transition: {
-			staggerChildren: 0.14,
-			opacity: { duration: 0.9, ease: "easeInOut" },
-		},
+		transition: { staggerChildren: 0.14, opacity: { duration: 0.9, ease: "easeInOut" } },
 	},
 	hidden: { opacity: 0 },
 	exit: {
@@ -27,24 +24,10 @@ const text = {
 		transition: { duration: 2.4, ease: cubicBezier(0.09, 0.64, 0.26, 1) },
 	},
 	hidden: { y: 60, opacity: 0 },
-	exit: {
-		opacity: 0,
-		transition: {
-			duration: 0.3,
-			ease: "easeIn",
-		},
-	},
+	exit: { opacity: 0, transition: { duration: 0.3, ease: "easeIn" } },
 };
 
-const title = {
-	exit: {
-		opacity: 0,
-		transition: {
-			duration: 0.3,
-			ease: "easeIn",
-		},
-	},
-};
+const title = { exit: { opacity: 0, transition: { duration: 0.3, ease: "easeIn" } } };
 
 const About = () => {
 	return (

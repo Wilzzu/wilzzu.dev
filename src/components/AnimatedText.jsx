@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 // Animations
 const container = {
 	visible: (delay) => ({
-		transition: {
-			delayChildren: 0.4 + delay,
-			staggerChildren: 0.1,
-		},
+		transition: { delayChildren: 0.4 + delay, staggerChildren: 0.1 },
 	}),
 	hidden: {},
 };
@@ -14,16 +11,9 @@ const container = {
 const character = {
 	visible: (dur) => ({
 		opacity: 1,
-		transition: {
-			opacity: {
-				duration: dur,
-				ease: "easeInOut",
-			},
-		},
+		transition: { opacity: { duration: dur, ease: "easeInOut" } },
 	}),
-	hidden: {
-		opacity: 0,
-	},
+	hidden: { opacity: 0 },
 };
 
 const AnimatedText = (props) => {

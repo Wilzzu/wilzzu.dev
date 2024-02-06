@@ -96,7 +96,7 @@ const Projects = ({ projectName, delayItems }) => {
 						item={project}
 						current={projectName}
 						parsedUrl={parseUrl(project.title)}
-						index={i + 1}
+						index={i}
 						lastItem={projectsDb.length === i + 1}
 					/>
 				))}

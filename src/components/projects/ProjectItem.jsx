@@ -34,7 +34,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 			layout
 			variants={itemVariant}
 			transition={{ layout: { duration: 0.3, type: "tween", ease: "easeInOut" } }}
-			style={!lastItem && selected && { gridRowStart: index / 2 }} // Make right side items span above
+			style={!lastItem && selected && { gridRowStart: (index + 1) / 2 }} // Make right side items span above
 			className={cn(selected && "col-span-2")} // Selected items span both columns
 		>
 			<Tilt
