@@ -11,10 +11,30 @@ const list = {
 			delayChildren,
 			staggerChildren: 0.12,
 			opacity: { delay: delayOpacity, duration: 0.4, ease: "easeInOut" },
-		}, //0.8 0.7
+		},
 	}),
 	hidden: { opacity: 0 },
-	exit: { opacity: 0, transition: { staggerChildren: 0.1, duration: 0.9, ease: "easeInOut" } },
+	exit: { opacity: 0, transition: { staggerChildren: 0.08, duration: 0.9, ease: "easeInOut" } },
+};
+
+const itemVariant = {
+	visible: {
+		y: 0,
+		scale: 1,
+		opacity: 1,
+		transition: {
+			y: { type: "tween", duration: 0.5, ease: "easeOut" },
+			opacity: { duration: 1, ease: "easeInOut" },
+			scale: { duration: 0.5, ease: "easeOut" },
+		},
+	},
+	hidden: { y: 50, scale: 0.8, opacity: 0 },
+	exit: { scale: 0.8, opacity: 0, transition: { duration: 0.4, ease: "easeInOut" } },
+};
+
+const fastExitVariant = {
+	...itemVariant,
+	exit: { ...itemVariant.exit, transition: { duration: 0.1 } },
 };
 
 const parseUrl = (title) => {
@@ -98,6 +118,7 @@ const Projects = ({ projectName, delayItems }) => {
 						parsedUrl={parseUrl(project.title)}
 						index={i}
 						lastItem={projectsDb.length === i + 1}
+						variant={i < 6 ? itemVariant : fastExitVariant}
 					/>
 				))}
 			</motion.ul>

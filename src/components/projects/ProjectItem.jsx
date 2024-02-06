@@ -6,24 +6,8 @@ import SelectedItem from "./SelectedItem";
 import ItemThumbnail from "./ItemThumbnail";
 import { forwardRef } from "react";
 
-// Animation variants
-const itemVariant = {
-	visible: {
-		y: 0,
-		scale: 1,
-		opacity: 1,
-		transition: {
-			y: { type: "tween", duration: 0.5, ease: "easeOut" },
-			opacity: { duration: 1, ease: "easeInOut" },
-			scale: { duration: 0.5, ease: "easeOut" },
-		},
-	},
-	hidden: { y: 50, scale: 0.8, opacity: 0 },
-	exit: { scale: 0.8, opacity: 0, transition: { duration: 0.4, ease: "easeInOut" } },
-};
-
 const ProjectItem = forwardRef(function ProjectItem(
-	{ item, current, parsedUrl, index, lastItem },
+	{ item, current, parsedUrl, index, lastItem, variant },
 	ref
 ) {
 	const selected = current === parsedUrl;
@@ -32,7 +16,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 		<motion.li
 			ref={ref}
 			layout
-			variants={itemVariant}
+			variants={variant}
 			transition={{ layout: { duration: 0.3, type: "tween", ease: "easeInOut" } }}
 			style={!lastItem && selected && { gridRowStart: (index + 1) / 2 }} // Make right side items span above
 			className={cn(selected && "col-span-2")} // Selected items span both columns
