@@ -60,7 +60,7 @@ const icons = {
 	),
 };
 
-const Socials = ({ socials, style = null, direction }) => {
+const Socials = ({ socials, direction, style = null }) => {
 	return (
 		<motion.ul
 			initial="hidden"

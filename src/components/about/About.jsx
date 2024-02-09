@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import AnimatedText from "../AnimatedText";
 import Contact from "./Contact";
 import { cubicBezier, motion } from "framer-motion";
@@ -30,6 +31,16 @@ const text = {
 const title = { exit: { opacity: 0, transition: { duration: 0.3, ease: "easeIn" } } };
 
 const About = () => {
+	const [removeFirstAnimation, setRemoveFirstAnimation] = useState(false);
+
+	// Remove first animation after 5 seconds
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setRemoveFirstAnimation(true);
+		}, 5000);
+		return () => clearTimeout(timeout);
+	}, []);
+
 	return (
 		// Card container
 		<motion.div
@@ -37,14 +48,18 @@ const About = () => {
 			animate="visible"
 			exit="exit"
 			variants={container}
-			className="flex items-center justify-center h-full w-full max-h-[37rem] bg-gradient-to-br from-[#19191975] to-[#2A2A2A75] backdrop-blur-md rounded-2xl py-10 px-4">
+			className="flex items-center justify-center h-full w-full max-h-[37.5rem] bg-gradient-to-br from-[#19191975] to-[#2A2A2A75] backdrop-blur-md rounded-2xl py-10 px-4">
 			<div className="flex flex-col max-w-[31rem] gap-4 text-justify items-center justify-between leading-relaxed text-sm text-[#d6d6d6]">
 				{/* Title */}
-				<motion.span
+				<motion.h1
 					variants={title}
-					className="text-[1.76rem] font-semibold mb-3 text-neutral-200">
-					<AnimatedText text="Hi, I'm Wilzzu! 👋" delay={0.6} duration={0.4} />
-				</motion.span>
+					className="flex gap-2 text-[1.76rem] font-semibold mb-3 text-neutral-200 group">
+					<AnimatedText text="Hi, I'm Wilzzu!" delay={0.6} duration={0.4} />
+					{/* Waving hand */}
+					<span className={removeFirstAnimation ? "group-hover:animate-hoverWave" : "animate-wave"}>
+						{"👋"}
+					</span>
+				</motion.h1>
 
 				{/* Content */}
 				<motion.p variants={text}>

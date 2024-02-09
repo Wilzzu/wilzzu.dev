@@ -102,15 +102,15 @@ const Logo = ({ setIntroAnimationOver }) => {
 						<div className="w-full flex flex-col items-center justify-center">
 							<AnimatedText
 								text="Wilzzu"
-								style="text-5xl leading-none opacity-90"
 								delay={0.9}
 								duration={location.pathname === "/" ? 3 : 1}
+								style="text-5xl leading-none opacity-90"
 							/>
 							<AnimatedText
 								text="/ Web Developer"
-								style="text-xl leading-none opacity-50"
 								delay={location.pathname === "/" ? 3 : 2.1}
 								duration={0.2}
+								style="text-xl leading-none opacity-50"
 							/>
 						</div>
 					</>

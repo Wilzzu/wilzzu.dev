@@ -3,7 +3,7 @@ import socials from "../../configs/socials.json";
 import { motion } from "framer-motion";
 
 const container = {
-	visible: { transition: { delayChildren: 0.2 } },
+	visible: { transition: { delayChildren: 0.2, staggerChildren: 0.1 } },
 	hidden: {},
 	exit: {},
 };
@@ -25,13 +25,14 @@ const item = {
 
 const Contact = () => {
 	return (
-		<motion.div variants={container}>
-			<motion.div variants={item}>
-				<Socials socials={socials.contact} style={"justify-center gap-8 scale-90"} direction={20} />
-			</motion.div>
-			<motion.p variants={item} className="text-sm text-neutral-400">
-				{"Contact me on Twitter or via email."}
+		<motion.div variants={container} className="flex flex-col-reverse">
+			<motion.p variants={item} className="text-sm text-neutral-400 text-center">
+				{"Contact me on Twitter or via email."} <br />{" "}
+				<span className="text-xs">{"(Email: wilzzudev@gmail.com)"}</span>
 			</motion.p>
+			<motion.div variants={item}>
+				<Socials socials={socials.contact} direction={20} style={"justify-center gap-8 scale-90"} />
+			</motion.div>
 		</motion.div>
 	);
 };

@@ -32,7 +32,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 					<div
 						className={cn(
 							"relative group flex items-center justify-center bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden gap-3",
-							selected && "h-72 px-6 py-4"
+							selected && "h-80 px-6 py-4"
 							// TODO: Maybe change to py-3 if being too cramped
 						)}>
 						{/* Content */}
@@ -44,11 +44,11 @@ const ProjectItem = forwardRef(function ProjectItem(
 							)}
 						</AnimatePresence>
 						{/* Background image */}
-						<img
+						<motion.img
 							src={item.thumbnail}
 							alt={`${item.title} image`}
 							className={cn(
-								"absolute w-full h-full object-cover blur-sm duration-300 z-0",
+								"absolute w-full h-full object-fill blur-sm duration-300 z-0",
 								selected
 									? "opacity-10 blur-md"
 									: "opacity-20 group-hover:opacity-30 group-hover:blur-[2px]"
