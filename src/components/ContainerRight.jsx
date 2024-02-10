@@ -6,14 +6,14 @@ import About from "./about/About";
 import { useEffect, useState } from "react";
 
 const ContainerRight = () => {
-	const [delayItems, setDelayItems] = useState(true);
+	const [delayAnimation, setDelayAnimation] = useState(true);
 	const location = useLocation();
 	const { projectName } = useParams();
 
-	// Delay items on initial render to give time for the logo to move
+	// Delay animation on initial render to give time for the logo to move away
 	useEffect(() => {
-		if (delayItems) setDelayItems(false);
-	}, [delayItems]);
+		if (delayAnimation) setDelayAnimation(false);
+	}, [delayAnimation]);
 
 	return (
 		<div className="h-full w-[800px] flex flex-col items-center justify-center gap-4">
@@ -21,9 +21,9 @@ const ContainerRight = () => {
 			<section className="relative h-[40rem] w-full z-0 overflow-hidden backdrop-blur-lg">
 				<AnimatePresence mode="wait">
 					{location.pathname === "/about/" ? (
-						<About key="About" />
+						<About key="About" delayAnimation={delayAnimation} />
 					) : (
-						<Projects key="Projects" projectName={projectName} delayItems={delayItems} />
+						<Projects key="Projects" projectName={projectName} delayAnimation={delayAnimation} />
 					)}
 				</AnimatePresence>
 			</section>

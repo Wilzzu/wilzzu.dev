@@ -5,12 +5,12 @@ import { createRef, useEffect, useRef } from "react";
 
 // Animation variants
 const list = {
-	visible: ([delayChildren, delayOpacity]) => ({
+	visible: ([delayChildren, delay]) => ({
 		opacity: 1,
 		transition: {
 			delayChildren,
 			staggerChildren: 0.12,
-			opacity: { delay: delayOpacity, duration: 0.4, ease: "easeInOut" },
+			opacity: { delay, duration: 0.4, ease: "easeInOut" },
 		},
 	}),
 	hidden: { opacity: 0 },
@@ -75,7 +75,7 @@ const scrollToProject = (listRef, projectRefs, projectName) => {
 	}
 };
 
-const Projects = ({ projectName, delayItems }) => {
+const Projects = ({ projectName, delayAnimation }) => {
 	// Refs
 	const projectRefs = useRef(projectsDb.map(() => createRef()));
 	const listRef = useRef(null);
@@ -104,7 +104,7 @@ const Projects = ({ projectName, delayItems }) => {
 				animate="visible"
 				exit="exit"
 				variants={list}
-				custom={delayItems ? [0.8, 0.7] : [0, 0]}
+				custom={delayAnimation ? [0.6, 0.5] : [0, 0]}
 				ref={listRef}
 				onAnimationComplete={() => scrollToProject(listRef, projectName)}
 				onScroll={(e) => scrollShadow(e.target, botShadow, topShadow)}

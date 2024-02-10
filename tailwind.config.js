@@ -22,11 +22,10 @@ export default {
 			keyframes: {
 				wave: {
 					"0%": { opacity: 0 },
-					"50%": { opacity: 0, transform: "rotate(0deg)" },
-					"62%": { opacity: 0.2, transform: "rotate(25deg)" },
-					"75%": { opacity: 1, transform: "rotate(0deg)" },
-					"87%": { transform: "rotate(25deg)" },
-					"100%": { transform: "rotate(0deg)" },
+					"52%": { opacity: 0 },
+					"55%": { transform: "rotate(0deg)" },
+					"70%": { opacity: 1, transform: "rotate(25deg)" },
+					"90%": { transform: "rotate(0deg)" },
 				},
 				hoverWave: {
 					"0%, 100%": { transform: "rotate(0deg)" },
@@ -34,8 +33,8 @@ export default {
 				},
 			},
 			animation: {
-				wave: "wave 5s ease-in-out forwards",
-				hoverWave: "hoverWave 1s ease-in-out infinite",
+				wave: "wave 4.8s ease-in-out forwards",
+				hoverWave: "hoverWave 1.2s ease-in-out infinite",
 			},
 		},
 	},
