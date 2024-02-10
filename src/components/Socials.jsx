@@ -13,6 +13,7 @@ const item = {
 	visible: {
 		y: 0,
 		opacity: 1,
+		rotate: 0.01, // To make the animation render smoother
 		transition: {
 			y: { type: "tween", duration: 1, ease: "easeOut" },
 			opacity: { duration: 2, ease: "easeInOut" },
