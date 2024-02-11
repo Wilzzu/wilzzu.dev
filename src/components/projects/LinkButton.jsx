@@ -20,7 +20,7 @@ const LinkButton = ({ link }) => {
 		<button
 			onClick={handleClick}
 			onAuxClick={handleClick}
-			className="flex items-center justify-center border-2 border-neutral-200 hover:bg-[#0000003b] hover:border-orange-300 focus:border-orange-300 outline-none h-11 px-5 rounded-full gap-3 hover:scale-105 duration-300">
+			className="flex items-center justify-center h-11 px-5 rounded-full text-sm tablet:text-base gap-2 tablet:gap-3 border-2 border-neutral-200 hover:bg-[#0000003b] hover:border-orange-300 focus:border-orange-300 outline-none hover:scale-105 duration-300">
 			{icon[link.type]}
 			<p>{link.type}</p>
 		</button>

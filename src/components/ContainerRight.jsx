@@ -16,9 +16,9 @@ const ContainerRight = () => {
 	}, [delayAnimation]);
 
 	return (
-		<div className="h-full w-[800px] flex flex-col items-center justify-center gap-4">
+		<div className="h-full w-full tablet:w-[800px] flex flex-col items-center justify-start tablet:justify-center gap-4">
 			<Navigation location={location} projectName={projectName} />
-			<section className="relative h-[40rem] w-full z-0 overflow-hidden backdrop-blur-lg">
+			<section className="relative w-full h-full tablet:h-[40rem] pb-4 xl:pb-0 z-0 overflow-hidden backdrop-blur-lg">
 				<AnimatePresence mode="wait">
 					{location.pathname === "/about/" ? (
 						<About key="About" delayAnimation={delayAnimation} />

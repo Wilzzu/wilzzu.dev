@@ -34,7 +34,7 @@ const TechIcons = ({ items, variant, badge = false }) => {
 					variants={variant}
 					className={
 						badge
-							? "flex justify-center h-6 px-2 text-[0.7rem] rounded-md gap-2 items-center bg-gradient-to-tr from-primary to-secondary text-nowrap"
+							? "flex justify-center h-5 tablet:h-6 px-2 text-[0.64rem] tablet:text-[0.7rem] rounded-md gap-2 items-center bg-gradient-to-tr from-primary to-secondary text-nowrap"
 							: "drop-shadow-icon"
 					}
 					key={item}>

@@ -67,11 +67,11 @@ const Socials = ({ socials, direction, style = null }) => {
 			initial="hidden"
 			animate="visible"
 			variants={container}
-			className={cn("h-14 w-full flex justify-between", style)}>
+			className={cn("tablet:h-14 px-10 tablet:px-0 w-full flex justify-between", style)}>
 			{socials.map((social) => (
 				<motion.li
 					key={social.name}
-					className="group relative w-14 h-14 flex flex-col items-center"
+					className="group relative w-10 h-10 tablet:w-14 tablet:h-14 flex flex-col items-center"
 					variants={item}
 					custom={direction}>
 					{/* Social icon */}

@@ -51,7 +51,8 @@ const About = ({ delayAnimation }) => {
 			exit="exit"
 			variants={container}
 			custom={delayAnimation ? [0.4, 0.3] : [0, 0]}
-			className="flex items-center justify-center h-full w-full max-h-[37.5rem] bg-gradient-to-br from-[#19191975] to-[#2A2A2A75] backdrop-blur-md rounded-2xl py-10 px-4">
+			// TODO: Make this fill the whole height, so that it starts overflowing, so that navigation items dont move
+			className="flex items-center justify-center h-full w-full tablet:max-h-[37.5rem] bg-gradient-to-br from-[#19191975] to-[#2A2A2A75] backdrop-blur-md rounded-2xl py-10 px-10 tablet:px-4">
 			<div className="flex flex-col max-w-[31rem] gap-4 text-justify items-center justify-between leading-relaxed text-sm text-[#d6d6d6]">
 				{/* Title */}
 				{showTitle ? <Title /> : <div className="h-11 w-full mb-3" />}
@@ -72,7 +73,7 @@ const About = ({ delayAnimation }) => {
 						"Besides programming, I enjoy playing video games, editing photos and videos, and tinkering with small electronic projects in my free time."
 					}
 				</motion.p>
-				<motion.p className="mt-6" variants={text}>
+				<motion.p className="mb-4 tablet:mb-0 mt-6 text-center" variants={text}>
 					{"Feel free to contact me, I'm always open to new adventures! :)"}
 				</motion.p>
 

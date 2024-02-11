@@ -46,12 +46,13 @@ const SelectedItem = ({ item }) => {
 	return (
 		<>
 			{/* Image */}
-			<div className="w-[14.5rem] h-[14.5rem] shrink-0">
+			<div className="mt-3 tablet:mt-0 w-[10rem] h-[10rem] tablet:w-[14.5rem] tablet:h-[14.5rem] shrink-0">
 				<motion.img
 					layout
 					initial="hidden"
 					animate="visible"
 					exit="exit"
+					// TODO: Change exit animation based on isMobile
 					variants={imageVariant}
 					src={item.image}
 					alt={`${item.title} image`}
@@ -68,10 +69,10 @@ const SelectedItem = ({ item }) => {
 				variants={containerVariant}
 				className="w-full h-full overflow-hidden flex flex-col items-center justify-center gap-6 px-2 py-4 z-10 drop-shadow">
 				{/* Title and Badges */}
-				<div className="w-full flex flex-col items-center gap-2">
+				<div className="w-full flex flex-col items-center gap-2 tablet:gap-1">
 					{/* Name and Year */}
-					<div className="flex items-center gap-2">
-						<motion.h1 variants={itemVariant} className="font-semibold text-2xl leading-none">
+					<div className="flex items-center gap-2 tablet:-mt-1">
+						<motion.h1 variants={itemVariant} className="font-semibold text-xl tablet:text-2xl">
 							{item.title}
 						</motion.h1>
 						<motion.p variants={itemVariant} className="font-light text-sm mt-[0.16rem]">
@@ -86,14 +87,16 @@ const SelectedItem = ({ item }) => {
 					</motion.div>
 				</div>
 				{/* Description */}
-				<motion.p className="px-4 text-center text-[0.92rem]" variants={itemVariant}>
+				<motion.p
+					className="px-1 tablet:px-4 text-center text-sm tablet:text-[0.92rem] tablet:leading-normal"
+					variants={itemVariant}>
 					{item.description}
 				</motion.p>
 
 				{/* Links */}
 				<motion.div
 					variants={itemVariant}
-					className="w-full flex justify-center items-center gap-5">
+					className="w-full flex justify-center items-center gap-4 tablet:gap-5">
 					{item?.links.map((link) => (
 						<LinkButton key={`${item.title}-${link.type}`} link={link} />
 					))}

@@ -95,6 +95,7 @@ const Logo = ({ setIntroAnimationOver }) => {
 					</Tilt>
 				</motion.div>
 				{/* Show socials, name and title below logo */}
+				{/* TODO: Fix this causing abrupt animation on mobile */}
 				{firstLayoutAnimationComplete && (
 					<>
 						<Socials socials={socials.socials} direction={-20} />

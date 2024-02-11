@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import projectsDb from "../../configs/projects.json";
 import ProjectItem from "./ProjectItem";
 import { createRef, useEffect, useRef } from "react";
+import useCheckMobile from "../../hooks/useCheckMobile";
 
 // Animation variants
 const list = {
@@ -76,6 +77,8 @@ const scrollToProject = (listRef, projectRefs, projectName) => {
 };
 
 const Projects = ({ projectName, delayAnimation }) => {
+	const isMobile = useCheckMobile();
+
 	// Refs
 	const projectRefs = useRef(projectsDb.map(() => createRef()));
 	const listRef = useRef(null);
@@ -108,7 +111,7 @@ const Projects = ({ projectName, delayAnimation }) => {
 				ref={listRef}
 				onAnimationComplete={() => scrollToProject(listRef, projectName)}
 				onScroll={(e) => scrollShadow(e.target, botShadow, topShadow)}
-				className="h-full px-4 grid grid-cols-2 grid-flow-dense gap-6 overflow-y-auto overflow-x-hidden scrollbar scrollbar-w-2 scrollbar-thumb-accent scrollbar-thumb-rounded-full  drop-shadow-md pr-4">
+				className="h-full px-4 grid tablet:grid-cols-2 grid-flow-dense gap-6 overflow-y-auto overflow-x-hidden scrollbar scrollbar-w-2 scrollbar-thumb-accent scrollbar-thumb-rounded-full drop-shadow-md pr-4">
 				{projectsDb.map((project, i) => (
 					<ProjectItem
 						key={project.title}
@@ -119,6 +122,7 @@ const Projects = ({ projectName, delayAnimation }) => {
 						index={i}
 						lastItem={projectsDb.length === i + 1}
 						variant={i < 6 ? itemVariant : fastExitVariant}
+						isMobile={isMobile}
 					/>
 				))}
 			</motion.ul>

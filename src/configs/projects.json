@@ -11,31 +11,31 @@
 	{
 		"title": "CS2Rankings",
 		"description": "Website with live Counter-Strike 2 leaderboard rankings, overall position tracking, detailed player histories and previous season standings.",
-		"image": "",
+		"image": "./src/assets/projects/botBob.png",
+		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2023",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },
-			{ "type": "live", "url": "google.com" },
-			{ "type": "demo", "url": "demo.google.com" }
+			{ "type": "live", "url": "google.com" }
 		],
 		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Node.js"]
 	},
 	{
 		"title": "wilzzu.dev",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"image": "",
+		"image": "./src/assets/projects/botBob.png",
+		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2022",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },
-			{ "type": "live", "url": "google.com" },
-			{ "type": "demo", "url": "demo.google.com" }
+			{ "type": "live", "url": "google.com" }
 		],
 		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Thunderblaze",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"image": "",
+		"image": "./src/assets/projects/botBob.png",
 		"year": "2021",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },

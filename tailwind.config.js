@@ -5,6 +5,10 @@ import tailwindScrollbar from "tailwind-scrollbar";
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
+		screens: {
+			tablet: "840px",
+			xl: "1280px",
+		},
 		fontFamily: {
 			poppins: ["Poppins", "Helvetica", "Arial", "sans-serif"],
 		},

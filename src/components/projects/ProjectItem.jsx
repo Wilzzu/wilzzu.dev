@@ -7,7 +7,7 @@ import ItemThumbnail from "./ItemThumbnail";
 import { forwardRef } from "react";
 
 const ProjectItem = forwardRef(function ProjectItem(
-	{ item, current, parsedUrl, index, lastItem, variant },
+	{ item, current, parsedUrl, index, lastItem, variant, isMobile },
 	ref
 ) {
 	const selected = current === parsedUrl;
@@ -18,8 +18,8 @@ const ProjectItem = forwardRef(function ProjectItem(
 			layout
 			variants={variant}
 			transition={{ layout: { duration: 0.3, type: "tween", ease: "easeInOut" } }}
-			style={!lastItem && selected && { gridRowStart: (index + 1) / 2 }} // Make right side items span above
-			className={cn(selected && "col-span-2")} // Selected items span both columns
+			style={!lastItem && !isMobile && selected && { gridRowStart: (index + 1) / 2 }} // Make right side items span above
+			className={cn(selected && "tablet:col-span-2")} // Selected items span both columns
 		>
 			<Tilt
 				perspective={800}
@@ -31,14 +31,13 @@ const ProjectItem = forwardRef(function ProjectItem(
 					{/* Card container */}
 					<div
 						className={cn(
-							"relative group flex items-center justify-center bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden gap-3",
-							selected && "h-80 px-6 py-4"
-							// TODO: Maybe change to py-3 if being too cramped
+							"relative group flex flex-col tablet:flex-row items-center justify-center bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden gap-3",
+							selected && "h-full tablet:h-80 py-4 px-2 tablet:px-6 tablet:py-4"
 						)}>
 						{/* Content */}
 						<AnimatePresence>
 							{selected ? (
-								<SelectedItem key={item.title + "-selected"} item={item} />
+								<SelectedItem key={item.title + "-selected"} item={item} isMobile={isMobile} />
 							) : (
 								<ItemThumbnail key={item.title + "-thumbnail"} item={item} />
 							)}
@@ -48,9 +47,9 @@ const ProjectItem = forwardRef(function ProjectItem(
 							src={item.thumbnail}
 							alt={`${item.title} image`}
 							className={cn(
-								"absolute w-full h-full object-fill blur-sm duration-300 z-0",
+								"absolute w-full h-full object-fill blur-sm duration-1000 tablet:duration-500 z-0",
 								selected
-									? "opacity-10 blur-md"
+									? "opacity-0 tablet:opacity-10 blur-md"
 									: "opacity-20 group-hover:opacity-30 group-hover:blur-[2px]"
 							)}
 						/>
