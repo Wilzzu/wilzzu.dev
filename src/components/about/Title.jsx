@@ -42,7 +42,7 @@ const Title = () => {
 			variants={variant}
 			onHoverStart={() => handleWaving(true)}
 			onHoverEnd={() => handleWaving(false)}
-			className="flex h-11 gap-2 text-[1.76rem] font-semibold mb-3 text-neutral-200">
+			className="flex h-11 gap-2 text-2xl tablet:leading-normal tablet:text-[1.76rem] font-semibold tablet:mb-3 text-neutral-200">
 			<AnimatedText text="Hi, I'm Wilzzu!" delay={0.6} duration={0.4} />
 			{/* Waving animation */}
 			<span className={removeFirstAnimation ? (waving ? "animate-hoverWave" : "") : "animate-wave"}>

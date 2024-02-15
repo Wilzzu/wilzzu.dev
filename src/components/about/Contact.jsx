@@ -26,7 +26,7 @@ const item = {
 const Contact = () => {
 	return (
 		<motion.div variants={container} className="flex flex-col-reverse">
-			<motion.p variants={item} className="text-sm text-neutral-400 text-center">
+			<motion.p variants={item} className="text-xs tablet:text-sm text-neutral-400 text-center">
 				{"Contact me on Twitter or via email."} <br />{" "}
 				<span className="text-xs">{"(Email: wilzzudev@gmail.com)"}</span>
 			</motion.p>

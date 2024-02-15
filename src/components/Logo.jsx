@@ -57,7 +57,7 @@ const Logo = ({ setIntroAnimationOver }) => {
 			onLayoutAnimationComplete={handleLayoutAnimationComplete}
 			className="relative w-[380px] h-full flex flex-col items-center justify-center drop-shadow-2xl z-10">
 			{/* Container for logo and socials */}
-			<motion.div className="w-full h-full flex flex-col items-center justify-center gap-8">
+			<motion.div className="w-full h-[500px] flex flex-col items-center justify-center gap-8">
 				{/* Container for logo, to move it upwards at start and after first layout animation */}
 				<motion.div
 					layout
@@ -95,7 +95,6 @@ const Logo = ({ setIntroAnimationOver }) => {
 					</Tilt>
 				</motion.div>
 				{/* Show socials, name and title below logo */}
-				{/* TODO: Fix this causing abrupt animation on mobile */}
 				{firstLayoutAnimationComplete && (
 					<>
 						<Socials socials={socials.socials} direction={-20} />
