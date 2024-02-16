@@ -50,7 +50,7 @@ const scrollShadow = (element, botShadow, topShadow) => {
 		botShadow.current.style.display = "none";
 	} else {
 		botShadow.current.style.display = "block";
-		setTimeout(() => (botShadow.current.style.opacity = 0.6), 100);
+		setTimeout(() => botShadow.current && (botShadow.current.style.opacity = 0.6), 100);
 	}
 
 	if (element.scrollTop < 20) {
@@ -58,7 +58,7 @@ const scrollShadow = (element, botShadow, topShadow) => {
 		topShadow.current.style.display = "none";
 	} else {
 		topShadow.current.style.display = "block";
-		setTimeout(() => (topShadow.current.style.opacity = 0.6), 100);
+		setTimeout(() => topShadow.current && (topShadow.current.style.opacity = 0.6), 100);
 	}
 };
 
