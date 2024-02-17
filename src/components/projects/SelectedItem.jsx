@@ -14,15 +14,16 @@ const imageVariant = {
 		},
 	},
 	hidden: { y: 100, opacity: 0 },
-	exit: {
-		x: -220,
+	exit: (isMobile) => ({
+		x: isMobile ? 0 : -220,
+		y: isMobile ? 10 : 0,
 		scale: 0.55,
 		opacity: 0,
 		transition: {
 			x: { type: "tween", duration: 0.6, ease: "easeOut" },
 			opacity: { duration: 0.22, ease: "easeOut" },
 		},
-	},
+	}),
 };
 
 const containerVariant = {
@@ -42,7 +43,7 @@ const itemVariant = {
 	exit: { y: 0, opacity: 0, transition: { duration: 0 } },
 };
 
-const SelectedItem = ({ item }) => {
+const SelectedItem = ({ item, isMobile }) => {
 	return (
 		<>
 			{/* Image */}
@@ -52,8 +53,8 @@ const SelectedItem = ({ item }) => {
 					initial="hidden"
 					animate="visible"
 					exit="exit"
-					// TODO: Change exit animation based on isMobile
 					variants={imageVariant}
+					custom={isMobile}
 					src={item.image}
 					alt={`${item.title} image`}
 					draggable={false}
