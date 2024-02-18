@@ -42,5 +42,8 @@ export default {
 			},
 		},
 	},
-	plugins: [tailwindcss3d, tailwindScrollbar({ nocompatible: true })],
+	plugins: [
+		tailwindcss3d,
+		tailwindScrollbar({ nocompatible: true, preferredStrategy: "pseudoelements" }),
+	],
 };

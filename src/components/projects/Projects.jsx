@@ -99,8 +99,6 @@ const Projects = ({ projectName, delayAnimation }) => {
 				className="absolute top-0 bg-gradient-to-b from-background to-transparent right-4 h-4 w-full z-10 duration-500"
 			/>
 			{/* List of projects */}
-			{/* TODO: Fix scrollbar */}
-			{/* TODO: Fix items disappearing on Firefox */}
 			<motion.ul
 				layout
 				initial="hidden"
@@ -111,7 +109,9 @@ const Projects = ({ projectName, delayAnimation }) => {
 				ref={listRef}
 				onAnimationComplete={() => scrollToProject(listRef, projectName)}
 				onScroll={(e) => scrollShadow(e.target, botShadow, topShadow)}
-				className="h-full px-4 grid tablet:grid-cols-2 grid-flow-dense gap-6 overflow-y-auto overflow-x-hidden scrollbar scrollbar-w-2 scrollbar-thumb-accent scrollbar-thumb-rounded-full drop-shadow-md pr-4">
+				// Scrollbar track color is set to invisible, to be able to render the thumb color in Firefox
+				className="h-full px-4 grid tablet:grid-cols-2 grid-flow-dense gap-6 overflow-y-auto overflow-x-hidden drop-shadow-md pr-4
+				scrollbar-thin scrollbar-track-[#19191900] scrollbar-track-rounded-full scrollbar-thumb-accent scrollbar-thumb-rounded-full">
 				{projectsDb.map((project, i) => (
 					<ProjectItem
 						key={project.title}

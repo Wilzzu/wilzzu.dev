@@ -29,6 +29,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 				tiltReverse={selected}>
 				<Link to={!selected && `/project/${parsedUrl}`} draggable={false}>
 					{/* Card container */}
+					{/* TODO: Fix items disappearing on Firefox because of backdrop blur */}
 					<div
 						className={cn(
 							"relative group flex flex-col tablet:flex-row items-center justify-center bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden gap-3",
