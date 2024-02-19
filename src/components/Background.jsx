@@ -22,7 +22,7 @@ const Background = () => {
 			// TODO: Add a linear sweep initial transition
 			// TODO: Add same color light streaks going down in an angle
 			transition={{ delay: 3, duration: 2, ease: "easeInOut" }}
-			className="w-full h-full fixed overflow-hidden">
+			className="w-full h-full hidden tablet:block fixed overflow-hidden">
 			{/* Background line colors */}
 			<div className="w-full h-full bg-[#111111] fixed -z-[2] " />
 			{/* Container that follows the mouse and lights up background */}
