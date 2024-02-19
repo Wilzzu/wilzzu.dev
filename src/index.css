@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	.bg-clip {
+		-webkit-mask-image: url("/src/assets/overlay.svg"), linear-gradient(#101010 0 0);
+		mask-position: center;
+		mask-repeat: no-repeat;
+		mask-mode: alpha;
+		mask-size: cover;
+		-webkit-mask-composite: exclude;
+		mask-composite: exclude;
+	}
+}
+
 :root {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;

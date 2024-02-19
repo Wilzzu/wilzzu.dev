@@ -110,7 +110,7 @@ const Projects = ({ projectName, delayAnimation }) => {
 				onAnimationComplete={() => scrollToProject(listRef, projectName)}
 				onScroll={(e) => scrollShadow(e.target, botShadow, topShadow)}
 				// Scrollbar track color is set to invisible, to be able to render the thumb color in Firefox
-				className="h-full px-4 grid tablet:grid-cols-2 grid-flow-dense gap-6 overflow-y-auto overflow-x-hidden drop-shadow-md pr-4
+				className="h-full px-4 grid tablet:grid-cols-2 grid-flow-dense gap-6 overflow-y-auto overflow-x-hidden drop-shadow-md pr-4 backdrop-blur
 				scrollbar-thin scrollbar-track-[#19191900] scrollbar-track-rounded-full scrollbar-thumb-accent scrollbar-thumb-rounded-full">
 				{projectsDb.map((project, i) => (
 					<ProjectItem
