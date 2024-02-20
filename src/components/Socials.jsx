@@ -28,6 +28,7 @@ const icons = {
 		<FiGithub
 			size={48}
 			strokeWidth={1.2}
+			fill="#101010"
 			className="opacity-40 group-hover:opacity-80 duration-500"
 		/>
 	),
@@ -35,6 +36,7 @@ const icons = {
 		<FiTwitter
 			size={48}
 			strokeWidth={1.2}
+			fill="#101010"
 			className="opacity-40 group-hover:opacity-80 duration-500"
 		/>
 	),
@@ -42,6 +44,7 @@ const icons = {
 		<FiYoutube
 			size={52}
 			strokeWidth={1.2}
+			fill="#101010"
 			className="opacity-40 group-hover:opacity-80 duration-500"
 		/>
 	),
@@ -49,6 +52,7 @@ const icons = {
 		<TbBrandSteam
 			size={52}
 			strokeWidth={1.2}
+			fill="#101010"
 			className="opacity-40 group-hover:opacity-80 duration-500 social-stroke"
 		/>
 	),
@@ -56,6 +60,7 @@ const icons = {
 		<FiMail
 			size={52}
 			strokeWidth={1.2}
+			fill="#101010"
 			className="opacity-40 group-hover:opacity-80 duration-500"
 		/>
 	),

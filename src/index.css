@@ -6,7 +6,7 @@
 	.bg-clip {
 		-webkit-mask-image: url("/src/assets/overlay.svg"), linear-gradient(#101010 0 0);
 		mask-position: center;
-		mask-repeat: no-repeat;
+		mask-repeat: repeat;
 		mask-mode: alpha;
 		mask-size: cover;
 		-webkit-mask-composite: exclude;

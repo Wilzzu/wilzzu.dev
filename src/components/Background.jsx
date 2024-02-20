@@ -42,7 +42,6 @@ const Background = () => {
 				<div className="w-full h-full bg-gradient-radial from-transparent via-primary to-50% to-background absolute" />
 			</motion.div>
 			{/* Overlay */}
-			{/* TODO: Change this and make the lines smaller maybe */}
 			<div className="w-full h-full bg-background fixed z-0 bg-clip" />
 		</motion.div>
 	);

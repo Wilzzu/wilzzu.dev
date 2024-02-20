@@ -7,7 +7,7 @@ function Home() {
 	const [introAnimationOver, setIntroAnimationOver] = useState(false);
 
 	return (
-		<main className="relative h-dvh w-full overflow-x-hidden py-10 px-2 tablet:p-6 flex flex-col items-center xl:flex-row xl:justify-center gap-24 font-poppins">
+		<main className="relative h-dvh tablet:min-h-dvh tablet:h-auto w-full overflow-x-hidden py-10 px-2 tablet:p-6 flex flex-col items-center xl:flex-row xl:justify-center gap-24 font-poppins">
 			<Background />
 			{/* Main container */}
 			<section className="h-full flex justify-center">
