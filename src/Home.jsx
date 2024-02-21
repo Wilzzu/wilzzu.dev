@@ -1,7 +1,7 @@
 import Logo from "./components/Logo";
 import { useState } from "react";
 import ContainerRight from "./components/ContainerRight";
-import Background from "./components/Background";
+import Background from "./components/background/Background";
 
 function Home() {
 	const [introAnimationOver, setIntroAnimationOver] = useState(false);

@@ -96,7 +96,7 @@ const Projects = ({ projectName, delayAnimation }) => {
 			<div
 				ref={topShadow}
 				style={{ opacity: 0, display: "none" }}
-				className="absolute top-0 bg-gradient-to-b from-background to-transparent right-4 h-4 w-full z-10 duration-500"
+				className="absolute top-0 bg-gradient-to-b from-background to-transparent right-4 h-4 w-full z-10 duration-500 pointer-events-none"
 			/>
 			{/* List of projects */}
 			<motion.ul
@@ -130,7 +130,7 @@ const Projects = ({ projectName, delayAnimation }) => {
 			<div
 				ref={botShadow}
 				style={{ opacity: 0.6 }}
-				className="relative bottom-4 bg-gradient-to-t from-background to-transparent right-4 h-4 w-full z-10 duration-500"
+				className="relative bottom-4 bg-gradient-to-t from-background to-transparent right-4 h-4 w-full z-10 duration-500 pointer-events-none"
 			/>
 		</>
 	);

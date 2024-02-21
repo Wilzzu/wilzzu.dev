@@ -48,11 +48,26 @@ export default {
 					"90%": { backgroundPosition: "-62% 33%" },
 					"100%": { backgroundPosition: "32% -11%" },
 				},
+				// Move div from top right to bottom left
+				bgStreakTR: {
+					"0%": { top: 0, transform: "translate(-30%, 0)", opacity: 0 },
+					"5%": { opacity: 1 },
+					"40%": { top: "calc(100% - 400px)", transform: "translate(-110%, 0)", opacity: 0 },
+					"100%": { opacity: 0 },
+				},
+				bgStreakBL: {
+					"0%": { bottom: 0, opacity: 0 },
+					"20%": { opacity: 1 },
+					"40%": { bottom: "calc(100% - 300px)", opacity: 0 },
+					"100%": { opacity: 0 },
+				},
 			},
 			animation: {
 				wave: "wave 4.8s ease-in-out forwards",
 				hoverWave: "hoverWave 1.2s ease-in-out infinite",
 				grain: "grain 5s linear infinite",
+				bgStreakTR: "bgStreakTR 15s linear infinite 8s",
+				bgStreakBL: "bgStreakBL 17s linear infinite 15s",
 			},
 			backgroundImage: {
 				"bg-overlay": "url('/src/assets/overlay.svg')",

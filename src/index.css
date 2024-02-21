@@ -20,7 +20,6 @@
 	font-weight: 400;
 
 	color: rgba(255, 255, 255, 0.87);
-	/* background-color: #fff; */
 	background-color: #101010;
 
 	font-synthesis: none;
@@ -28,13 +27,3 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
-/* @keyframes changeBGColor {
-	0% {
-		background-color: #141316;
-	}
-}
-
-body {
-	animation: changeBGColor 3s ease-in-out;
-} */

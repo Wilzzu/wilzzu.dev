@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 
-import useMousePosition from "../hooks/useMousePosition";
+import useMousePosition from "../../hooks/useMousePosition";
+// import Glow from "./Glow";
+import GrainAndMask from "./GrainAndMask";
 
 // Animation variants
 const variants = {
@@ -19,13 +21,15 @@ const Background = () => {
 		<motion.div
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			// TODO: Add a linear sweep initial transition
-			// TODO: Add same color light streaks going down in an angle
-			transition={{ delay: 3, duration: 2, ease: "easeInOut" }}
+			transition={{ delay: 3.5, duration: 2, ease: "easeInOut" }}
 			className="w-full h-full hidden tablet:block fixed overflow-hidden">
 			{/* Background line colors */}
-			<div className="w-full h-full bg-[#111111] fixed -z-[2] " />
-			{/* Container that follows the mouse and lights up background */}
+			<div className="w-full h-full bg-[#111111] fixed -z-[3]" />
+			{/* Animate glowing lights that move on the background */}
+			{/* <Glow style={"right-0 top-[-200%] animate-bgStreakTR"} />
+			<Glow style={"left-[16.2%] bottom-[-200%] animate-bgStreakBL"} /> */}
+			{/* Div that follows the mouse and lights up background */}
+			{/* TODO: Fix edges being straight, only a problem when going over other glows */}
 			<motion.div
 				style={{
 					left: smoothPosition.x,
@@ -35,11 +39,8 @@ const Background = () => {
 				animate="visible"
 				custom={visible}
 				variants={variants}
-				className="w-[512px] h-[512px] fixed bg-gradient-radial from-[#FFA700] via-transparent to-50% to-transparent -z-[1]">
-				{/* Grain */}
-				<div className="w-full h-full bg-[url('./src/assets/grain.svg')] bg-repeat bg-fixed animate-grain absolute" />
-				{/* Smooth radial edges */}
-				<div className="w-full h-full bg-gradient-radial from-transparent via-primary to-50% to-background absolute" />
+				className="w-[512px] h-[512px] fixed overflow-hidden bg-gradient-radial from-[#FFA700] via-transparent to-50% to-transparent -z-[1]">
+				<GrainAndMask />
 			</motion.div>
 			{/* Overlay */}
 			<div className="w-full h-full bg-background fixed z-0 bg-clip" />
