@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import useMousePosition from "../../hooks/useMousePosition";
-// import Glow from "./Glow";
+import Glow from "./Glow";
 import GrainAndMask from "./GrainAndMask";
 
 // Animation variants
@@ -26,8 +26,8 @@ const Background = () => {
 			{/* Background line colors */}
 			<div className="w-full h-full bg-[#111111] fixed -z-[3]" />
 			{/* Animate glowing lights that move on the background */}
-			{/* <Glow style={"right-0 top-[-200%] animate-bgStreakTR"} />
-			<Glow style={"left-[16.2%] bottom-[-200%] animate-bgStreakBL"} /> */}
+			<Glow style={"right-0 top-[-200%] animate-bgStreakTR"} />
+			<Glow style={"left-[16.2%] bottom-[-200%] animate-bgStreakBL"} />
 			{/* Div that follows the mouse and lights up background */}
 			{/* TODO: Fix edges being straight, only a problem when going over other glows */}
 			<motion.div

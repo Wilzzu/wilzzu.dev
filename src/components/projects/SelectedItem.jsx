@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import LinkButton from "./LinkButton";
 import TechIcons from "./TechIcons";
+import ImageCarousel from "./ImageCarousel";
 
 // Animation variants
 const imageVariant = {
@@ -49,6 +50,7 @@ const SelectedItem = ({ item, isMobile }) => {
 			{/* Image */}
 			<div className="mt-3 tablet:mt-0 w-[10rem] h-[10rem] tablet:w-[14.5rem] tablet:h-[14.5rem] shrink-0">
 				{/* TODO: Add carousel */}
+				{/* <ImageCarousel images={item.images} isMobile={isMobile} /> */}
 				<motion.img
 					layout
 					initial="hidden"
