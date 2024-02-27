@@ -1,31 +1,9 @@
 import { motion } from "framer-motion";
 import LinkButton from "./LinkButton";
 import TechIcons from "./TechIcons";
+import ImageCarousel from "./carousel/ImageCarousel";
 
 // Animation variants
-const imageVariant = {
-	visible: {
-		y: 0,
-		opacity: 1,
-		borderRadius: "7%",
-		transition: {
-			y: { type: "spring", stiffness: 44, damping: 14 },
-			opacity: { duration: 1, delay: 0.14 },
-		},
-	},
-	hidden: { y: 100, opacity: 0 },
-	exit: (isMobile) => ({
-		x: isMobile ? 0 : -220,
-		y: isMobile ? 10 : 0,
-		scale: 0.55,
-		opacity: 0,
-		transition: {
-			x: { type: "tween", duration: 0.6, ease: "easeOut" },
-			opacity: { duration: 0.22, ease: "easeOut" },
-		},
-	}),
-};
-
 const containerVariant = {
 	visible: { transition: { delayChildren: 0.2, staggerChildren: 0.12 } },
 	hidden: {},
@@ -46,21 +24,9 @@ const itemVariant = {
 const SelectedItem = ({ item, isMobile }) => {
 	return (
 		<>
-			{/* Image */}
+			{/* Image carousel */}
 			<div className="mt-3 tablet:mt-0 w-[10rem] h-[10rem] tablet:w-[14.5rem] tablet:h-[14.5rem] shrink-0">
-				{/* TODO: Add carousel */}
-				<motion.img
-					layout
-					initial="hidden"
-					animate="visible"
-					exit="exit"
-					variants={imageVariant}
-					custom={isMobile}
-					src={item.image}
-					alt={`${item.title} image`}
-					draggable={false}
-					className="w-full h-full z-10"
-				/>
+				<ImageCarousel images={item.images} isMobile={isMobile} />
 			</div>
 			{/* Content container */}
 			<motion.div

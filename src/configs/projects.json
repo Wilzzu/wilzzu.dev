@@ -2,7 +2,12 @@
 	{
 		"title": "botBob",
 		"description": "An advanced Discord bot with fully customizable features, AI integration, and multilingual support. Originally started in 2019, rewritten in 2024.",
-		"image": "./src/assets/projects/botBob.png",
+		"images": [
+			"./src/assets/projects/1.png",
+			"./src/assets/projects/2.png",
+			"./src/assets/projects/3.png",
+			"./src/assets/projects/botBob.png"
+		],
 		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2024",
 		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/botBob" }],
@@ -11,7 +16,11 @@
 	{
 		"title": "CS2Rankings",
 		"description": "Website with live Counter-Strike 2 leaderboard rankings, overall position tracking, detailed player histories and previous season standings.",
-		"image": "./src/assets/projects/botBob.png",
+		"images": [
+			"./src/assets/projects/1.png",
+			"./src/assets/projects/2.png",
+			"./src/assets/projects/3.png"
+		],
 		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2023",
 		"links": [
@@ -23,7 +32,11 @@
 	{
 		"title": "wilzzu.dev",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"image": "./src/assets/projects/botBob.png",
+		"images": [
+			"./src/assets/projects/1.png",
+			"./src/assets/projects/2.png",
+			"./src/assets/projects/3.png"
+		],
 		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2022",
 		"links": [
@@ -35,7 +48,11 @@
 	{
 		"title": "Thunderblaze",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"image": "./src/assets/projects/botBob.png",
+		"images": [
+			"./src/assets/projects/1.png",
+			"./src/assets/projects/2.png",
+			"./src/assets/projects/3.png"
+		],
 		"year": "2021",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },
@@ -46,7 +63,11 @@
 	{
 		"title": "CS2TextModMerger",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"image": "",
+		"images": [
+			"./src/assets/projects/1.png",
+			"./src/assets/projects/2.png",
+			"./src/assets/projects/3.png"
+		],
 		"year": "2020",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },
@@ -57,7 +78,11 @@
 	{
 		"title": "Project 6",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"image": "",
+		"images": [
+			"./src/assets/projects/1.png",
+			"./src/assets/projects/2.png",
+			"./src/assets/projects/3.png"
+		],
 		"year": "2019",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },
@@ -68,7 +93,11 @@
 	{
 		"title": "Project 7",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"image": "",
+		"images": [
+			"./src/assets/projects/1.png",
+			"./src/assets/projects/2.png",
+			"./src/assets/projects/3.png"
+		],
 		"year": "2018",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },
@@ -79,7 +108,11 @@
 	{
 		"title": "Project 8",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"image": "",
+		"images": [
+			"./src/assets/projects/1.png",
+			"./src/assets/projects/2.png",
+			"./src/assets/projects/3.png"
+		],
 		"year": "2017",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },
@@ -90,7 +123,11 @@
 	{
 		"title": "Project 9",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"image": "",
+		"images": [
+			"./src/assets/projects/1.png",
+			"./src/assets/projects/2.png",
+			"./src/assets/projects/3.png"
+		],
 		"year": "2016",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },
@@ -101,7 +138,11 @@
 	{
 		"title": "Project 10",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"image": "",
+		"images": [
+			"./src/assets/projects/1.png",
+			"./src/assets/projects/2.png",
+			"./src/assets/projects/3.png"
+		],
 		"year": "2015",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },
