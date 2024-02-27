@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import CarouselButton from "./CarouselButton";
 import CarouselCircles from "./CarouselCircles";
 
@@ -27,40 +27,33 @@ const container = {
 	}),
 };
 
-const image = {
-	visible: { x: 0 },
-	hidden: (direction) => ({ x: 230 * direction }),
-	exit: (direction) => ({ x: 230 * (direction * -1) }),
-};
-
 const ImageCarousel = ({ images, isMobile }) => {
 	const [current, setCurrent] = useState(0);
-	const [direction, setDirection] = useState(1);
+	const hovering = useRef(false);
 
+	// Calculate new index value
 	const handleNewCurrent = ({ direction, index }) => {
-		let newValue;
-
-		// Calculate new index value
-		if (index >= 0) newValue = index;
-		else {
-			if (direction === "next") newValue = (current + 1) % images.length;
-			else newValue = (current - 1 + images.length) % images.length;
-		}
-
-		console.log(newValue);
-
-		// Calculate direction and set it
-		if (newValue > current) {
-			if (current === 0 && newValue === images.length - 1) setDirection(-1);
-			else setDirection(1);
-		} else {
-			if (current === images.length - 1 && newValue === 0) setDirection(1);
-			else setDirection(-1);
-		}
-
-		// Set new current value
-		setCurrent(newValue);
+		if (index >= 0) return setCurrent(index);
+		if (direction === "next") return setCurrent((prev) => (prev + 1) % images.length);
+		return setCurrent((prev) => (prev - 1 + images.length) % images.length);
 	};
+
+	// Handle swipe gestures
+	const handlePanEnd = (_, info) => {
+		if (!isMobile) return;
+		if (info.offset.x > 5) handleNewCurrent({ direction: "prev" });
+		else if (info.offset.x < -5) handleNewCurrent({ direction: "next" });
+	};
+
+	// Scroll through images automatically
+	useEffect(() => {
+		const interval = setInterval(() => {
+			if (hovering.current) return;
+			handleNewCurrent({ direction: "next" });
+		}, 5000);
+		return () => clearInterval(interval);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [current]);
 
 	return (
 		<motion.div
@@ -70,6 +63,11 @@ const ImageCarousel = ({ images, isMobile }) => {
 			exit="exit"
 			variants={container}
 			custom={isMobile}
+			onMouseEnter={() => (hovering.current = true)}
+			onMouseLeave={() => (hovering.current = false)}
+			onTouchStart={() => (hovering.current = true)}
+			onTouchEnd={() => (hovering.current = false)}
+			onPanEnd={handlePanEnd}
 			className="relative group/images w-full h-full z-10 overflow-hidden">
 			{/* Navigation */}
 			<div className="absolute opacity-25 group-hover/images:opacity-100 duration-300 p-2 bottom-0 w-full flex justify-between items-center z-10">
@@ -77,23 +75,20 @@ const ImageCarousel = ({ images, isMobile }) => {
 				<CarouselCircles images={images} current={current} handleNewCurrent={handleNewCurrent} />
 				<CarouselButton handleNewCurrent={handleNewCurrent} direction="next" />
 			</div>
-
 			{/* Images */}
-			<AnimatePresence initial={false} mode="popLayout" custom={direction}>
-				<motion.img
-					key={current}
-					initial="hidden"
-					animate="visible"
-					exit="exit"
-					variants={image}
-					custom={direction}
-					transition={{ duration: 0.3, ease: "linear" }}
-					src={images[current]}
-					alt={`Project screenshot #${current + 1}`}
-					draggable={false}
-					className="w-full h-full object-cover"
-				/>
-			</AnimatePresence>
+			<div
+				style={{ transform: `translateX(${current * -100}%)` }}
+				className="flex duration-700 ease-in-out">
+				{images.map((image, index) => (
+					<img
+						key={index}
+						src={image}
+						alt={`Project screenshot #${index + 1}`}
+						draggable={false}
+						className="w-full h-full object-cover"
+					/>
+				))}
+			</div>
 		</motion.div>
 	);
 };
