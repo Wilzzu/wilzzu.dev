@@ -5,7 +5,8 @@
 		"images": [
 			"./src/assets/projects/1.png",
 			"./src/assets/projects/2.png",
-			"./src/assets/projects/3.png"
+			"./src/assets/projects/3.png",
+			"./src/assets/projects/botBob.png"
 		],
 		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2024",
