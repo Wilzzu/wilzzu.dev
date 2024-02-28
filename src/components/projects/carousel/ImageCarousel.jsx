@@ -70,7 +70,7 @@ const ImageCarousel = ({ images, isMobile }) => {
 			onPanEnd={handlePanEnd}
 			className="relative group/images w-full h-full z-10 overflow-hidden">
 			{/* Navigation */}
-			<div className="absolute opacity-25 group-hover/images:opacity-100 duration-300 p-2 bottom-0 w-full flex justify-between items-center z-10">
+			<div className="absolute opacity-80 tablet:opacity-25 group-hover/images:opacity-100 duration-300 p-2 bottom-0 w-full flex justify-between items-center z-10">
 				<CarouselButton handleNewCurrent={handleNewCurrent} direction="prev" />
 				<CarouselCircles images={images} current={current} handleNewCurrent={handleNewCurrent} />
 				<CarouselButton handleNewCurrent={handleNewCurrent} direction="next" />

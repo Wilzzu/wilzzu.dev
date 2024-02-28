@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import useMousePosition from "../../hooks/useMousePosition";
 import Glow from "./Glow";
-import GrainAndMask from "./GrainAndMask";
+import Grain from "./Grain";
 
 // Animation variants
 const variants = {
@@ -29,7 +29,6 @@ const Background = () => {
 			<Glow style={"right-0 top-[-200%] animate-bgStreakTR"} />
 			<Glow style={"left-[16.2%] bottom-[-200%] animate-bgStreakBL"} />
 			{/* Div that follows the mouse and lights up background */}
-			{/* TODO: Fix edges being straight, only a problem when going over other glows */}
 			<motion.div
 				style={{
 					left: smoothPosition.x,
@@ -39,8 +38,8 @@ const Background = () => {
 				animate="visible"
 				custom={visible}
 				variants={variants}
-				className="w-[512px] h-[512px] fixed overflow-hidden bg-gradient-radial from-[#FFA700] via-transparent to-50% to-transparent -z-[1]">
-				<GrainAndMask />
+				className="w-[512px] h-[512px] fixed overflow-hidden bg-gradient-radial from-[#FFA700] via-transparent to-35% to-transparent -z-[1]">
+				<Grain />
 			</motion.div>
 			{/* Overlay */}
 			<div className="w-full h-full bg-background fixed z-0 bg-clip" />
