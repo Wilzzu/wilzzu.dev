@@ -85,7 +85,8 @@ const ImageCarousel = ({ images, isMobile }) => {
 						src={image}
 						alt={`Project screenshot #${index + 1}`}
 						draggable={false}
-						className="w-full h-full object-cover"
+						// All images should be 256x256, otherwise they will be stretched
+						className="w-64 h-full aspect-square object-cover"
 					/>
 				))}
 			</div>

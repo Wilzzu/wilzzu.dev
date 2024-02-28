@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 import useMousePosition from "../../hooks/useMousePosition";
 import Glow from "./Glow";
 import Grain from "./Grain";
