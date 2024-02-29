@@ -23,8 +23,8 @@
 		],
 		"year": "2023",
 		"links": [
-			{ "type": "code", "url": "github.com/wilzzu" },
-			{ "type": "live", "url": "google.com" }
+			{ "type": "code", "url": "https://github.com/Wilzzu/cs2rankings" },
+			{ "type": "live", "url": "https://cs2rankings.com" }
 		],
 		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Node.js"]
 	},
