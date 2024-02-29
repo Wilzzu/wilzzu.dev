@@ -2,13 +2,12 @@
 	{
 		"title": "botBob",
 		"description": "An advanced Discord bot with fully customizable features, AI integration, and multilingual support. Originally started in 2019, rewritten in 2024.",
+		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/1.png",
-			"./src/assets/projects/2.png",
-			"./src/assets/projects/3.png",
-			"./src/assets/projects/botBob.png"
+			"./src/assets/projects/botbob/botbob-1.png",
+			"./src/assets/projects/botbob/botbob-2.png",
+			"./src/assets/projects/botbob/botbob-3.png"
 		],
-		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2024",
 		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/botBob" }],
 		"tech": ["Node.js", "MongoDB", "OpenAI"]
@@ -16,12 +15,12 @@
 	{
 		"title": "CS2Rankings",
 		"description": "Website with live Counter-Strike 2 leaderboard rankings, overall position tracking, detailed player histories and previous season standings.",
+		"thumbnail": "./src/assets/projects/cs2rankings/cs2rankings-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/1.png",
-			"./src/assets/projects/2.png",
-			"./src/assets/projects/3.png"
+			"./src/assets/projects/cs2rankings/cs2rankings-1.webp",
+			"./src/assets/projects/cs2rankings/cs2rankings-2.webp",
+			"./src/assets/projects/cs2rankings/cs2rankings-3.webp"
 		],
-		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2023",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },
@@ -32,12 +31,12 @@
 	{
 		"title": "wilzzu.dev",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/1.png",
-			"./src/assets/projects/2.png",
-			"./src/assets/projects/3.png"
+			"./src/assets/projects/botbob/botbob-1.png",
+			"./src/assets/projects/botbob/botbob-2.png",
+			"./src/assets/projects/botbob/botbob-3.png"
 		],
-		"thumbnail": "./src/assets/projects/thumbnails/botBob_thumbnail.png",
 		"year": "2022",
 		"links": [
 			{ "type": "code", "url": "github.com/wilzzu" },
@@ -48,10 +47,11 @@
 	{
 		"title": "Thunderblaze",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/1.png",
-			"./src/assets/projects/2.png",
-			"./src/assets/projects/3.png"
+			"./src/assets/projects/botbob/botbob-1.png",
+			"./src/assets/projects/botbob/botbob-2.png",
+			"./src/assets/projects/botbob/botbob-3.png"
 		],
 		"year": "2021",
 		"links": [
@@ -63,10 +63,11 @@
 	{
 		"title": "CS2TextModMerger",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/1.png",
-			"./src/assets/projects/2.png",
-			"./src/assets/projects/3.png"
+			"./src/assets/projects/botbob/botbob-1.png",
+			"./src/assets/projects/botbob/botbob-2.png",
+			"./src/assets/projects/botbob/botbob-3.png"
 		],
 		"year": "2020",
 		"links": [
@@ -78,10 +79,11 @@
 	{
 		"title": "Project 6",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/1.png",
-			"./src/assets/projects/2.png",
-			"./src/assets/projects/3.png"
+			"./src/assets/projects/botbob/botbob-1.png",
+			"./src/assets/projects/botbob/botbob-2.png",
+			"./src/assets/projects/botbob/botbob-3.png"
 		],
 		"year": "2019",
 		"links": [
@@ -93,10 +95,11 @@
 	{
 		"title": "Project 7",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/1.png",
-			"./src/assets/projects/2.png",
-			"./src/assets/projects/3.png"
+			"./src/assets/projects/botbob/botbob-1.png",
+			"./src/assets/projects/botbob/botbob-2.png",
+			"./src/assets/projects/botbob/botbob-3.png"
 		],
 		"year": "2018",
 		"links": [
@@ -108,10 +111,11 @@
 	{
 		"title": "Project 8",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/1.png",
-			"./src/assets/projects/2.png",
-			"./src/assets/projects/3.png"
+			"./src/assets/projects/botbob/botbob-1.png",
+			"./src/assets/projects/botbob/botbob-2.png",
+			"./src/assets/projects/botbob/botbob-3.png"
 		],
 		"year": "2017",
 		"links": [
@@ -123,10 +127,11 @@
 	{
 		"title": "Project 9",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/1.png",
-			"./src/assets/projects/2.png",
-			"./src/assets/projects/3.png"
+			"./src/assets/projects/botbob/botbob-1.png",
+			"./src/assets/projects/botbob/botbob-2.png",
+			"./src/assets/projects/botbob/botbob-3.png"
 		],
 		"year": "2016",
 		"links": [
@@ -138,10 +143,11 @@
 	{
 		"title": "Project 10",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/1.png",
-			"./src/assets/projects/2.png",
-			"./src/assets/projects/3.png"
+			"./src/assets/projects/botbob/botbob-1.png",
+			"./src/assets/projects/botbob/botbob-2.png",
+			"./src/assets/projects/botbob/botbob-3.png"
 		],
 		"year": "2015",
 		"links": [

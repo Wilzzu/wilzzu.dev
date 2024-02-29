@@ -25,6 +25,7 @@ const Background = () => {
 			{/* Background line colors */}
 			<div className="w-full h-full bg-[#111111] fixed -z-[3]" />
 			{/* Animate glowing lights that move on the background */}
+			{/* TODO: Make this one animate instantly after initial animation */}
 			<Glow style={"right-0 top-[-200%] animate-bgStreakTR"} />
 			<Glow style={"left-[16.2%] bottom-[-200%] animate-bgStreakBL"} />
 			{/* Div that follows the mouse and lights up background */}

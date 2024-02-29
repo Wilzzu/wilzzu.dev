@@ -46,6 +46,7 @@ const ImageCarousel = ({ images, isMobile }) => {
 	};
 
 	// Scroll through images automatically
+	// TODO: Make the first transition after 3 seconds
 	useEffect(() => {
 		const interval = setInterval(() => {
 			if (hovering.current) return;

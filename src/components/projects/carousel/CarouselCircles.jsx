@@ -18,7 +18,7 @@ const CarouselCircles = ({ images, current, handleNewCurrent }) => {
 					{/* Circle */}
 					<div
 						className={cn(
-							"w-2 h-2 rounded-full outline outline-1 outline-transparent bg-secondary bg-opacity-40 group-hover/nav:bg-opacity-80 group-hover/nav:bg-white group-hover/nav:outline-gray-400 duration-300",
+							"w-2 h-2 rounded-full outline outline-1 outline-transparent bg-secondary bg-opacity-60 group-hover/nav:bg-opacity-80 group-hover/nav:bg-white group-hover/nav:outline-gray-400 duration-300",
 							current === i && "bg-opacity-100 bg-white outline-gray-400"
 						)}
 					/>

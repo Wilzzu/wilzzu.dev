@@ -24,16 +24,18 @@ const ProjectItem = forwardRef(function ProjectItem(
 			<Tilt
 				perspective={800}
 				transitionSpeed={2400}
-				tiltMaxAngleX={selected ? 4 : 8}
-				tiltMaxAngleY={selected ? 2 : 6}
+				tiltMaxAngleX={!selected && 8}
+				tiltMaxAngleY={!selected && 6}
 				tiltReverse={selected}>
 				<Link to={!selected && `/project/${parsedUrl}`} draggable={false}>
 					{/* Card container */}
-					{/* TODO: Fix items disappearing on Firefox because of backdrop blur */}
+					{/* TODO: Add hover border */}
 					<div
 						className={cn(
 							"relative group flex flex-col tablet:flex-row items-center justify-center bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden gap-3",
-							selected && "h-full tablet:h-80 py-4 px-2 tablet:px-6 tablet:py-4"
+							selected
+								? "h-full tablet:h-80 py-4 px-2 tablet:px-6 tablet:py-4"
+								: "hover:shadow-[0_0_16px_rgba(210,167,84,0.4)] duration-300" // TODO: Add better shadow
 						)}>
 						{/* Content */}
 						<AnimatePresence>
@@ -43,7 +45,8 @@ const ProjectItem = forwardRef(function ProjectItem(
 								<ItemThumbnail key={item.title + "-thumbnail"} item={item} />
 							)}
 						</AnimatePresence>
-						{/* Background image */}
+						{/* Background image, should be 368 x 128 */}
+						{/* TODO: Add low res thumbnail as background image when not hovering, will be blurred and saves data */}
 						<motion.img
 							src={item.thumbnail}
 							alt={`${item.title} image`}
@@ -51,7 +54,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 								"absolute w-full h-full object-fill blur-sm duration-1000 tablet:duration-500 z-0",
 								selected
 									? "opacity-0 tablet:opacity-10 blur-md"
-									: "opacity-20 group-hover:opacity-30 group-hover:blur-[2px]"
+									: "opacity-20 group-hover:opacity-90 group-hover:blur-none"
 							)}
 						/>
 					</div>
