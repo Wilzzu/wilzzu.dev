@@ -46,7 +46,7 @@ const ImageCarousel = ({ images, isMobile }) => {
 	};
 
 	// Scroll through images automatically
-	// TODO: Make the first transition after 3 seconds
+	// TODO: If user stops hovering, restart interval
 	useEffect(() => {
 		const interval = setInterval(() => {
 			if (hovering.current) return;
@@ -86,8 +86,7 @@ const ImageCarousel = ({ images, isMobile }) => {
 						src={image}
 						alt={`Project screenshot #${index + 1}`}
 						draggable={false}
-						// All images should be 256x256, otherwise they will be stretched
-						className="w-64 h-full aspect-square object-cover"
+						className="w-80 h-full aspect-square object-cover" // Images should be 320x320
 					/>
 				))}
 			</div>
