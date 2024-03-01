@@ -35,7 +35,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 							"relative group flex flex-col tablet:flex-row items-center justify-center bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden gap-3",
 							selected
 								? "h-full tablet:h-80 py-4 px-2 tablet:px-6 tablet:py-4"
-								: "tablet:hover:shadow-[0_0_16px_rgba(210,167,84,0.4)] tablet:duration-300" // TODO: Add better shadow
+								: "tablet:hover:shadow-[0_0_16px_rgba(210,167,84,0.4)] tablet:duration-300 tablet:transition-shadow" // TODO: Add better shadow
 						)}>
 						{/* Content */}
 						<AnimatePresence>
