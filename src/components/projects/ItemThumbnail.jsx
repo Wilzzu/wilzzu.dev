@@ -1,5 +1,14 @@
 import { motion } from "framer-motion";
 import TechIcons from "./TechIcons";
+import { cn } from "../../../lib/utils";
+
+const scales = {
+	1: "tablet:group-hover:scale-[1.5]",
+	2: "tablet:group-hover:scale-[2]",
+	3: "tablet:group-hover:scale-[2.5]",
+	4: "tablet:group-hover:scale-[3]",
+	5: "tablet:group-hover:scale-[3.5]",
+};
 
 // Animation variants
 const container = {
@@ -12,7 +21,10 @@ const itemVariant = {
 	visible: {
 		y: 0,
 		opacity: 1,
-		transition: { type: "tween", duration: 0.3, ease: "easeInOut" },
+		transition: {
+			y: { duration: 0.5, ease: "easeInOut" },
+			opacity: { duration: 0.8, ease: "easeInOut" },
+		},
 	},
 	hidden: { y: 3, opacity: 0 },
 	exit: { opacity: 0, transition: { duration: 0 } },
@@ -29,7 +41,10 @@ const ItemThumbnail = ({ item }) => {
 			{/* Title */}
 			<motion.h1
 				variants={itemVariant}
-				className="font-semibold text-lg tablet:group-hover:-translate-y-2 tablet:group-hover:text-transparent duration-300">
+				className={cn(
+					"font-semibold text-lg tablet:group-hover:translate-y-3 tablet:group-hover:[text-shadow:_0_1px_2px_rgb(0_0_0_/_50%)] tablet:group-hover:text-neutral-100 duration-300",
+					scales[item.scale]
+				)}>
 				{item.title}
 			</motion.h1>
 			{/* Year and Tech icons */}

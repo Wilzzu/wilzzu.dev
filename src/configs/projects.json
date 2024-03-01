@@ -10,7 +10,8 @@
 		],
 		"year": "2024",
 		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/botBob" }],
-		"tech": ["Node.js", "MongoDB", "OpenAI"]
+		"tech": ["Node.js", "MongoDB", "OpenAI"],
+		"scale": 4
 	},
 	{
 		"title": "CS2Rankings",
@@ -26,7 +27,8 @@
 			{ "type": "code", "url": "https://github.com/Wilzzu/cs2rankings" },
 			{ "type": "live", "url": "https://cs2rankings.com" }
 		],
-		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Node.js"]
+		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Node.js"],
+		"scale": 3
 	},
 	{
 		"title": "wilzzu.dev",
@@ -42,7 +44,8 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"]
+		"tech": ["React", "Tailwind CSS"],
+		"scale": 2
 	},
 	{
 		"title": "Thunderblaze",
@@ -58,7 +61,8 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Supabase", "Node.js"]
+		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Supabase", "Node.js"],
+		"scale": 2
 	},
 	{
 		"title": "CS2TextModMerger",
@@ -74,7 +78,8 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["Node.js", "Electron", "HTML", "CSS"]
+		"tech": ["Node.js", "Electron", "HTML", "CSS"],
+		"scale": 2
 	},
 	{
 		"title": "Project 6",
@@ -90,7 +95,8 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"]
+		"tech": ["React", "Tailwind CSS"],
+		"scale": 2
 	},
 	{
 		"title": "Project 7",
@@ -106,7 +112,8 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"]
+		"tech": ["React", "Tailwind CSS"],
+		"scale": 2
 	},
 	{
 		"title": "Project 8",
@@ -122,7 +129,8 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"]
+		"tech": ["React", "Tailwind CSS"],
+		"scale": 2
 	},
 	{
 		"title": "Project 9",
@@ -138,7 +146,8 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"]
+		"tech": ["React", "Tailwind CSS"],
+		"scale": 2
 	},
 	{
 		"title": "Project 10",
@@ -154,6 +163,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"]
+		"tech": ["React", "Tailwind CSS"],
+		"scale": 2
 	}
 ]
