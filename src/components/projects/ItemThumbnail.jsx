@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import TechIcons from "./TechIcons";
+import { cn } from "../../../lib/utils";
 
 // Animation variants
 const container = {
@@ -12,13 +13,24 @@ const itemVariant = {
 	visible: {
 		y: 0,
 		opacity: 1,
-		transition: { type: "tween", duration: 0.3, ease: "easeInOut" },
+		transition: {
+			y: { duration: 0.5, ease: "easeInOut" },
+			opacity: { duration: 0.8, ease: "easeInOut" },
+		},
 	},
 	hidden: { y: 3, opacity: 0 },
 	exit: { opacity: 0, transition: { duration: 0 } },
 };
 
 const ItemThumbnail = ({ item }) => {
+	const calculateScale = (title) => {
+		if (title.length <= 4) return "tablet:group-hover:scale-[3.2]";
+		if (title.length <= 7) return "tablet:group-hover:scale-[2.6]";
+		if (title.length <= 12) return "tablet:group-hover:scale-[2.3]";
+		if (title.length <= 15) return "tablet:group-hover:scale-[2]";
+		return "tablet:group-hover:scale-[1.8]";
+	};
+
 	return (
 		<motion.div
 			initial="hidden"
@@ -29,7 +41,12 @@ const ItemThumbnail = ({ item }) => {
 			{/* Title */}
 			<motion.h1
 				variants={itemVariant}
-				className="font-semibold text-lg tablet:group-hover:-translate-y-2 tablet:group-hover:text-transparent duration-300">
+				className={cn(
+					"font-semibold text-lg duration-300",
+					"tablet:group-hover:translate-y-3 tablet:group-hover:[text-shadow:_0_1px_2px_rgb(0_0_0_/_50%)] tablet:group-hover:text-neutral-100",
+					"tablet:group-active:![text-shadow:none] tablet:group-active:!text-transparent",
+					calculateScale(item.title)
+				)}>
 				{item.title}
 			</motion.h1>
 			{/* Year and Tech icons */}

@@ -33,9 +33,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 					<div
 						className={cn(
 							"relative group flex flex-col tablet:flex-row items-center justify-center bg-primary bg-opacity-50 backdrop-blur-md h-32 rounded-xl overflow-hidden gap-3",
-							selected
-								? "h-full tablet:h-80 py-4 px-2 tablet:px-6 tablet:py-4"
-								: "tablet:hover:shadow-[0_0_16px_rgba(210,167,84,0.4)] tablet:duration-300 tablet:transition-shadow" // TODO: Add better shadow
+							selected && "h-full tablet:h-80 py-4 px-2 tablet:px-6 tablet:py-4"
 						)}>
 						{/* Content */}
 						<AnimatePresence>
@@ -54,7 +52,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 								"absolute w-full h-full object-fill blur-sm duration-1000 tablet:duration-500 z-0",
 								selected
 									? "opacity-0 tablet:opacity-10 blur-md"
-									: "opacity-20 tablet:group-hover:opacity-90 tablet:group-hover:blur-none"
+									: "opacity-20 tablet:group-hover:opacity-50 tablet:group-hover:blur-[2px]"
 							)}
 						/>
 					</div>

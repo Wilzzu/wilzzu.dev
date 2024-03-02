@@ -9,6 +9,8 @@ import { SiSupabase } from "react-icons/si";
 import { IoLogoElectron } from "react-icons/io5";
 import { PiFileHtmlBold } from "react-icons/pi";
 import { PiFileCssBold } from "react-icons/pi";
+import { SiUnity } from "react-icons/si";
+import { SiCsharp } from "react-icons/si";
 import { motion } from "framer-motion";
 
 // Remap icon names to actual icons
@@ -24,6 +26,8 @@ const remapIcons = {
 	Electron: <IoLogoElectron className="w-4 h-4" />,
 	HTML: <PiFileHtmlBold className="w-4 h-4" />,
 	CSS: <PiFileCssBold className="w-4 h-4" />,
+	Unity: <SiUnity className="w-4 h-4" />,
+	"C#": <SiCsharp className="w-4 h-4" />,
 };
 
 const TechIcons = ({ items, variant, badge = false }) => {
