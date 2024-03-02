@@ -4,14 +4,14 @@
 		"description": "An advanced Discord bot with fully customizable features, AI integration, and multilingual support. Originally started in 2019, rewritten in 2024.",
 		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/botbob/botbob-1.png",
-			"./src/assets/projects/botbob/botbob-2.png",
-			"./src/assets/projects/botbob/botbob-3.png"
+			"./src/assets/projects/botbob/botbob-1.webp",
+			"./src/assets/projects/botbob/botbob-2.webp",
+			"./src/assets/projects/botbob/botbob-3.webp",
+			"./src/assets/projects/botbob/botbob-4.webp"
 		],
 		"year": "2024",
 		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/botBob" }],
-		"tech": ["Node.js", "MongoDB", "OpenAI"],
-		"scale": 4
+		"tech": ["Node.js", "MongoDB", "OpenAI"]
 	},
 	{
 		"title": "CS2Rankings",
@@ -27,8 +27,21 @@
 			{ "type": "code", "url": "https://github.com/Wilzzu/cs2rankings" },
 			{ "type": "live", "url": "https://cs2rankings.com" }
 		],
-		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Node.js"],
-		"scale": 3
+		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Node.js"]
+	},
+	{
+		"title": "Jumpy",
+		"description": "Platformer game that requires precision and patience. One missed jump, and you'll be plummeting back to the start. Built for both mobile and desktop.",
+		"thumbnail": "./src/assets/projects/jumpy/jumpy-thumbnail.webp",
+		"images": [
+			"./src/assets/projects/jumpy/jumpy-1.webp",
+			"./src/assets/projects/jumpy/jumpy-2.webp",
+			"./src/assets/projects/jumpy/jumpy-3.webp",
+			"./src/assets/projects/jumpy/jumpy-4.webp"
+		],
+		"year": "2022",
+		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/jumpy" }],
+		"tech": ["Unity", "C#"]
 	},
 	{
 		"title": "wilzzu.dev",
@@ -44,8 +57,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"],
-		"scale": 2
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Thunderblaze",
@@ -61,8 +73,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Supabase", "Node.js"],
-		"scale": 2
+		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Supabase", "Node.js"]
 	},
 	{
 		"title": "CS2TextModMerger",
@@ -78,8 +89,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["Node.js", "Electron", "HTML", "CSS"],
-		"scale": 2
+		"tech": ["Node.js", "Electron", "HTML", "CSS"]
 	},
 	{
 		"title": "Project 6",
@@ -95,8 +105,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"],
-		"scale": 2
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Project 7",
@@ -112,8 +121,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"],
-		"scale": 2
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Project 8",
@@ -129,8 +137,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"],
-		"scale": 2
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Project 9",
@@ -146,8 +153,7 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"],
-		"scale": 2
+		"tech": ["React", "Tailwind CSS"]
 	},
 	{
 		"title": "Project 10",
@@ -163,7 +169,6 @@
 			{ "type": "code", "url": "github.com/wilzzu" },
 			{ "type": "live", "url": "google.com" }
 		],
-		"tech": ["React", "Tailwind CSS"],
-		"scale": 2
+		"tech": ["React", "Tailwind CSS"]
 	}
 ]
