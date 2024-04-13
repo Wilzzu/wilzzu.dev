@@ -87,7 +87,7 @@ const Socials = ({ socials, direction, style = null }) => {
 						className="h-full w-full flex items-center justify-center z-10">
 						{icons[social.icon]}
 						{/* Tooltip */}
-						<span className="absolute -bottom-3 scale-75 px-3 py-2 bg-primary rounded-lg text-sm shadow-xl opacity-0 group-hover:opacity-100 group-hover:-bottom-9 group-hover:scale-100 duration-300 z-0">
+						<span className="absolute -bottom-3 scale-75 px-3 py-2 bg-primary rounded-lg text-sm shadow-xl opacity-0 group-hover:opacity-100 group-hover:-bottom-9 group-hover:scale-100 duration-300 z-0 text-nowrap">
 							{social.name}
 						</span>
 					</a>
