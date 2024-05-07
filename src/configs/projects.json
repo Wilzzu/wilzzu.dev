@@ -30,6 +30,23 @@
 		"tech": ["Node.js", "MongoDB", "OpenAI"]
 	},
 	{
+		"title": "wilzzu.dev",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
+		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
+		"images": [
+			"./src/assets/projects/botbob/botbob-1.webp",
+			"./src/assets/projects/botbob/botbob-2.webp",
+			"./src/assets/projects/botbob/botbob-3.webp",
+			"./src/assets/projects/botbob/botbob-4.webp"
+		],
+		"year": "2024",
+		"links": [
+			{ "type": "code", "url": "github.com/wilzzu" },
+			{ "type": "live", "url": "google.com" }
+		],
+		"tech": ["React", "Tailwind CSS"]
+	},
+	{
 		"title": "CS2Rankings",
 		"description": "Website with live Counter-Strike 2 leaderboard rankings, overall position tracking, detailed player histories and previous season standings.",
 		"thumbnail": "./src/assets/projects/cs2rankings/cs2rankings-thumbnail.webp",
@@ -46,6 +63,54 @@
 		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Node.js"]
 	},
 	{
+		"title": "Who sent that?",
+		"description": "Discord chat guessing game",
+		"thumbnail": "./src/assets/projects/whosentthat/WST-thumbnail.webp",
+		"images": [
+			"./src/assets/projects/whosentthat/WST-1.webp",
+			"./src/assets/projects/whosentthat/WST-2.webp",
+			"./src/assets/projects/whosentthat/WST-3.webp",
+			"./src/assets/projects/whosentthat/WST-4.webp"
+		],
+		"year": "2023",
+		"links": [
+			{ "type": "code", "url": "https://github.com/Wilzzu/WhoSentThat" },
+			{ "type": "demo", "url": "https://whosentthat.wilzzu.dev/" }
+		],
+		"tech": ["React", "Tailwind CSS", "Supabase", "MongoDB", "Express", "Node.js"]
+	},
+	{
+		"title": "Thunderblaze",
+		"description": "Website for a private Discord server, built to practice React and Tailwind. With this demo, you can access all the features by using the \"Demo menu\" button at the bottom of the page and changing your role.",
+		"thumbnail": "./src/assets/projects/thunderblaze/thunderblaze-thumbnail.webp",
+		"images": [
+			"./src/assets/projects/thunderblaze/thunderblaze-1.webp",
+			"./src/assets/projects/thunderblaze/thunderblaze-2.webp",
+			"./src/assets/projects/thunderblaze/thunderblaze-3.webp",
+			"./src/assets/projects/thunderblaze/thunderblaze-4.webp",
+			"./src/assets/projects/thunderblaze/thunderblaze-5.webp"
+		],
+		"year": "2023",
+		"links": [
+			{ "type": "code", "url": "https://github.com/Wilzzu/Thunderblaze" },
+			{ "type": "demo", "url": "https://thunderblaze.wilzzu.dev/" }
+		],
+		"tech": ["React", "Tailwind CSS", "Redux", "Supabase", "MongoDB", "Express", "Node.js"]
+	},
+	{
+		"title": "CS2TextModMerger",
+		"description": "Electron app made for merging Counter-Strike 2 text mod files with the game's original language files.",
+		"thumbnail": "./src/assets/projects/cs2textmodmerger/CS2TMM-thumbnail.webp",
+		"images": [
+			"./src/assets/projects/cs2textmodmerger/CS2TMM-1.webp",
+			"./src/assets/projects/cs2textmodmerger/CS2TMM-2.webp",
+			"./src/assets/projects/cs2textmodmerger/CS2TMM-3.webp"
+		],
+		"year": "2023",
+		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/CS2TextModMerger" }],
+		"tech": ["Electron", "Node.js", "HTML", "CSS"]
+	},
+	{
 		"title": "Jumpy",
 		"description": "Platformer game that requires precision and patience. One missed jump, and you'll be plummeting back to the start. Built for both mobile and desktop.",
 		"thumbnail": "./src/assets/projects/jumpy/jumpy-thumbnail.webp",
@@ -60,61 +125,14 @@
 		"tech": ["Unity", "C#"]
 	},
 	{
-		"title": "wilzzu.dev",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
-		"images": [
-			"./src/assets/projects/botbob/botbob-1.png",
-			"./src/assets/projects/botbob/botbob-2.png",
-			"./src/assets/projects/botbob/botbob-3.png"
-		],
-		"year": "2022",
-		"links": [
-			{ "type": "code", "url": "github.com/wilzzu" },
-			{ "type": "live", "url": "google.com" }
-		],
-		"tech": ["React", "Tailwind CSS"]
-	},
-	{
-		"title": "Thunderblaze",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
-		"images": [
-			"./src/assets/projects/botbob/botbob-1.png",
-			"./src/assets/projects/botbob/botbob-2.png",
-			"./src/assets/projects/botbob/botbob-3.png"
-		],
-		"year": "2021",
-		"links": [
-			{ "type": "code", "url": "github.com/wilzzu" },
-			{ "type": "live", "url": "google.com" }
-		],
-		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Supabase", "Node.js"]
-	},
-	{
-		"title": "CS2TextModMerger",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
-		"images": [
-			"./src/assets/projects/botbob/botbob-1.png",
-			"./src/assets/projects/botbob/botbob-2.png",
-			"./src/assets/projects/botbob/botbob-3.png"
-		],
-		"year": "2020",
-		"links": [
-			{ "type": "code", "url": "github.com/wilzzu" },
-			{ "type": "live", "url": "google.com" }
-		],
-		"tech": ["Node.js", "Electron", "HTML", "CSS"]
-	},
-	{
 		"title": "Project 7",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/botbob/botbob-1.png",
-			"./src/assets/projects/botbob/botbob-2.png",
-			"./src/assets/projects/botbob/botbob-3.png"
+			"./src/assets/projects/botbob/botbob-1.webp",
+			"./src/assets/projects/botbob/botbob-2.webp",
+			"./src/assets/projects/botbob/botbob-3.webp",
+			"./src/assets/projects/botbob/botbob-4.webp"
 		],
 		"year": "2018",
 		"links": [
@@ -128,9 +146,10 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/botbob/botbob-1.png",
-			"./src/assets/projects/botbob/botbob-2.png",
-			"./src/assets/projects/botbob/botbob-3.png"
+			"./src/assets/projects/botbob/botbob-1.webp",
+			"./src/assets/projects/botbob/botbob-2.webp",
+			"./src/assets/projects/botbob/botbob-3.webp",
+			"./src/assets/projects/botbob/botbob-4.webp"
 		],
 		"year": "2017",
 		"links": [
@@ -144,9 +163,10 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/botbob/botbob-1.png",
-			"./src/assets/projects/botbob/botbob-2.png",
-			"./src/assets/projects/botbob/botbob-3.png"
+			"./src/assets/projects/botbob/botbob-1.webp",
+			"./src/assets/projects/botbob/botbob-2.webp",
+			"./src/assets/projects/botbob/botbob-3.webp",
+			"./src/assets/projects/botbob/botbob-4.webp"
 		],
 		"year": "2016",
 		"links": [
@@ -160,9 +180,10 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
 		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/botbob/botbob-1.png",
-			"./src/assets/projects/botbob/botbob-2.png",
-			"./src/assets/projects/botbob/botbob-3.png"
+			"./src/assets/projects/botbob/botbob-1.webp",
+			"./src/assets/projects/botbob/botbob-2.webp",
+			"./src/assets/projects/botbob/botbob-3.webp",
+			"./src/assets/projects/botbob/botbob-4.webp"
 		],
 		"year": "2015",
 		"links": [

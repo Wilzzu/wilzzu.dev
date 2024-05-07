@@ -17,13 +17,17 @@ const ContainerRight = () => {
 
 	return (
 		<div className="h-full w-full tablet:w-[800px] flex flex-col items-center justify-start tablet:justify-center gap-4">
-			<Navigation location={location} projectName={projectName} />
+			<Navigation location={location} projectName={encodeURIComponent(projectName)} />
 			<section className="relative w-full h-full tablet:h-[40rem] pb-4 xl:pb-0 z-0 overflow-hidden">
 				<AnimatePresence mode="wait">
 					{location.pathname === "/about/" ? (
 						<About key="About" delayAnimation={delayAnimation} />
 					) : (
-						<Projects key="Projects" projectName={projectName} delayAnimation={delayAnimation} />
+						<Projects
+							key="Projects"
+							projectName={encodeURIComponent(projectName)}
+							delayAnimation={delayAnimation}
+						/>
 					)}
 				</AnimatePresence>
 			</section>

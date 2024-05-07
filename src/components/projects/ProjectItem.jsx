@@ -44,7 +44,6 @@ const ProjectItem = forwardRef(function ProjectItem(
 							)}
 						</AnimatePresence>
 						{/* Background image, should be 368 x 128 */}
-						{/* TODO: Add low res thumbnail as background image when not hovering, will be blurred and saves data */}
 						<motion.img
 							src={item.thumbnail}
 							alt={`${item.title} image`}

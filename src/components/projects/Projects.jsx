@@ -38,10 +38,6 @@ const fastExitVariant = {
 	exit: { ...itemVariant.exit, transition: { duration: 0.1 } },
 };
 
-const parseUrl = (title) => {
-	return title.replace(/\s+/g, "-").toLowerCase();
-};
-
 // Check if scroll shadows should be shown
 const scrollShadow = (element, botShadow, topShadow) => {
 	const distFromBot = element.scrollHeight - element.scrollTop - element.clientHeight;
@@ -64,7 +60,9 @@ const scrollShadow = (element, botShadow, topShadow) => {
 
 // Scroll to the selected project
 const scrollToProject = (listRef, projectRefs, projectName) => {
-	const projectIndex = projectsDb.findIndex((project) => parseUrl(project.title) === projectName);
+	const projectIndex = projectsDb.findIndex(
+		(project) => encodeURIComponent(project.title) === projectName
+	);
 
 	if (projectIndex !== -1) {
 		const selectedProject = projectRefs.current[projectIndex];
@@ -118,7 +116,7 @@ const Projects = ({ projectName, delayAnimation }) => {
 						ref={projectRefs.current[i]}
 						item={project}
 						current={projectName}
-						parsedUrl={parseUrl(project.title)}
+						parsedUrl={encodeURIComponent(project.title)}
 						index={i}
 						lastItem={projectsDb.length === i + 1}
 						variant={i < 6 ? itemVariant : fastExitVariant}
