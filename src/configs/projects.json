@@ -81,7 +81,7 @@
 	},
 	{
 		"title": "Thunderblaze",
-		"description": "Website for a private Discord server, built to practice React and Tailwind. With this demo, you can access all the features by using the \"Demo menu\" button at the bottom of the page and changing your role.",
+		"description": "Website built for a private Discord server. This is a demo version, where you can access all the features by using the \"Demo menu\" button at the bottom of the page and changing your role.",
 		"thumbnail": "./src/assets/projects/thunderblaze/thunderblaze-thumbnail.webp",
 		"images": [
 			"./src/assets/projects/thunderblaze/thunderblaze-1.webp",
@@ -98,7 +98,7 @@
 		"tech": ["React", "Tailwind CSS", "Redux", "Supabase", "MongoDB", "Express", "Node.js"]
 	},
 	{
-		"title": "CS2TextModMerger",
+		"title": "CS2 Text Mod Merger",
 		"description": "Electron app made for merging Counter-Strike 2 text mod files with the game's original language files.",
 		"thumbnail": "./src/assets/projects/cs2textmodmerger/CS2TMM-thumbnail.webp",
 		"images": [
@@ -125,71 +125,29 @@
 		"tech": ["Unity", "C#"]
 	},
 	{
-		"title": "Project 7",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
+		"title": "CSDevAlerts",
+		"description": "Discord bot that sends a notification whenever a developer starts playing CS:GO",
+		"thumbnail": "./src/assets/projects/csdevalerts/csdevalerts-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/botbob/botbob-1.webp",
-			"./src/assets/projects/botbob/botbob-2.webp",
-			"./src/assets/projects/botbob/botbob-3.webp",
-			"./src/assets/projects/botbob/botbob-4.webp"
+			"./src/assets/projects/csdevalerts/csdevalerts-1.webp",
+			"./src/assets/projects/csdevalerts/csdevalerts-2.webp",
+			"./src/assets/projects/csdevalerts/csdevalerts-3.webp"
 		],
-		"year": "2018",
-		"links": [
-			{ "type": "code", "url": "github.com/wilzzu" },
-			{ "type": "live", "url": "google.com" }
-		],
-		"tech": ["React", "Tailwind CSS"]
+		"year": "2022",
+		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/CsDevAlerts" }],
+		"tech": ["Node.js"]
 	},
 	{
-		"title": "Project 8",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
+		"title": "Twitch Drops Manager",
+		"description": "Chrome extension that makes it easy to follow your Twitch drops progress. Drops are shown right under the stream, with a progress bar and time left in minutes.",
+		"thumbnail": "./src/assets/projects/twitchdropsmanager/TDM-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/botbob/botbob-1.webp",
-			"./src/assets/projects/botbob/botbob-2.webp",
-			"./src/assets/projects/botbob/botbob-3.webp",
-			"./src/assets/projects/botbob/botbob-4.webp"
+			"./src/assets/projects/twitchdropsmanager/TDM-1.webp",
+			"./src/assets/projects/twitchdropsmanager/TDM-2.webp",
+			"./src/assets/projects/twitchdropsmanager/TDM-3.webp"
 		],
-		"year": "2017",
-		"links": [
-			{ "type": "code", "url": "github.com/wilzzu" },
-			{ "type": "live", "url": "google.com" }
-		],
-		"tech": ["React", "Tailwind CSS"]
-	},
-	{
-		"title": "Project 9",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
-		"images": [
-			"./src/assets/projects/botbob/botbob-1.webp",
-			"./src/assets/projects/botbob/botbob-2.webp",
-			"./src/assets/projects/botbob/botbob-3.webp",
-			"./src/assets/projects/botbob/botbob-4.webp"
-		],
-		"year": "2016",
-		"links": [
-			{ "type": "code", "url": "github.com/wilzzu" },
-			{ "type": "live", "url": "google.com" }
-		],
-		"tech": ["React", "Tailwind CSS"]
-	},
-	{
-		"title": "Project 10",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
-		"images": [
-			"./src/assets/projects/botbob/botbob-1.webp",
-			"./src/assets/projects/botbob/botbob-2.webp",
-			"./src/assets/projects/botbob/botbob-3.webp",
-			"./src/assets/projects/botbob/botbob-4.webp"
-		],
-		"year": "2015",
-		"links": [
-			{ "type": "code", "url": "github.com/wilzzu" },
-			{ "type": "live", "url": "google.com" }
-		],
-		"tech": ["React", "Tailwind CSS"]
+		"year": "2021",
+		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/TwitchDropsManager" }],
+		"tech": ["HTML", "CSS", "JavaScript"]
 	}
 ]

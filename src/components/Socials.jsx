@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { FiGithub, FiTwitter, FiYoutube, FiMail } from "react-icons/fi";
+import { FiGithub, FiYoutube, FiMail } from "react-icons/fi";
+import { RiTwitterXLine } from "react-icons/ri";
 import { TbBrandSteam } from "react-icons/tb";
 import { cn } from "../../lib/utils";
 
@@ -32,14 +33,7 @@ const icons = {
 			className="opacity-40 group-hover:opacity-80 duration-500"
 		/>
 	),
-	twitter: (
-		<FiTwitter
-			size={48}
-			strokeWidth={1.2}
-			fill="#101010"
-			className="opacity-40 group-hover:opacity-80 duration-500"
-		/>
-	),
+	twitter: <RiTwitterXLine size={48} className="opacity-40 group-hover:opacity-80 duration-500" />,
 	youtube: (
 		<FiYoutube
 			size={52}

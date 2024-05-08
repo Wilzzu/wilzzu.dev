@@ -23,12 +23,13 @@ const itemVariant = {
 };
 
 const ItemThumbnail = ({ item }) => {
-	const calculateScale = (title) => {
+	const calculateTitleScale = (title) => {
 		if (title.length <= 4) return "tablet:group-hover:scale-[3.2]";
 		if (title.length <= 7) return "tablet:group-hover:scale-[2.6]";
 		if (title.length <= 12) return "tablet:group-hover:scale-[2.3]";
 		if (title.length <= 15) return "tablet:group-hover:scale-[2]";
-		return "tablet:group-hover:scale-[1.8]";
+		if (title.length <= 18) return "tablet:group-hover:scale-[1.8]";
+		return "tablet:group-hover:scale-[1.6]";
 	};
 
 	return (
@@ -45,7 +46,7 @@ const ItemThumbnail = ({ item }) => {
 					"font-semibold text-lg duration-300",
 					"tablet:group-hover:translate-y-3 tablet:group-hover:[text-shadow:_0_1px_2px_rgb(0_0_0_/_50%)] tablet:group-hover:text-neutral-100",
 					"tablet:group-active:![text-shadow:none] tablet:group-active:!text-transparent",
-					calculateScale(item.title)
+					calculateTitleScale(item.title)
 				)}>
 				{item.title}
 			</motion.h1>

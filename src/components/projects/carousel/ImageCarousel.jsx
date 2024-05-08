@@ -46,7 +46,6 @@ const ImageCarousel = ({ images, isMobile }) => {
 	};
 
 	// Scroll through images automatically
-	// TODO: If user stops hovering, restart interval
 	useEffect(() => {
 		const interval = setInterval(() => {
 			if (hovering.current) return;
