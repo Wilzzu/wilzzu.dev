@@ -1,23 +1,25 @@
-import { SiReact } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
-import { SiRedux } from "react-icons/si";
-import { SiNodedotjs } from "react-icons/si";
-import { SiOpenai } from "react-icons/si";
-import { SiSupabase } from "react-icons/si";
+import {
+	SiReact,
+	SiTailwindcss,
+	SiMongodb,
+	SiExpress,
+	SiRedux,
+	SiNodedotjs,
+	SiOpenai,
+	SiSupabase,
+	SiUnity,
+	SiCsharp,
+} from "react-icons/si";
 import { IoLogoElectron } from "react-icons/io5";
-import { PiFileHtmlBold } from "react-icons/pi";
-import { PiFileCssBold } from "react-icons/pi";
-import { PiFileJsBold } from "react-icons/pi";
-import { SiUnity } from "react-icons/si";
-import { SiCsharp } from "react-icons/si";
+import { PiFileHtmlBold, PiFileCssBold, PiFileJsBold } from "react-icons/pi";
+import { TbBrandFramerMotion } from "react-icons/tb";
 import { motion } from "framer-motion";
 
 // Remap icon names to actual icons
 const remapIcons = {
 	React: <SiReact className="w-4 h-4" />,
 	"Tailwind CSS": <SiTailwindcss className="w-4 h-4" />,
+	"Framer Motion": <TbBrandFramerMotion className="w-4 h-4" />,
 	MongoDB: <SiMongodb className="w-2 h-4 scale-[1.8]" />,
 	Express: <SiExpress className="w-4 h-4 scale-110" />,
 	Redux: <SiRedux className="w-4 h-4" />,

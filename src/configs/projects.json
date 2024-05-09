@@ -2,18 +2,37 @@
 	{
 		"title": "DCWheel",
 		"description": "Fast and fun way to create teams for games and events! With a Discord integration, you can easily add players and share the results with your server.",
-		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
+		"thumbnail": "./src/assets/projects/dcwheel/dcwheel-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/botbob/botbob-1.webp",
-			"./src/assets/projects/botbob/botbob-2.webp",
-			"./src/assets/projects/botbob/botbob-3.webp"
+			"./src/assets/projects/dcwheel/dcwheel-1.webp",
+			"./src/assets/projects/dcwheel/dcwheel-2.webp",
+			"./src/assets/projects/dcwheel/dcwheel-3.webp",
+			"./src/assets/projects/dcwheel/dcwheel-4.webp",
+			"./src/assets/projects/dcwheel/dcwheel-5.webp"
 		],
 		"year": "2024",
 		"links": [
-			{ "type": "code", "url": "https://github.com/Wilzzu/Discord-Wheel" },
-			{ "type": "live", "url": "https://dcwheel.wilzzu.dev/#" }
+			{ "type": "code", "url": "https://github.com/Wilzzu/DCWheel" },
+			{ "type": "live", "url": "https://dcwheel.wilzzu.dev/" }
 		],
-		"tech": ["React", "Tailwind CSS", "Express", "Supabase", "Node.js"]
+		"tech": ["React", "Tailwind CSS", "Framer Motion", "Express", "Supabase", "Node.js"]
+	},
+	{
+		"title": "wilzzu.dev",
+		"description": "My personal website, where you can find all my projects and more information about me. Built with a design-first approach, emphasizing smooth animations and transitions, all made from scratch!",
+		"thumbnail": "./src/assets/projects/wilzzudev/wilzzudev-thumbnail.webp",
+		"images": [
+			"./src/assets/projects/wilzzudev/wilzzudev-1.webp",
+			"./src/assets/projects/wilzzudev/wilzzudev-2.webp",
+			"./src/assets/projects/wilzzudev/wilzzudev-3.webp",
+			"./src/assets/projects/wilzzudev/wilzzudev-4.webp"
+		],
+		"year": "2024",
+		"links": [
+			{ "type": "code", "url": "https://github.com/Wilzzu/wilzzu.dev" },
+			{ "type": "live", "url": "https://wilzzu.dev/" }
+		],
+		"tech": ["React", "Tailwind CSS", "Framer Motion"]
 	},
 	{
 		"title": "botBob",
@@ -30,23 +49,6 @@
 		"tech": ["Node.js", "MongoDB", "OpenAI"]
 	},
 	{
-		"title": "wilzzu.dev",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultrices, nunc nunc ultricies nunc.",
-		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
-		"images": [
-			"./src/assets/projects/botbob/botbob-1.webp",
-			"./src/assets/projects/botbob/botbob-2.webp",
-			"./src/assets/projects/botbob/botbob-3.webp",
-			"./src/assets/projects/botbob/botbob-4.webp"
-		],
-		"year": "2024",
-		"links": [
-			{ "type": "code", "url": "github.com/wilzzu" },
-			{ "type": "live", "url": "google.com" }
-		],
-		"tech": ["React", "Tailwind CSS"]
-	},
-	{
 		"title": "CS2Rankings",
 		"description": "Website with live Counter-Strike 2 leaderboard rankings, overall position tracking, detailed player histories and previous season standings.",
 		"thumbnail": "./src/assets/projects/cs2rankings/cs2rankings-thumbnail.webp",
@@ -58,26 +60,9 @@
 		"year": "2023",
 		"links": [
 			{ "type": "code", "url": "https://github.com/Wilzzu/cs2rankings" },
-			{ "type": "live", "url": "https://cs2rankings.com" }
+			{ "type": "live", "url": "https://cs2rankings.com/" }
 		],
 		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Node.js"]
-	},
-	{
-		"title": "Who sent that?",
-		"description": "Discord chat guessing game",
-		"thumbnail": "./src/assets/projects/whosentthat/WST-thumbnail.webp",
-		"images": [
-			"./src/assets/projects/whosentthat/WST-1.webp",
-			"./src/assets/projects/whosentthat/WST-2.webp",
-			"./src/assets/projects/whosentthat/WST-3.webp",
-			"./src/assets/projects/whosentthat/WST-4.webp"
-		],
-		"year": "2023",
-		"links": [
-			{ "type": "code", "url": "https://github.com/Wilzzu/WhoSentThat" },
-			{ "type": "demo", "url": "https://whosentthat.wilzzu.dev/" }
-		],
-		"tech": ["React", "Tailwind CSS", "Supabase", "MongoDB", "Express", "Node.js"]
 	},
 	{
 		"title": "Thunderblaze",
@@ -95,7 +80,33 @@
 			{ "type": "code", "url": "https://github.com/Wilzzu/Thunderblaze" },
 			{ "type": "demo", "url": "https://thunderblaze.wilzzu.dev/" }
 		],
-		"tech": ["React", "Tailwind CSS", "Redux", "Supabase", "MongoDB", "Express", "Node.js"]
+		"tech": [
+			"React",
+			"Tailwind CSS",
+			"Framer Motion",
+			"Redux",
+			"Supabase",
+			"MongoDB",
+			"Express",
+			"Node.js"
+		]
+	},
+	{
+		"title": "Who sent that?",
+		"description": "Discord chat guessing game",
+		"thumbnail": "./src/assets/projects/whosentthat/WST-thumbnail.webp",
+		"images": [
+			"./src/assets/projects/whosentthat/WST-1.webp",
+			"./src/assets/projects/whosentthat/WST-2.webp",
+			"./src/assets/projects/whosentthat/WST-3.webp",
+			"./src/assets/projects/whosentthat/WST-4.webp"
+		],
+		"year": "2023",
+		"links": [
+			{ "type": "code", "url": "https://github.com/Wilzzu/WhoSentThat" },
+			{ "type": "demo", "url": "https://whosentthat.wilzzu.dev/" }
+		],
+		"tech": ["React", "Tailwind CSS", "Framer Motion", "Supabase", "MongoDB", "Express", "Node.js"]
 	},
 	{
 		"title": "CS2 Text Mod Merger",
