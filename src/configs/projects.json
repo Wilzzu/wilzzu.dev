@@ -93,7 +93,7 @@
 	},
 	{
 		"title": "Who sent that?",
-		"description": "Discord chat guessing game",
+		"description": "Discord chat guessing game, where you have to guess who sent the message. Includes a live leaderboard and Discord notifications.",
 		"thumbnail": "./src/assets/projects/whosentthat/WST-thumbnail.webp",
 		"images": [
 			"./src/assets/projects/whosentthat/WST-1.webp",
