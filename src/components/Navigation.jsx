@@ -19,8 +19,13 @@ const Navigation = ({ location, projectName }) => {
 				animate="visible"
 				variants={list}
 				className="w-full flex gap-10 items-center pt-2 tablet:pt-0 justify-center">
-				<NavItem name="Projects" url="/" current={location} projectName={projectName} />
-				<NavItem name="About Me" url="/about/" current={location} />
+				<NavItem
+					name="Projects"
+					url="/"
+					current={location}
+					projectName={projectName === "undefined" ? null : projectName}
+				/>
+				<NavItem name="About Me" url="/about" current={location} />
 			</motion.ul>
 		</nav>
 	);

@@ -20,7 +20,7 @@ const ContainerRight = () => {
 			<Navigation location={location} projectName={encodeURIComponent(projectName)} />
 			<section className="relative w-full h-full tablet:h-[40rem] pb-4 xl:pb-0 z-0 overflow-hidden">
 				<AnimatePresence mode="wait">
-					{location.pathname === "/about/" ? (
+					{location.pathname === "/about" ? (
 						<About key="About" delayAnimation={delayAnimation} />
 					) : (
 						<Projects

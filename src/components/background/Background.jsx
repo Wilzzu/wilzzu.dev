@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import useMousePosition from "../../hooks/useMousePosition";
 import Glow from "./Glow";
 import Grain from "./Grain";
+import { useMemo } from "react";
+import useSessionStorage from "../../hooks/useSessionStorage";
 
 // Animation variants
 const variants = {
@@ -15,12 +17,22 @@ const variants = {
 
 const Background = () => {
 	const { smoothPosition, visible } = useMousePosition(256);
+	const { getSessionItem } = useSessionStorage();
+
+	// Use faster animation for intro if user has visited the site before during the session
+	const shouldAnimateFast = () => {
+		if (location.pathname !== "/") return true;
+		if (getSessionItem("storage", "hasVisited")) return true;
+		return false;
+	};
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	const fastAnimation = useMemo(() => shouldAnimateFast(), []);
 
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			transition={{ delay: 3.5, duration: 2, ease: "easeInOut" }}
+			transition={{ delay: fastAnimation ? 1.4 : 3.5, duration: 2, ease: "easeInOut" }}
 			className="w-full h-full hidden tablet:block fixed overflow-hidden">
 			{/* Background line colors */}
 			<div className="w-full h-full bg-[#111111] fixed -z-[3]" />

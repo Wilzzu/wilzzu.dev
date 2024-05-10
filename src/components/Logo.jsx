@@ -1,10 +1,11 @@
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Socials from "./Socials";
 import AnimatedText from "./AnimatedText";
 import { useLocation } from "react-router-dom";
 import socials from "../configs/socials.json";
+import useSessionStorage from "../hooks/useSessionStorage";
 
 // Animation variants
 const variants = {
@@ -20,9 +21,19 @@ const variants = {
 };
 
 const Logo = ({ setIntroAnimationOver }) => {
+	const { getSessionItem, setSessionItem } = useSessionStorage();
 	const [firstLayoutAnimationComplete, setFirstLayoutAnimationComplete] = useState(false);
 	const location = useLocation();
 	const animationState = useRef(firstLayoutAnimationComplete);
+
+	// Use faster animation for intro if user has visited the site before during the session
+	const shouldAnimateFast = () => {
+		if (location.pathname !== "/") return true;
+		if (getSessionItem("storage", "hasVisited")) return true;
+		return false;
+	};
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	const fastAnimation = useMemo(() => shouldAnimateFast(), []);
 
 	// Update the ref so setTimeout can access the latest state
 	useEffect(() => {
@@ -39,7 +50,10 @@ const Logo = ({ setIntroAnimationOver }) => {
 	};
 
 	const handleLayoutAnimationComplete = () => {
-		if (!animationState.current) setFirstLayoutAnimationComplete(true);
+		if (!animationState.current) {
+			setFirstLayoutAnimationComplete(true);
+			setSessionItem("storage", "hasVisited", true);
+		}
 	};
 
 	return (
@@ -49,7 +63,7 @@ const Logo = ({ setIntroAnimationOver }) => {
 			id="logoContainer"
 			transition={{
 				layout: {
-					duration: location.pathname === "/" ? 1.8 : 1.2,
+					duration: fastAnimation ? 1.2 : 1.8,
 					type: "tween",
 					ease: [0.62, 0, 0.25, 1],
 				},
@@ -64,12 +78,12 @@ const Logo = ({ setIntroAnimationOver }) => {
 					initial="hidden"
 					animate="visible"
 					variants={variants}
-					custom={location.pathname === "/" ? [3.4, 2.5] : [0, 1]}
+					custom={fastAnimation ? [0, 1] : [3.4, 2.5]}
 					onAnimationComplete={handleInitialAnimationComplete}
 					transition={{
 						layout: {
 							type: "tween",
-							duration: location.pathname === "/" ? 1.9 : 1.5,
+							duration: fastAnimation ? 1.5 : 1.9,
 							ease: [0.48, 0.13, 0.15, 1],
 						},
 					}} //1.4 | 0.45, 0.16, 0.28, 1 /  2.1 | 0.38, 0.2, 0.06, 1 / 1.9 | 0.48, 0.13, 0.15, 1
@@ -103,12 +117,12 @@ const Logo = ({ setIntroAnimationOver }) => {
 							<AnimatedText
 								text="Wilzzu"
 								delay={0.9}
-								duration={location.pathname === "/" ? 3 : 1}
+								duration={fastAnimation ? 1 : 3}
 								style="text-5xl leading-none opacity-90"
 							/>
 							<AnimatedText
 								text="/ Web Developer"
-								delay={location.pathname === "/" ? 3 : 2.1}
+								delay={fastAnimation ? 2.1 : 3}
 								duration={0.2}
 								style="text-xl leading-none opacity-50"
 							/>

@@ -49,7 +49,7 @@
 		"tech": ["Node.js", "MongoDB", "OpenAI"]
 	},
 	{
-		"title": "CS2Rankings",
+		"title": "CS2 Rankings",
 		"description": "Website with live Counter-Strike 2 leaderboard rankings, overall position tracking, detailed player histories and previous season standings.",
 		"thumbnail": "./src/assets/projects/cs2rankings/cs2rankings-thumbnail.webp",
 		"images": [
@@ -66,7 +66,7 @@
 	},
 	{
 		"title": "Thunderblaze",
-		"description": "Website built for a private Discord server. This is a demo version, where you can access all the features by using the \"Demo menu\" button at the bottom of the page and changing your role.",
+		"description": "Website built for a private Discord server. This is a demo version, where you can access all the features by using the \"Demo menu\" button at the bottom of the page.",
 		"thumbnail": "./src/assets/projects/thunderblaze/thunderblaze-thumbnail.webp",
 		"images": [
 			"./src/assets/projects/thunderblaze/thunderblaze-1.webp",
