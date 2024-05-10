@@ -6,6 +6,7 @@ import AnimatedText from "./AnimatedText";
 import { useLocation } from "react-router-dom";
 import socials from "../configs/socials.json";
 import useSessionStorage from "../hooks/useSessionStorage";
+import useCheckMobile from "../hooks/useCheckMobile";
 
 // Animation variants
 const variants = {
@@ -25,6 +26,7 @@ const Logo = ({ setIntroAnimationOver }) => {
 	const [firstLayoutAnimationComplete, setFirstLayoutAnimationComplete] = useState(false);
 	const location = useLocation();
 	const animationState = useRef(firstLayoutAnimationComplete);
+	const isMobile = useCheckMobile();
 
 	// Use faster animation for intro if user has visited the site before during the session
 	const shouldAnimateFast = () => {
@@ -93,13 +95,14 @@ const Logo = ({ setIntroAnimationOver }) => {
 						className="bg-[url('/assets/LogoBG.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center aspect-square rounded-[2rem] transform-style-3d"
 						perspective={800}
 						glareEnable={true}
-						glareMaxOpacity={0.2}
-						glareColor="#ffffff"
+						glareMaxOpacity={isMobile ? 0.1 : 0.2}
+						glareColor="#FFC166"
 						glarePosition="bottom"
 						glareBorderRadius="2rem"
 						transitionSpeed={2200}
-						// gyroscope={true}
-					>
+						tiltReverse={isMobile}
+						tiltMaxAngleX={isMobile ? 0 : 20}
+						gyroscope={true}>
 						{/* Inner logo letter */}
 						<img
 							className="w-1/4 transform-style-3d translate-z-4 drop-shadow-2xl group-hover:scale-125 duration-500 ease-out select-none"
