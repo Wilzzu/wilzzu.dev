@@ -2,13 +2,13 @@
 	{
 		"title": "DCWheel",
 		"description": "Fast and fun way to create teams for games and events! With a Discord integration, you can easily add players and share the results with your server.",
-		"thumbnail": "./src/assets/projects/dcwheel/dcwheel-thumbnail.webp",
+		"thumbnail": "/assets/projects/dcwheel/dcwheel-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/dcwheel/dcwheel-1.webp",
-			"./src/assets/projects/dcwheel/dcwheel-2.webp",
-			"./src/assets/projects/dcwheel/dcwheel-3.webp",
-			"./src/assets/projects/dcwheel/dcwheel-4.webp",
-			"./src/assets/projects/dcwheel/dcwheel-5.webp"
+			"/assets/projects/dcwheel/dcwheel-1.webp",
+			"/assets/projects/dcwheel/dcwheel-2.webp",
+			"/assets/projects/dcwheel/dcwheel-3.webp",
+			"/assets/projects/dcwheel/dcwheel-4.webp",
+			"/assets/projects/dcwheel/dcwheel-5.webp"
 		],
 		"year": "2024",
 		"links": [
@@ -20,12 +20,12 @@
 	{
 		"title": "wilzzu.dev",
 		"description": "My personal website, where you can find all my projects and more information about me. Built with a design-first approach, emphasizing smooth animations and transitions, all made from scratch!",
-		"thumbnail": "./src/assets/projects/wilzzudev/wilzzudev-thumbnail.webp",
+		"thumbnail": "/assets/projects/wilzzudev/wilzzudev-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/wilzzudev/wilzzudev-1.webp",
-			"./src/assets/projects/wilzzudev/wilzzudev-2.webp",
-			"./src/assets/projects/wilzzudev/wilzzudev-3.webp",
-			"./src/assets/projects/wilzzudev/wilzzudev-4.webp"
+			"/assets/projects/wilzzudev/wilzzudev-1.webp",
+			"/assets/projects/wilzzudev/wilzzudev-2.webp",
+			"/assets/projects/wilzzudev/wilzzudev-3.webp",
+			"/assets/projects/wilzzudev/wilzzudev-4.webp"
 		],
 		"year": "2024",
 		"links": [
@@ -37,12 +37,12 @@
 	{
 		"title": "botBob",
 		"description": "An advanced Discord bot with fully customizable features, AI integration, and multilingual support. Originally started in 2019, rewritten in 2024.",
-		"thumbnail": "./src/assets/projects/botbob/botbob-thumbnail.webp",
+		"thumbnail": "/assets/projects/botbob/botbob-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/botbob/botbob-1.webp",
-			"./src/assets/projects/botbob/botbob-2.webp",
-			"./src/assets/projects/botbob/botbob-3.webp",
-			"./src/assets/projects/botbob/botbob-4.webp"
+			"/assets/projects/botbob/botbob-1.webp",
+			"/assets/projects/botbob/botbob-2.webp",
+			"/assets/projects/botbob/botbob-3.webp",
+			"/assets/projects/botbob/botbob-4.webp"
 		],
 		"year": "2024",
 		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/botBob" }],
@@ -51,11 +51,11 @@
 	{
 		"title": "CS2 Rankings",
 		"description": "Website with live Counter-Strike 2 leaderboard rankings, overall position tracking, detailed player histories and previous season standings.",
-		"thumbnail": "./src/assets/projects/cs2rankings/cs2rankings-thumbnail.webp",
+		"thumbnail": "/assets/projects/cs2rankings/cs2rankings-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/cs2rankings/cs2rankings-1.webp",
-			"./src/assets/projects/cs2rankings/cs2rankings-2.webp",
-			"./src/assets/projects/cs2rankings/cs2rankings-3.webp"
+			"/assets/projects/cs2rankings/cs2rankings-1.webp",
+			"/assets/projects/cs2rankings/cs2rankings-2.webp",
+			"/assets/projects/cs2rankings/cs2rankings-3.webp"
 		],
 		"year": "2023",
 		"links": [
@@ -67,13 +67,13 @@
 	{
 		"title": "Thunderblaze",
 		"description": "Website built for a private Discord server. This is a demo version, where you can access all the features by using the \"Demo menu\" button at the bottom of the page.",
-		"thumbnail": "./src/assets/projects/thunderblaze/thunderblaze-thumbnail.webp",
+		"thumbnail": "/assets/projects/thunderblaze/thunderblaze-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/thunderblaze/thunderblaze-1.webp",
-			"./src/assets/projects/thunderblaze/thunderblaze-2.webp",
-			"./src/assets/projects/thunderblaze/thunderblaze-3.webp",
-			"./src/assets/projects/thunderblaze/thunderblaze-4.webp",
-			"./src/assets/projects/thunderblaze/thunderblaze-5.webp"
+			"/assets/projects/thunderblaze/thunderblaze-1.webp",
+			"/assets/projects/thunderblaze/thunderblaze-2.webp",
+			"/assets/projects/thunderblaze/thunderblaze-3.webp",
+			"/assets/projects/thunderblaze/thunderblaze-4.webp",
+			"/assets/projects/thunderblaze/thunderblaze-5.webp"
 		],
 		"year": "2023",
 		"links": [
@@ -94,12 +94,12 @@
 	{
 		"title": "Who sent that?",
 		"description": "Discord chat guessing game, where you have to guess who sent the message. Includes a live leaderboard and Discord notifications.",
-		"thumbnail": "./src/assets/projects/whosentthat/WST-thumbnail.webp",
+		"thumbnail": "/assets/projects/whosentthat/WST-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/whosentthat/WST-1.webp",
-			"./src/assets/projects/whosentthat/WST-2.webp",
-			"./src/assets/projects/whosentthat/WST-3.webp",
-			"./src/assets/projects/whosentthat/WST-4.webp"
+			"/assets/projects/whosentthat/WST-1.webp",
+			"/assets/projects/whosentthat/WST-2.webp",
+			"/assets/projects/whosentthat/WST-3.webp",
+			"/assets/projects/whosentthat/WST-4.webp"
 		],
 		"year": "2023",
 		"links": [
@@ -111,11 +111,11 @@
 	{
 		"title": "CS2 Text Mod Merger",
 		"description": "Electron app made for merging Counter-Strike 2 text mod files with the game's original language files.",
-		"thumbnail": "./src/assets/projects/cs2textmodmerger/CS2TMM-thumbnail.webp",
+		"thumbnail": "/assets/projects/cs2textmodmerger/CS2TMM-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/cs2textmodmerger/CS2TMM-1.webp",
-			"./src/assets/projects/cs2textmodmerger/CS2TMM-2.webp",
-			"./src/assets/projects/cs2textmodmerger/CS2TMM-3.webp"
+			"/assets/projects/cs2textmodmerger/CS2TMM-1.webp",
+			"/assets/projects/cs2textmodmerger/CS2TMM-2.webp",
+			"/assets/projects/cs2textmodmerger/CS2TMM-3.webp"
 		],
 		"year": "2023",
 		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/CS2TextModMerger" }],
@@ -124,12 +124,12 @@
 	{
 		"title": "Jumpy",
 		"description": "Platformer game that requires precision and patience. One missed jump, and you'll be plummeting back to the start. Built for both mobile and desktop.",
-		"thumbnail": "./src/assets/projects/jumpy/jumpy-thumbnail.webp",
+		"thumbnail": "/assets/projects/jumpy/jumpy-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/jumpy/jumpy-1.webp",
-			"./src/assets/projects/jumpy/jumpy-2.webp",
-			"./src/assets/projects/jumpy/jumpy-3.webp",
-			"./src/assets/projects/jumpy/jumpy-4.webp"
+			"/assets/projects/jumpy/jumpy-1.webp",
+			"/assets/projects/jumpy/jumpy-2.webp",
+			"/assets/projects/jumpy/jumpy-3.webp",
+			"/assets/projects/jumpy/jumpy-4.webp"
 		],
 		"year": "2022",
 		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/jumpy" }],
@@ -138,11 +138,11 @@
 	{
 		"title": "CSDevAlerts",
 		"description": "Discord bot that sends a notification whenever a developer starts playing CS:GO",
-		"thumbnail": "./src/assets/projects/csdevalerts/csdevalerts-thumbnail.webp",
+		"thumbnail": "/assets/projects/csdevalerts/csdevalerts-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/csdevalerts/csdevalerts-1.webp",
-			"./src/assets/projects/csdevalerts/csdevalerts-2.webp",
-			"./src/assets/projects/csdevalerts/csdevalerts-3.webp"
+			"/assets/projects/csdevalerts/csdevalerts-1.webp",
+			"/assets/projects/csdevalerts/csdevalerts-2.webp",
+			"/assets/projects/csdevalerts/csdevalerts-3.webp"
 		],
 		"year": "2022",
 		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/CsDevAlerts" }],
@@ -151,11 +151,11 @@
 	{
 		"title": "Twitch Drops Manager",
 		"description": "Chrome extension that makes it easy to follow your Twitch drops progress. Drops are shown right under the stream, with a progress bar and time left in minutes.",
-		"thumbnail": "./src/assets/projects/twitchdropsmanager/TDM-thumbnail.webp",
+		"thumbnail": "/assets/projects/twitchdropsmanager/TDM-thumbnail.webp",
 		"images": [
-			"./src/assets/projects/twitchdropsmanager/TDM-1.webp",
-			"./src/assets/projects/twitchdropsmanager/TDM-2.webp",
-			"./src/assets/projects/twitchdropsmanager/TDM-3.webp"
+			"/assets/projects/twitchdropsmanager/TDM-1.webp",
+			"/assets/projects/twitchdropsmanager/TDM-2.webp",
+			"/assets/projects/twitchdropsmanager/TDM-3.webp"
 		],
 		"year": "2021",
 		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/TwitchDropsManager" }],

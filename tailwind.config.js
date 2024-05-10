@@ -69,7 +69,7 @@ export default {
 				bgStreakBL: "bgStreakBL 17s linear infinite 15s",
 			},
 			backgroundImage: {
-				"bg-overlay": "url('/src/assets/overlay.svg')",
+				"bg-overlay": "url('/assets/overlay.svg')",
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 			},
 		},

@@ -4,7 +4,7 @@
 
 @layer utilities {
 	.bg-clip {
-		-webkit-mask-image: url("/src/assets/overlay.svg"), linear-gradient(#101010 0 0);
+		-webkit-mask-image: url("/assets/overlay.svg"), linear-gradient(#101010 0 0);
 		mask-position: center;
 		mask-repeat: repeat;
 		mask-mode: alpha;
