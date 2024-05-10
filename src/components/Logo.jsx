@@ -98,7 +98,8 @@ const Logo = ({ setIntroAnimationOver }) => {
 						glarePosition="bottom"
 						glareBorderRadius="2rem"
 						transitionSpeed={2200}
-						gyroscope={true}>
+						// gyroscope={true}
+					>
 						{/* Inner logo letter */}
 						<img
 							className="w-1/4 transform-style-3d translate-z-4 drop-shadow-2xl group-hover:scale-125 duration-500 ease-out select-none"
