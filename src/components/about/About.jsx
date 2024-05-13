@@ -46,7 +46,7 @@ const About = ({ delayAnimation }) => {
 
 	return (
 		// Container
-		<div className="max-h-dvh">
+		<div className="max-h-screen">
 			{/* About card */}
 			<motion.div
 				initial="hidden"

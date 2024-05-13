@@ -4,11 +4,20 @@ import Projects from "./projects/Projects";
 import { AnimatePresence } from "framer-motion";
 import About from "./about/About";
 import { useEffect, useState } from "react";
+import useScrollDirection from "../hooks/useScrollDirection";
 
-const ContainerRight = () => {
+const ContainerRight = ({ mainRef }) => {
 	const [delayAnimation, setDelayAnimation] = useState(true);
+	const [hasScrolled, setHasScrolled] = useState(false);
+	const { scrollDir, scrollPos } = useScrollDirection(mainRef?.current);
 	const location = useLocation();
 	const { projectName } = useParams();
+
+	// Scroll to bottom when the user scrolls down after a certain point
+	if (scrollDir === "down" && scrollPos > 250 && !hasScrolled) {
+		setHasScrolled(true);
+		mainRef?.current?.scrollTo({ top: mainRef?.current?.scrollHeight, behavior: "smooth" });
+	} else if (scrollDir === "up" && hasScrolled) setHasScrolled(false);
 
 	// Delay animation on initial render to give time for the logo to move away
 	useEffect(() => {
