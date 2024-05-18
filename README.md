@@ -6,7 +6,7 @@
 
 ## Live Site
 
-Check out the live portfolio website:
+Check out the live website:
 
 [https://wilzzu.dev/](https://wilzzu.dev/)
 
