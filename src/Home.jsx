@@ -10,7 +10,7 @@ function Home() {
 	return (
 		<main
 			ref={ref}
-			className="relative h-screen tablet:min-h-screen tablet:h-auto w-full overflow-x-hidden py-10 px-2 tablet:p-6 flex flex-col items-center xl:flex-row xl:justify-center gap-24 font-poppins">
+			className="relative h-screen tablet:min-h-screen tablet:h-auto w-full overflow-x-hidden pt-10 pb-5 px-2 tablet:p-6 flex flex-col items-center xl:flex-row xl:justify-center gap-24 font-poppins">
 			<Background />
 			{/* Main container */}
 			<section className="h-full flex justify-center">

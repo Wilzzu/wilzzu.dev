@@ -27,7 +27,7 @@ const ContainerRight = ({ mainRef }) => {
 	return (
 		<div className="h-full w-full tablet:w-[800px] flex flex-col items-center justify-start tablet:justify-center gap-4">
 			<Navigation location={location} projectName={encodeURIComponent(projectName)} />
-			<section className="relative w-full h-full tablet:h-[40rem] pb-4 xl:pb-0 z-0 overflow-hidden">
+			<section className="relative w-full h-full tablet:h-[40rem] pb-1 xl:pb-0 z-0 overflow-hidden">
 				<AnimatePresence mode="wait">
 					{location.pathname === "/about" ? (
 						<About key="About" delayAnimation={delayAnimation} />
@@ -40,6 +40,15 @@ const ContainerRight = ({ mainRef }) => {
 					)}
 				</AnimatePresence>
 			</section>
+			<footer className="xl:absolute bottom-0 right-1">
+				<a
+					href="https://github.com/Wilzzu"
+					target="_blank"
+					rel="noreferrer noopener"
+					className="text-[#FBFBFB]/30 tablet:text-[#FBFBFB]/20 hover:text-[#FBFBFB] hover:drop-shadow-icon animate-fadeIn font-light text-xs duration-300 hover:underline">
+					© 2024 Wilzzu. All rights reserved.
+				</a>
+			</footer>
 		</div>
 	);
 };

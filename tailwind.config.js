@@ -60,6 +60,10 @@ export default {
 					"40%": { bottom: "calc(100% - 300px)", opacity: 0 },
 					"100%": { opacity: 0 },
 				},
+				fadeIn: {
+					"0%": { opacity: 0 },
+					"100%": { opacity: 1 },
+				},
 			},
 			animation: {
 				wave: "wave 4.8s ease-in-out forwards",
@@ -67,6 +71,7 @@ export default {
 				grain: "grain 5s linear infinite",
 				bgStreakTR: "bgStreakTR 15s linear infinite 8s",
 				bgStreakBL: "bgStreakBL 17s linear infinite 15s",
+				fadeIn: "fadeIn 2s ease-in-out forwards",
 			},
 			backgroundImage: {
 				"bg-overlay": "url('/assets/overlay.svg')",
