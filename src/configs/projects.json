@@ -19,7 +19,7 @@
 	},
 	{
 		"title": "wilzzu.dev",
-		"description": "My personal website, where you can find all my projects and more information about me. Built with a design-first approach, emphasizing smooth animations and transitions, all made from scratch!",
+		"description": "My personal website, where you can find all my projects and more information about me. Built with a design-first approach, it emphasizes smooth animations and transitions, all handcrafted using Framer Motion.",
 		"thumbnail": "/assets/projects/wilzzudev/wilzzudev-thumbnail.webp",
 		"images": [
 			"/assets/projects/wilzzudev/wilzzudev-1.webp",
