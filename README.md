@@ -2,13 +2,12 @@
 
 <h1 align="center">wilzzu.dev</h1>
 
-<p align="center">Website built with React for showcasing my projects and providing more information about myself.</br>Built with a design-first approach, it emphasizes smooth animations and transitions, all handcrafted using Framer Motion.</p>
+<p align="center">A React-based website showcasing my projects and providing more information about myself.</br>Built with a design-first approach, emphasizing smooth animations and transitions handcrafted with Framer Motion.</p>
 
 ## Live Site
 
 Check out the live website:
-
-[https://wilzzu.dev/](https://wilzzu.dev/)
+[wilzzu.dev](https://wilzzu.dev/)
 
 ## Features
 
