@@ -6,7 +6,7 @@
 
 ## Live Site
 
-Check out the live website:
+Check out the live version of the website:
 [wilzzu.dev](https://wilzzu.dev/)
 
 ## Features
