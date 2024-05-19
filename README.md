@@ -11,11 +11,11 @@ Check out the live version of the website:
 
 ## Features
 
-- Showcase of my projects with descriptions, screenshots and links.
-- Demo versions of some projects, so anyone can try them out.
-- Smooth animations and transitions.
-- Information about me and links to my socials.
-- Responsive design.
+- Showcase of my projects with descriptions, screenshots and links
+- Demo versions of some projects, so anyone can try them out
+- Smooth animations and transitions
+- Information about me and links to my socials
+- Responsive design
 
 ## Technologies Used
 
