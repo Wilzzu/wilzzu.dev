@@ -123,7 +123,7 @@
 	},
 	{
 		"title": "Jumpy",
-		"description": "Platformer game that requires precision and patience. One missed jump, and you'll be plummeting back to the start. Built for both mobile and desktop.",
+		"description": "Challenging 2D platformer game that requires precision and patience. Only one miscalculated jump, and you'll be plummeting back to the start. Built with Unity for both desktop and mobile.",
 		"thumbnail": "/assets/projects/jumpy/jumpy-thumbnail.webp",
 		"images": [
 			"/assets/projects/jumpy/jumpy-1.webp",
@@ -132,7 +132,10 @@
 			"/assets/projects/jumpy/jumpy-4.webp"
 		],
 		"year": "2022",
-		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/jumpy" }],
+		"links": [
+			{ "type": "code", "url": "https://github.com/Wilzzu/jumpy" },
+			{ "type": "demo", "url": "https://wilzzu.itch.io/jumpy" }
+		],
 		"tech": ["Unity", "C#"]
 	},
 	{
