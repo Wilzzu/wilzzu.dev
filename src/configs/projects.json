@@ -49,7 +49,7 @@
 		"tech": ["Node.js", "MongoDB", "OpenAI"]
 	},
 	{
-		"title": "CS2 Rankings",
+		"title": "CS2Rankings",
 		"description": "Website with live Counter-Strike 2 leaderboard rankings, overall position tracking, detailed player histories and previous season standings.",
 		"thumbnail": "/assets/projects/cs2rankings/cs2rankings-thumbnail.webp",
 		"images": [
@@ -123,7 +123,7 @@
 	},
 	{
 		"title": "Jumpy",
-		"description": "Challenging 2D platformer game that requires precision and patience. Only one miscalculated jump, and you'll be plummeting back to the start. Built with Unity for both desktop and mobile.",
+		"description": "Challenging 2D platformer game that requires precision and patience. One miscalculated jump, and you'll be plummeting back to the start. Built with Unity for both desktop and mobile.",
 		"thumbnail": "/assets/projects/jumpy/jumpy-thumbnail.webp",
 		"images": [
 			"/assets/projects/jumpy/jumpy-1.webp",

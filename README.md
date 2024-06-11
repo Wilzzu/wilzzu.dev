@@ -9,6 +9,8 @@
 Check out the live version of the website:
 [wilzzu.dev](https://wilzzu.dev/)
 
+![Screenshots](https://i.imgur.com/makqbpP.png)
+
 ## Features
 
 - Showcase of my projects with descriptions, screenshots and links
