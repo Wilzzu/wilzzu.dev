@@ -53,7 +53,7 @@ const Background = () => {
 				<Grain />
 			</motion.div>
 			{/* Overlay */}
-			<div className="w-full h-full bg-background fixed z-0 bg-clip" />
+			<div className="w-full h-full bg-background fixed top-0 z-0 bg-clip" />
 		</motion.div>
 	);
 };
