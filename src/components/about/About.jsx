@@ -3,6 +3,7 @@ import { cubicBezier, motion } from "framer-motion";
 import Title from "./Title";
 import Contact from "./Contact";
 import { cn } from "../../../lib/utils";
+import TechStack from "./TechStack";
 
 // Animation variants
 const container = {
@@ -33,6 +34,19 @@ const text = {
 	exit: { opacity: 0, transition: { duration: 0.3, ease: "easeIn" } },
 };
 
+const textContact = {
+	...text,
+	visible: {
+		...text.visible,
+		transition: {
+			duration: 3.2,
+			ease: cubicBezier(0.12, 0.42, 0.26, 1),
+			delay: 2.2,
+			opacity: { duration: 2.2, ease: "easeInOut", delay: 2.2 },
+		},
+	},
+};
+
 const About = ({ delayAnimation }) => {
 	const [showTitle, setShowTitle] = useState(false);
 
@@ -54,7 +68,7 @@ const About = ({ delayAnimation }) => {
 				exit="exit"
 				variants={container}
 				custom={delayAnimation ? [0.4, 0.3] : [0, 0]}
-				className="flex items-center justify-center h-full w-full tablet:max-h-[37.5rem] bg-gradient-to-br from-[#19191942] to-[#2a2a2a3b] backdrop-blur rounded-2xl py-10 tablet:py-12 px-10 tablet:px-4">
+				className="flex items-center justify-center h-full w-full tablet:max-h-[37.5rem] bg-gradient-to-br from-[#19191942] to-[#2a2a2a3b] backdrop-blur rounded-2xl py-10 tablet:py-12 px-10 tablet:px-4 overflow-hidden">
 				<div className="flex flex-col h-full max-w-[31rem] gap-4 text-justify items-center justify-between text-xs tablet:text-sm tablet:leading-relaxed text-[#d6d6d6]">
 					{/* Title */}
 					{showTitle ? <Title /> : <div className="h-11 w-full mb-3" />}
@@ -75,12 +89,21 @@ const About = ({ delayAnimation }) => {
 							"Besides programming, I enjoy playing video games, editing photos and videos, and tinkering with small electronic projects in my free time."
 						}
 					</motion.p>
-					<motion.p className="mb-4 tablet:mb-0 mt-2 tablet:mt-6 text-center" variants={text}>
-						{"Feel free to contact me, I'm always open to new adventures! :)"}
+					<TechStack variants={text} />
+					<motion.p className="mt-2 tablet:mt-2 text-center" variants={textContact}>
+						{"Feel free to "}
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="mailto:wilzzudev@gmail.com"
+							className="underline underline-offset-2 ">
+							contact me
+						</a>
+						{", I'm always open to new adventures! :)"}
 					</motion.p>
 
 					{/* Contact information */}
-					<Contact />
+					{/* <Contact /> */}
 				</div>
 			</motion.div>
 			{/* This allows mobile view to smoothly transition to correct size */}

@@ -1,6 +1,6 @@
-import Socials from "../Socials";
-import socials from "../../configs/socials.json";
+import icons from "../../configs/icons.json";
 import { motion } from "framer-motion";
+import IconLinks from "../IconLinks";
 
 const container = {
 	visible: { transition: { delayChildren: 0.2, staggerChildren: 0.1 } },
@@ -31,7 +31,7 @@ const Contact = () => {
 				<span className="text-xs">{"(Email: wilzzudev@gmail.com)"}</span>
 			</motion.p>
 			<motion.div variants={item}>
-				<Socials socials={socials.contact} direction={20} style={"justify-center gap-8 scale-90"} />
+				<IconLinks icons={icons.contact} direction={20} style={"justify-center gap-8 scale-90"} />
 			</motion.div>
 		</motion.div>
 	);
