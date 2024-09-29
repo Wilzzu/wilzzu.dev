@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { cubicBezier, motion } from "framer-motion";
 import Title from "./Title";
-import Contact from "./Contact";
+// import Contact from "./Contact";
 import { cn } from "../../../lib/utils";
 import TechStack from "./TechStack";
 
@@ -99,10 +99,11 @@ const About = ({ delayAnimation }) => {
 							className="underline underline-offset-2 ">
 							contact me
 						</a>
-						{", I'm always open to new adventures! :)"}
+						{", "}
+						<br className="inline-block tablet:hidden" />
+						{"I'm always open to new adventures! :)"}
 					</motion.p>
 
-					{/* Contact information */}
 					{/* <Contact /> */}
 				</div>
 			</motion.div>

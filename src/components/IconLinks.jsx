@@ -16,13 +16,7 @@ import {
 	SiFirebase,
 } from "react-icons/si";
 import { IoLogoElectron } from "react-icons/io5";
-import {
-	PiFileCssBold,
-	PiFileCssLight,
-	PiFileHtmlBold,
-	PiFileHtmlLight,
-	PiFileJsBold,
-} from "react-icons/pi";
+import { PiFileCssLight, PiFileHtmlLight } from "react-icons/pi";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 
 // Animation variants
