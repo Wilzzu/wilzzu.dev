@@ -1,0 +1,118 @@
+{
+	"socials": [
+		{
+			"name": "GitHub",
+			"link": "https://github.com/Wilzzu",
+			"icon": "github"
+		},
+		{
+			"name": "Twitter / X",
+			"link": "https://twitter.com/Wilzzu",
+			"icon": "twitter"
+		},
+		{
+			"name": "YouTube",
+			"link": "https://www.youtube.com/@thewilzzu",
+			"icon": "youtube"
+		},
+		{
+			"name": "Steam",
+			"link": "https://steamcommunity.com/id/wilzzu/",
+			"icon": "steam"
+		}
+	],
+	"contact": [
+		{
+			"name": "Twitter / X",
+			"link": "https://twitter.com/Wilzzu",
+			"icon": "twitter"
+		},
+		{
+			"name": "Email",
+			"link": "mailto:wilzzudev@gmail.com",
+			"icon": "email"
+		}
+	],
+	"tech": [
+		{
+			"name": "HTML",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+			"icon": "HTML"
+		},
+		{
+			"name": "CSS",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+			"icon": "CSS"
+		},
+		{
+			"name": "JavaScript",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+			"icon": "JavaScript"
+		},
+		{
+			"name": "TypeScript",
+			"link": "https://www.typescriptlang.org/",
+			"icon": "TypeScript"
+		},
+		{
+			"name": "React",
+			"link": "https://reactjs.org/",
+			"icon": "React"
+		},
+		{
+			"name": "Electron",
+			"link": "https://www.electronjs.org/",
+			"icon": "Electron"
+		},
+		{
+			"name": "Tailwind CSS",
+			"link": "https://tailwindcss.com/",
+			"icon": "Tailwind CSS"
+		},
+		{
+			"name": "Framer Motion",
+			"link": "https://www.framer.com/motion/",
+			"icon": "Framer Motion"
+		},
+		{
+			"name": "Node.js",
+			"link": "https://nodejs.org/",
+			"icon": "Node.js"
+		},
+		{
+			"name": "Redux",
+			"link": "https://redux.js.org/",
+			"icon": "Redux"
+		},
+		{
+			"name": "Express",
+			"link": "https://expressjs.com/",
+			"icon": "Express"
+		},
+		{
+			"name": "Firebase",
+			"link": "https://firebase.google.com/",
+			"icon": "Firebase"
+		},
+		{
+			"name": "MongoDB",
+			"link": "https://www.mongodb.com/",
+			"icon": "MongoDB"
+		},
+		{
+			"name": "Supabase",
+			"link": "https://supabase.io/",
+			"icon": "Supabase"
+		},
+		{
+			"name": "OpenAI",
+			"link": "https://www.openai.com/",
+			"icon": "OpenAI"
+		},
+		{
+			"name": "Discord.js",
+			"link": "https://discord.js.org/",
+			"icon": "Discord.js"
+		}
+	]
+}
