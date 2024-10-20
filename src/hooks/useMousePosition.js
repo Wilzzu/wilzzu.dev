@@ -1,11 +1,11 @@
 import { useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { throttle } from "lodash";
+import { useEffect, useState } from "react";
 
 const smoothing = { stiffness: 20, damping: 10 };
 
 const useMousePosition = (center = 0) => {
 	const [visible, setVisible] = useState(false);
-	const buffer = useRef(false);
 
 	const mousePos = {
 		x: useMotionValue(0),
@@ -19,18 +19,13 @@ const useMousePosition = (center = 0) => {
 
 	// Track mouse
 	useEffect(() => {
-		const onMouseMove = (e) => {
-			// Buffer mouse input
-			if (buffer.current) return;
-			buffer.current = true;
-			setTimeout(() => (buffer.current = false), 80);
-
+		const onMouseMove = throttle((e) => {
 			// Center div to the mouse position
 			const { clientX, clientY } = e;
 			mousePos.x.set(clientX - center);
 			mousePos.y.set(clientY - center);
 			setVisible(true);
-		};
+		}, 80);
 
 		const hideGlow = () => {
 			setVisible(false);
