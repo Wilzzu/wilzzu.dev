@@ -4,7 +4,11 @@ import { cn } from "../../../lib/utils";
 import Tilt from "react-parallax-tilt";
 import SelectedItem from "./SelectedItem";
 import ItemThumbnail from "./ItemThumbnail";
-import { forwardRef } from "react";
+import { forwardRef, memo } from "react";
+
+// Memoize SelectedItem and ItemThumbnail
+const MemoizedSelectedItem = memo(SelectedItem);
+const MemoizedItemThumbnail = memo(ItemThumbnail);
 
 const ProjectItem = forwardRef(function ProjectItem(
 	{ item, current, parsedUrl, index, lastItem, variant, isMobile },
@@ -37,9 +41,13 @@ const ProjectItem = forwardRef(function ProjectItem(
 						{/* Content */}
 						<AnimatePresence>
 							{selected ? (
-								<SelectedItem key={item.title + "-selected"} item={item} isMobile={isMobile} />
+								<MemoizedSelectedItem
+									key={item.title + "-selected"}
+									item={item}
+									isMobile={isMobile}
+								/>
 							) : (
-								<ItemThumbnail key={item.title + "-thumbnail"} item={item} />
+								<MemoizedItemThumbnail key={item.title + "-thumbnail"} item={item} />
 							)}
 						</AnimatePresence>
 						{/* Background image, should be 368 x 128 */}
@@ -60,4 +68,5 @@ const ProjectItem = forwardRef(function ProjectItem(
 	);
 });
 
-export default ProjectItem;
+const MemoizedProjectItem = memo(ProjectItem);
+export default MemoizedProjectItem;
