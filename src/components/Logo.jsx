@@ -59,6 +59,11 @@ const Logo = ({ setIntroAnimationOver, performanceMode, setPerformanceMode }) =>
 		}
 	};
 
+	const handlePerformanceButtonClick = () => {
+		setSessionItem("storage", "performanceMode", !performanceMode);
+		setPerformanceMode((prev) => !prev);
+	};
+
 	return (
 		// Full height container that moves to the left after logo reveal
 		<motion.div
@@ -139,7 +144,7 @@ const Logo = ({ setIntroAnimationOver, performanceMode, setPerformanceMode }) =>
 								animate={{ y: 0, opacity: 1 }}
 								transition={{ duration: 1.4, delay: 2.8, ease: "easeInOut" }}
 								className="group absolute -bottom-12 text-[0.68rem]"
-								onClick={() => setPerformanceMode((prev) => !prev)}>
+								onClick={handlePerformanceButtonClick}>
 								<div className="p-2 bg-primary rounded-md opacity-50 group-hover:opacity-100 duration-200">
 									<p
 										className={cn(

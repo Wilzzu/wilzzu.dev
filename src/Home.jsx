@@ -2,10 +2,14 @@ import Logo from "./components/Logo";
 import { useRef, useState } from "react";
 import ContainerRight from "./components/ContainerRight";
 import Background from "./components/background/Background";
+import useSessionStorage from "./hooks/useSessionStorage";
 
 function Home() {
 	const [introAnimationOver, setIntroAnimationOver] = useState(false);
-	const [performanceMode, setPerformanceMode] = useState(false);
+	const { getSessionItem } = useSessionStorage();
+	const [performanceMode, setPerformanceMode] = useState(
+		getSessionItem("storage", "performanceMode") || false
+	);
 	const ref = useRef(null);
 
 	return (
