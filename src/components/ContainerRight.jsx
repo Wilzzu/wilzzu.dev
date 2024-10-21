@@ -6,7 +6,7 @@ import About from "./about/About";
 import { useEffect, useState } from "react";
 import useScrollDirection from "../hooks/useScrollDirection";
 
-const ContainerRight = ({ mainRef }) => {
+const ContainerRight = ({ mainRef, performanceMode }) => {
 	const [delayAnimation, setDelayAnimation] = useState(true);
 	const [hasScrolled, setHasScrolled] = useState(false);
 	const { scrollDir, scrollPos } = useScrollDirection(mainRef?.current);
@@ -30,12 +30,13 @@ const ContainerRight = ({ mainRef }) => {
 			<section className="relative w-full h-full tablet:h-[40rem] pb-1 xl:pb-0 z-0 overflow-hidden">
 				<AnimatePresence mode="wait">
 					{location.pathname === "/about" ? (
-						<About key="About" delayAnimation={delayAnimation} />
+						<About key="About" delayAnimation={delayAnimation} performanceMode={performanceMode} />
 					) : (
 						<Projects
 							key="Projects"
 							projectName={encodeURIComponent(projectName)}
 							delayAnimation={delayAnimation}
+							performanceMode={performanceMode}
 						/>
 					)}
 				</AnimatePresence>

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import LinkButton from "./LinkButton";
 import TechIcons from "./TechIcons";
 import ImageCarousel from "./carousel/ImageCarousel";
+import { cn } from "../../../lib/utils";
 
 // Animation variants
 const containerVariant = {
@@ -21,7 +22,7 @@ const itemVariant = {
 	exit: { y: 0, opacity: 0, transition: { duration: 0 } },
 };
 
-const SelectedItem = ({ item, isMobile }) => {
+const SelectedItem = ({ item, isMobile, performanceMode }) => {
 	return (
 		<>
 			{/* Image carousel */}
@@ -35,7 +36,10 @@ const SelectedItem = ({ item, isMobile }) => {
 				animate="visible"
 				exit="exit"
 				variants={containerVariant}
-				className="w-full h-full overflow-hidden flex flex-col items-center justify-center gap-6 px-2 py-4 z-10 drop-shadow">
+				className={cn(
+					"w-full h-full overflow-hidden flex flex-col items-center justify-center gap-6 px-2 py-4 z-10 drop-shadow",
+					performanceMode && "drop-shadow-none"
+				)}>
 				{/* Title and Badges */}
 				<div className="w-full flex flex-col items-center gap-2 tablet:gap-1">
 					{/* Name and Year */}

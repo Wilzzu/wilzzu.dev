@@ -5,19 +5,24 @@ import Background from "./components/background/Background";
 
 function Home() {
 	const [introAnimationOver, setIntroAnimationOver] = useState(false);
+	const [performanceMode, setPerformanceMode] = useState(false);
 	const ref = useRef(null);
 
 	return (
 		<main
 			ref={ref}
 			className="relative h-screen tablet:min-h-screen tablet:h-auto w-full overflow-x-hidden pt-10 pb-5 px-2 tablet:p-6 flex flex-col items-center xl:flex-row xl:justify-center gap-24 font-poppins">
-			<Background />
+			<Background performanceMode={performanceMode} />
 			{/* Main container */}
 			<section className="h-full flex justify-center">
-				<Logo setIntroAnimationOver={setIntroAnimationOver} />
+				<Logo
+					setIntroAnimationOver={setIntroAnimationOver}
+					performanceMode={performanceMode}
+					setPerformanceMode={setPerformanceMode}
+				/>
 			</section>
 			{/* Show projects and about container */}
-			{introAnimationOver && <ContainerRight mainRef={ref} />}
+			{introAnimationOver && <ContainerRight mainRef={ref} performanceMode={performanceMode} />}
 		</main>
 	);
 }
