@@ -22,7 +22,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 			layout
 			variants={variant}
 			transition={{
-				layout: { duration: performanceMode ? 0.1 : 0.3, type: "tween", ease: "easeInOut" },
+				layout: { duration: performanceMode ? 0 : 0.3, type: "tween", ease: "easeInOut" },
 			}}
 			style={!lastItem && !isMobile && selected && { gridRowStart: (index + 1) / 2 }} // Make right side items span above
 			className={cn(selected && "tablet:col-span-2")} // Selected items span both columns
@@ -67,7 +67,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 									: performanceMode
 									? "opacity-10 tablet:group-hover:opacity-35"
 									: "opacity-20 tablet:group-hover:opacity-50 tablet:group-hover:blur-[2px]",
-								performanceMode && "blur-none duration-400 tablet:duration-100"
+								performanceMode && "blur-none duration-0 tablet:duration-0"
 							)}
 						/>
 					</div>

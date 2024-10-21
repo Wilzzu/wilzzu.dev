@@ -27,7 +27,7 @@ const SelectedItem = ({ item, isMobile, performanceMode }) => {
 		<>
 			{/* Image carousel */}
 			<div className="mt-3 tablet:mt-0 w-[10rem] h-[10rem] tablet:w-[14.5rem] tablet:h-[14.5rem] shrink-0">
-				<ImageCarousel images={item.images} isMobile={isMobile} />
+				<ImageCarousel images={item.images} isMobile={isMobile} performanceMode={performanceMode} />
 			</div>
 			{/* Content container */}
 			<motion.div

@@ -15,19 +15,19 @@ const container = {
 		},
 	},
 	hidden: { y: 100, opacity: 0 },
-	exit: (isMobile) => ({
+	exit: ({ isMobile, performanceMode }) => ({
 		x: isMobile ? 0 : -220,
 		y: isMobile ? 10 : 0,
 		scale: 0.55,
 		opacity: 0,
 		transition: {
 			x: { type: "tween", duration: 0.6, ease: "easeOut" },
-			opacity: { duration: 0.22, ease: "easeOut" },
+			opacity: { duration: performanceMode ? 0 : 0.22, ease: "easeOut" },
 		},
 	}),
 };
 
-const ImageCarousel = ({ images, isMobile }) => {
+const ImageCarousel = ({ images, isMobile, performanceMode }) => {
 	const [current, setCurrent] = useState(0);
 	const hovering = useRef(false);
 
@@ -62,7 +62,7 @@ const ImageCarousel = ({ images, isMobile }) => {
 			animate="visible"
 			exit="exit"
 			variants={container}
-			custom={isMobile}
+			custom={{ isMobile, performanceMode }}
 			onMouseEnter={() => (hovering.current = true)}
 			onMouseLeave={() => (hovering.current = false)}
 			onTouchStart={() => (hovering.current = true)}

@@ -111,7 +111,7 @@ const Logo = ({ setIntroAnimationOver, performanceMode, setPerformanceMode }) =>
 						transitionSpeed={2200}
 						tiltReverse={isMobile}
 						tiltMaxAngleX={isMobile ? 0 : 20}
-						gyroscope={true}>
+						gyroscope={!performanceMode}>
 						{/* Inner logo letter */}
 						<img
 							className="w-1/4 transform-style-3d translate-z-4 drop-shadow-2xl group-hover:scale-125 duration-500 ease-out select-none"
