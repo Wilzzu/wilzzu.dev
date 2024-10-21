@@ -49,9 +49,9 @@ export default {
 				},
 				// Move div from top right to bottom left
 				bgStreakTR: {
-					"0%": { top: 0, transform: "translate(-30%, 0)", opacity: 0 },
+					"0%": { top: 0, right: "5%", opacity: 0 },
 					"5%": { opacity: 1 },
-					"40%": { top: "calc(100% - 400px)", transform: "translate(-110%, 0)", opacity: 0 },
+					"40%": { top: "calc(100% - 400px)", right: "20%", opacity: 0 },
 					"100%": { opacity: 0 },
 				},
 				bgStreakBL: {

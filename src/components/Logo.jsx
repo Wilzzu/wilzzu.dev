@@ -7,6 +7,7 @@ import icons from "../configs/icons.json";
 import useSessionStorage from "../hooks/useSessionStorage";
 import useCheckMobile from "../hooks/useCheckMobile";
 import IconLinks from "./IconLinks";
+import { cn } from "../../lib/utils";
 
 // Animation variants
 const variants = {
@@ -21,7 +22,7 @@ const variants = {
 	hidden: { y: 300, opacity: 0 },
 };
 
-const Logo = ({ setIntroAnimationOver }) => {
+const Logo = ({ setIntroAnimationOver, performanceMode, setPerformanceMode }) => {
 	const { getSessionItem, setSessionItem } = useSessionStorage();
 	const [firstLayoutAnimationComplete, setFirstLayoutAnimationComplete] = useState(false);
 	const location = useLocation();
@@ -71,7 +72,10 @@ const Logo = ({ setIntroAnimationOver }) => {
 				},
 			}}
 			onLayoutAnimationComplete={handleLayoutAnimationComplete}
-			className="relative w-[380px] h-full flex flex-col items-center justify-center drop-shadow-2xl z-10">
+			className={cn(
+				"relative w-[380px] h-full flex flex-col items-center justify-center drop-shadow-2xl z-10",
+				performanceMode && "drop-shadow-none"
+			)}>
 			{/* Container for logo and socials */}
 			<motion.div className="w-full h-[500px] flex flex-col items-center justify-center gap-8">
 				{/* Container for logo, to move it upwards at start and after first layout animation */}
@@ -112,12 +116,12 @@ const Logo = ({ setIntroAnimationOver }) => {
 						/>
 					</Tilt>
 				</motion.div>
-				{/* Show socials, name and title below logo */}
+				{/* Show socials, name, title and performance option below logo */}
 				{firstLayoutAnimationComplete && (
 					<>
 						<IconLinks icons={icons.socials} direction={-20} />
 						{/* Name and title */}
-						<div className="w-full flex flex-col items-center justify-center">
+						<div className="relative w-full flex flex-col items-center justify-center">
 							<AnimatedText
 								text="Wilzzu"
 								delay={0.9}
@@ -130,6 +134,22 @@ const Logo = ({ setIntroAnimationOver }) => {
 								duration={0.2}
 								style="text-xl leading-none opacity-50"
 							/>
+							<motion.button
+								initial={{ y: -12, opacity: 0 }}
+								animate={{ y: 0, opacity: 1 }}
+								transition={{ duration: 1.4, delay: 2.8, ease: "easeInOut" }}
+								className="group absolute -bottom-12 text-[0.68rem]"
+								onClick={() => setPerformanceMode((prev) => !prev)}>
+								<div className="p-2 bg-primary rounded-md opacity-50 group-hover:opacity-100 duration-200">
+									<p
+										className={cn(
+											"group-hover:opacity-80 duration-200",
+											performanceMode && "text-green-400"
+										)}>
+										Toggle performance mode
+									</p>
+								</div>
+							</motion.button>
 						</div>
 					</>
 				)}

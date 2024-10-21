@@ -11,7 +11,7 @@ const TechStack = ({ variants }) => {
 				direction={20}
 				style={"tablet:h-full h-full grid grid-cols-8 grid-flow-row gap-4 gap-y-2 px-0"}
 				itemStyle={"w-8 h-8 tablet:w-10 tablet:h-10"}
-				tooltipStyle={"text-xs -bottom-4 group-hover:-bottom-8"}
+				tooltipStyle={"text-xs -bottom-5 group-hover:-bottom-8"}
 			/>
 		</motion.div>
 	);

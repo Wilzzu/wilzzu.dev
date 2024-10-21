@@ -99,7 +99,7 @@ const IconLinks = ({ icons, direction, style = null, itemStyle = null, tooltipSt
 						{/* Tooltip */}
 						<span
 							className={cn(
-								"absolute -bottom-3 scale-75 px-3 py-2 bg-primary rounded-lg text-sm shadow-xl opacity-0 group-hover:opacity-100 group-hover:-bottom-9 group-hover:scale-100 duration-300 z-0 text-nowrap",
+								"absolute -bottom-5 scale-75 px-3 py-2 bg-primary rounded-lg text-sm shadow-xl opacity-0 group-hover:opacity-100 group-hover:-bottom-8 group-hover:scale-100 duration-300 z-0 text-nowrap pointer-events-none",
 								tooltipStyle
 							)}>
 							{item.name}
