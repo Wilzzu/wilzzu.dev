@@ -4,6 +4,7 @@ import ProjectItem from "./ProjectItem";
 import { createRef, useEffect, useRef } from "react";
 import useCheckMobile from "../../hooks/useCheckMobile";
 import { cn } from "../../../lib/utils";
+import { Helmet } from "react-helmet";
 
 // Animation variants
 const list = {
@@ -91,6 +92,12 @@ const Projects = ({ projectName, delayAnimation, performanceMode }) => {
 
 	return (
 		<>
+			<Helmet>
+				<title>
+					Wilzzu - {projectName !== "undefined" ? decodeURIComponent(projectName) : "Web Developer"}
+				</title>
+				{projectName !== "undefined" && <meta name="robots" content="noindex" />}
+			</Helmet>
 			{/* Top shadow */}
 			<div
 				ref={topShadow}
