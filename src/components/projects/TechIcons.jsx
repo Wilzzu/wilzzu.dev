@@ -10,12 +10,13 @@ import {
 	SiUnity,
 	SiCsharp,
 	SiDiscord,
+	SiFirebase,
 } from "react-icons/si";
 import { IoLogoElectron } from "react-icons/io5";
 import { PiFileHtmlBold, PiFileCssBold } from "react-icons/pi";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { motion } from "framer-motion";
-import { BiLogoJavascript } from "react-icons/bi";
+import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 
 // Remap icon names to actual icons
 const remapIcons = {
@@ -32,9 +33,11 @@ const remapIcons = {
 	HTML: <PiFileHtmlBold className="w-4 h-4" />,
 	CSS: <PiFileCssBold className="w-4 h-4" />,
 	JavaScript: <BiLogoJavascript className="w-4 h-4" />,
+	TypeScript: <BiLogoTypescript className="w-4 h-4" />,
 	Unity: <SiUnity className="w-4 h-4" />,
 	"C#": <SiCsharp className="w-4 h-4" />,
 	"Discord.js": <SiDiscord className="w-4 h-4" />,
+	Firebase: <SiFirebase className="w-4 h-4" />,
 };
 
 const TechIcons = ({ items, variant, badge = false }) => {
