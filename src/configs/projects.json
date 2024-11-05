@@ -7,8 +7,7 @@
 			"/assets/projects/muistio/muistio-1.webp",
 			"/assets/projects/muistio/muistio-2.webp",
 			"/assets/projects/muistio/muistio-3.webp",
-			"/assets/projects/muistio/muistio-4.webp",
-			"/assets/projects/muistio/muistio-5.webp"
+			"/assets/projects/muistio/muistio-4.webp"
 		],
 		"year": "2024",
 		"links": [
@@ -162,8 +161,8 @@
 		"thumbnail": "/assets/projects/cs2textmodmerger/CS2TMM-thumbnail.webp",
 		"images": [
 			"/assets/projects/cs2textmodmerger/CS2TMM-1.webp",
-			"/assets/projects/cs2textmodmerger/CS2TMM-2.webp",
-			"/assets/projects/cs2textmodmerger/CS2TMM-3.webp"
+			"/assets/projects/cs2textmodmerger/CS2TMM-3.webp",
+			"/assets/projects/cs2textmodmerger/CS2TMM-4.webp"
 		],
 		"year": "2023",
 		"links": [{ "type": "code", "url": "https://github.com/Wilzzu/CS2TextModMerger" }],
