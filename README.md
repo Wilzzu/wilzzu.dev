@@ -18,6 +18,7 @@ Check out the live version of the website:
 - Smooth animations and transitions
 - Information about me and links to my socials
 - Responsive design
+- Performance mode
 
 ## Technologies Used
 
