@@ -61,7 +61,7 @@ const scrollShadow = (element, botShadow, topShadow) => {
 };
 
 // Scroll to the selected project
-const scrollToProject = (listRef, projectRefs, projectName) => {
+const scrollToProject = (listRef, projectRefs, projectName, performanceMode) => {
 	const projectIndex = projectsDb.findIndex(
 		(project) => encodeURIComponent(project.title) === projectName
 	);
@@ -71,7 +71,7 @@ const scrollToProject = (listRef, projectRefs, projectName) => {
 
 		listRef.current.scrollTo({
 			top: selectedProject.current.offsetTop - 50,
-			behavior: "smooth",
+			behavior: !performanceMode ? "smooth" : "instant",
 		});
 	}
 };
@@ -87,7 +87,9 @@ const Projects = ({ projectName, delayAnimation, performanceMode }) => {
 
 	// Scroll to a project when the url changes
 	useEffect(() => {
-		if (projectName && listRef?.current) scrollToProject(listRef, projectRefs, projectName);
+		if (projectName && listRef?.current)
+			scrollToProject(listRef, projectRefs, projectName, performanceMode);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [projectName]);
 
 	return (
@@ -113,7 +115,7 @@ const Projects = ({ projectName, delayAnimation, performanceMode }) => {
 				variants={list}
 				custom={delayAnimation ? [0.6, 0.5] : [0, 0]}
 				ref={listRef}
-				onAnimationComplete={() => scrollToProject(listRef, projectName)}
+				onAnimationComplete={() => scrollToProject(listRef, projectName, performanceMode)}
 				onScroll={(e) => scrollShadow(e.target, botShadow, topShadow)}
 				// Scrollbar track color is set to invisible, to be able to render the thumb color in Firefox
 				className={cn(

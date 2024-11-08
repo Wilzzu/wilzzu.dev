@@ -1,8 +1,24 @@
 import Logo from "./components/Logo";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ContainerRight from "./components/ContainerRight";
 import Background from "./components/background/Background";
 import useSessionStorage from "./hooks/useSessionStorage";
+import projectsDb from "./configs/projects.json";
+
+const defaultImagesToPreload = ["/assets/LogoBG.png", "/assets/LogoLetter.png"];
+
+const preloadImage = (url) => {
+	const img = new Image();
+	img.src = url;
+};
+
+const preloadImages = () => {
+	defaultImagesToPreload.forEach((url) => preloadImage(url));
+	projectsDb.forEach((item) => {
+		preloadImage(item.thumbnail);
+		preloadImage(item.images[0]);
+	});
+};
 
 function Home() {
 	const [introAnimationOver, setIntroAnimationOver] = useState(false);
@@ -11,6 +27,7 @@ function Home() {
 		getSessionItem("storage", "performanceMode") || false
 	);
 	const ref = useRef(null);
+	useEffect(() => preloadImages(), []);
 
 	return (
 		<main

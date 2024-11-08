@@ -51,7 +51,11 @@ const ProjectItem = forwardRef(function ProjectItem(
 									performanceMode={performanceMode}
 								/>
 							) : (
-								<MemoizedItemThumbnail key={item.title + "-thumbnail"} item={item} />
+								<MemoizedItemThumbnail
+									key={item.title + "-thumbnail"}
+									item={item}
+									performanceMode={performanceMode}
+								/>
 							)}
 						</AnimatePresence>
 						{/* Background image, should be 368 x 128 */}

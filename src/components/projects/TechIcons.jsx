@@ -40,12 +40,13 @@ const remapIcons = {
 	Firebase: <SiFirebase className="w-4 h-4" />,
 };
 
-const TechIcons = ({ items, variant, badge = false }) => {
+const TechIcons = ({ items, variant, performanceMode = false, badge = false }) => {
 	return (
 		<>
 			{items.map((item) => (
 				<motion.span
 					variants={variant}
+					custom={performanceMode}
 					className={
 						badge
 							? "flex justify-center h-5 tablet:h-6 px-2 text-[0.64rem] tablet:text-[0.7rem] rounded-md gap-2 items-center bg-gradient-to-tr from-primary to-secondary text-nowrap"

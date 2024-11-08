@@ -12,12 +12,12 @@ const containerVariant = {
 };
 
 const itemVariant = {
-	visible: {
+	visible: (performanceMode) => ({
 		y: 0,
 		opacity: 1,
-		rotate: 0.01,
-		transition: { type: "spring", stiffness: 52, damping: 14 },
-	},
+		rotate: !performanceMode ? 0.01 : 0,
+		transition: !performanceMode ? { type: "spring", stiffness: 52, damping: 14 } : { duration: 0 },
+	}),
 	hidden: { y: 10, opacity: 0 },
 	exit: { y: 0, opacity: 0, transition: { duration: 0 } },
 };
@@ -35,7 +35,7 @@ const SelectedItem = ({ item, isMobile, performanceMode }) => {
 				initial="hidden"
 				animate="visible"
 				exit="exit"
-				variants={containerVariant}
+				variants={!performanceMode ? containerVariant : null}
 				className={cn(
 					"w-full h-full overflow-hidden flex flex-col items-center justify-center gap-6 px-2 py-4 z-10 drop-shadow",
 					performanceMode && "drop-shadow-none"
@@ -44,30 +44,43 @@ const SelectedItem = ({ item, isMobile, performanceMode }) => {
 				<div className="w-full flex flex-col items-center gap-2 tablet:gap-1">
 					{/* Name and Year */}
 					<div className="flex items-center gap-2 tablet:-mt-1">
-						<motion.h1 variants={itemVariant} className="font-semibold text-xl tablet:text-2xl">
+						<motion.h1
+							variants={itemVariant}
+							custom={performanceMode}
+							className="font-semibold text-xl tablet:text-2xl">
 							{item.title}
 						</motion.h1>
-						<motion.p variants={itemVariant} className="font-light text-sm mt-[0.16rem]">
+						<motion.p
+							variants={itemVariant}
+							custom={performanceMode}
+							className="font-light text-sm mt-[0.16rem]">
 							({item.year})
 						</motion.p>
 					</div>
 					{/* Badges */}
 					<motion.div
-						variants={containerVariant}
+						variants={!performanceMode ? containerVariant : null}
 						className="flex flex-wrap w-full items-center justify-center gap-2">
-						<TechIcons items={item.tech} variant={itemVariant} badge={true} />
+						<TechIcons
+							items={item.tech}
+							variant={itemVariant}
+							performanceMode={performanceMode}
+							badge={true}
+						/>
 					</motion.div>
 				</div>
 				{/* Description */}
 				<motion.p
 					className="px-1 tablet:px-4 text-center text-sm tablet:text-[0.92rem] tablet:leading-normal"
-					variants={itemVariant}>
+					variants={itemVariant}
+					custom={performanceMode}>
 					{item.description}
 				</motion.p>
 
 				{/* Links */}
 				<motion.div
 					variants={itemVariant}
+					custom={performanceMode}
 					className="w-full flex justify-center items-center gap-4 tablet:gap-5">
 					{item?.links.map((link) => (
 						<LinkButton key={`${item.title}-${link.type}`} link={link} />

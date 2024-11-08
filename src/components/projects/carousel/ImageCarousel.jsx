@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import CarouselButton from "./CarouselButton";
 import CarouselCircles from "./CarouselCircles";
+import { cn } from "../../../../lib/utils";
 
 // Animation variants
 const container = {
-	visible: {
+	visible: ({ performanceMode }) => ({
 		y: 0,
 		opacity: 1,
 		borderRadius: "7%",
-		transition: {
-			y: { type: "spring", stiffness: 44, damping: 14 },
-			opacity: { duration: 1, delay: 0.14 },
-		},
-	},
+		transition: !performanceMode
+			? { y: { type: "spring", stiffness: 44, damping: 14 }, opacity: { duration: 1, delay: 0.14 } }
+			: { duration: 0 },
+	}),
 	hidden: { y: 100, opacity: 0 },
 	exit: ({ isMobile, performanceMode }) => ({
 		x: isMobile ? 0 : -220,
@@ -78,7 +78,10 @@ const ImageCarousel = ({ images, isMobile, performanceMode }) => {
 			{/* Images */}
 			<div
 				style={{ transform: `translateX(${current * -100}%)` }}
-				className="flex duration-700 ease-in-out">
+				className={cn(
+					"flex duration-700 ease-in-out text-transparent",
+					performanceMode && "duration-0"
+				)}>
 				{images.map((image, index) => (
 					<img
 						key={index}

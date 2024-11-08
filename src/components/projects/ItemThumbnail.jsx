@@ -4,7 +4,9 @@ import { cn } from "../../../lib/utils";
 
 // Animation variants
 const container = {
-	visible: { transition: { delayChildren: 0.16, staggerChildren: 0.2 } },
+	visible: (performanceMode) => ({
+		transition: { delayChildren: !performanceMode ? 0.16 : 0, staggerChildren: 0.2 },
+	}),
 	hidden: {},
 	exit: {},
 };
@@ -22,7 +24,7 @@ const itemVariant = {
 	exit: { opacity: 0, transition: { duration: 0 } },
 };
 
-const ItemThumbnail = ({ item }) => {
+const ItemThumbnail = ({ item, performanceMode }) => {
 	const calculateTitleScale = (title) => {
 		if (title.length <= 4) return "tablet:group-hover:scale-[3.2]";
 		if (title.length <= 7) return "tablet:group-hover:scale-[2.6]";
@@ -38,6 +40,7 @@ const ItemThumbnail = ({ item }) => {
 			animate="visible"
 			exit="exit"
 			variants={container}
+			custom={performanceMode}
 			className="absolute w-full flex flex-col justify-center items-center p-5 z-10">
 			{/* Title */}
 			<motion.h1
@@ -45,8 +48,10 @@ const ItemThumbnail = ({ item }) => {
 				className={cn(
 					"font-semibold text-lg duration-300",
 					"tablet:group-hover:translate-y-3 tablet:group-hover:[text-shadow:_0_1px_2px_rgb(0_0_0_/_50%)] tablet:group-hover:text-neutral-100",
-					"tablet:group-active:![text-shadow:none] tablet:group-active:!text-transparent",
-					calculateTitleScale(item.title)
+					calculateTitleScale(item.title),
+					!performanceMode
+						? "tablet:group-active:![text-shadow:none] tablet:group-active:!text-transparent"
+						: "transition-transform"
 				)}>
 				{item.title}
 			</motion.h1>
