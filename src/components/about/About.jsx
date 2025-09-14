@@ -86,12 +86,12 @@ const About = ({ delayAnimation, performanceMode }) => {
 						{/* Content */}
 						<motion.p variants={text}>
 							{
-								"I'm a 25 year old student from Finland, who enjoys creating fun projects around my passions. With a background in graphic design, I focus on the design and try to make everything look as good as possible."
+								"I'm a 26-year-old developer from Finland who enjoys creating fun projects around my passions. With a background in graphic design, I focus on the design and try to make everything look as good as possible."
 							}
 						</motion.p>
 						<motion.p variants={text}>
 							{
-								'I\'m a "Do-It-Yourself" type of person, so instead of using pre-made designs or templates, I like to create everything from scratch to suit my preferences. All the projects and designs are completely made by me, no tutorials or templates were used.'
+								'I\'m a "do-it-yourself" type of person, so instead of using pre-made designs or templates, I like to create everything from scratch to suit my own vision. All of my projects and designs are fully made by me, no tutorials or templates were used.'
 							}
 						</motion.p>
 						<motion.p variants={text}>

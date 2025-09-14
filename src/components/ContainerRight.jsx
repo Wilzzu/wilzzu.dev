@@ -47,7 +47,7 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 					target="_blank"
 					rel="noreferrer noopener"
 					className="text-[#FBFBFB]/30 tablet:text-[#FBFBFB]/20 hover:text-[#FBFBFB] hover:drop-shadow-icon animate-fadeIn font-light text-xs duration-300 hover:underline">
-					© 2024 Wilzzu. All rights reserved.
+					© 2024-2025 Wilzzu. All rights reserved.
 				</a>
 			</footer>
 		</div>

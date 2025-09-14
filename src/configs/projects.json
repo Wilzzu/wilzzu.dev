@@ -18,7 +18,7 @@
 	},
 	{
 		"title": "DCWheel",
-		"description": "Fast and fun way to create teams for games and events! With a Discord integration, you can easily add players and share the results with your server.",
+		"description": "A fast and fun way to create teams for games and events. With Discord integration, users can quickly add players and share the results directly to their server.",
 		"thumbnail": "/assets/projects/dcwheel/dcwheel-thumbnail.webp",
 		"images": [
 			"/assets/projects/dcwheel/dcwheel-1.webp",
@@ -61,7 +61,7 @@
 	},
 	{
 		"title": "Sonic CDN",
-		"description": "An Electron application for easily uploading and managing files on a content delivery network.",
+		"description": "An Electron-based desktop application for fast file uploads to a content delivery network, allowing easy file management and quick access to hosted content.",
 		"thumbnail": "/assets/projects/sonic-cdn/sonic-cdn-thumbnail.webp",
 		"images": [
 			"/assets/projects/sonic-cdn/sonic-cdn-1.webp",
@@ -187,7 +187,7 @@
 	},
 	{
 		"title": "CSDevAlerts",
-		"description": "Discord bot that sends a notification whenever a developer starts playing CS:GO",
+		"description": "Discord bot that sends a notification whenever a developer starts playing CS:GO.",
 		"thumbnail": "/assets/projects/csdevalerts/csdevalerts-thumbnail.webp",
 		"images": [
 			"/assets/projects/csdevalerts/csdevalerts-1.webp",
